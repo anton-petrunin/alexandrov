@@ -1,4 +1,5 @@
 lib/*
+pics/*
 *.backup
 *.log
 *.aux
