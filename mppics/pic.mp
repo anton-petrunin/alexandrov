@@ -128,6 +128,47 @@ beginfig(40)
 save u;
 u:=1cm;
 
+z.v=origin;
+z.a1=(-.8,-1)*u;
+z.a2=(0,-1.2)*u;
+z.a3=(.6,-1.1)*u;
+z.a4=(1.2,.3)*u;
+z.a5=(-.2,.5)*u;
+z.a6=(-.7,.2)*u;
+z.a=.4[z.a1,z.a6];
+z.b=.5[z.a3,z.a4];
+
+draw z.v--z.a1;
+draw z.v--z.a2;
+draw z.v--z.a3;
+draw z.v--z.a4;
+draw z.v--z.a5;
+draw z.v--z.a6;
+draw z.v--z.a dashed evenly;
+draw z.v--z.b dashed evenly;
+draw z.a1--z.a2--z.a3--z.a4--z.a5--z.a6--cycle;
+
+dOt z.v,z.a1,z.a2,z.a3,z.a4,z.a5,z.a6,z.a,z.b;
+
+
+whitelabel(btex ${+}$ etex, .5[z.v,z.a1]);
+whitelabel(btex ${+}$ etex, .5[z.v,z.a2]);
+whitelabel(btex ${+}$ etex, .5[z.v,z.a3]);
+whitelabel(btex ${-}$ etex, .5[z.v,z.a4]);
+whitelabel(btex ${-}$ etex, .5[z.v,z.a5]);
+whitelabel(btex ${-}$ etex, .5[z.v,z.a6]);
+label.lft(btex $a_0=a$ etex, z.a);
+label.rt(btex $b=a_4$ etex, z.b);
+label.llft(btex $a_1$ etex, z.a1);
+label.bot(btex $a_2$ etex, z.a2);
+label.lrt(btex $a_3$ etex, z.a3);
+endfig;
+
+
+beginfig(50) 
+save u;
+u:=1cm;
+
 path p[];
 
 z.v=origin;

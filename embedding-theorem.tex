@@ -52,32 +52,6 @@ such that the number of sign changes around each vertex of $\Gamma$ is at least 
 It remains to prove these two lemmas.
 \qeds
 
-\begin{wrapfigure}{r}{20mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-10}
-\bigskip
-\includegraphics{mppics/pic-20}
-\vskip-0mm
-\end{wrapfigure}
-
-\begin{thm}{Exercise}\label{ex:disc-bend}
-Consider two polyhedral discs in $\RR^3$ glued by the rule on the diagrams from regular polygons.
-Assume that each disc is a part of a surface of a convex polyhedron.
-Use the local lemma to show the following.
-
-
-
-\begin{subthm}{}
-The first configuration is rigid; that is, one can not fix the position of the pentagon and continuously move the remaining 5 vertices in a new position so that each triangle moves by a one-parameter family of isometries of $\RR^3$.
-\end{subthm}
-
-\begin{subthm}{}
-Show that the second configuration has a rotational symmetry with the axis passing through the midpoint of the marked edge.
-\end{subthm}
-
-\end{thm}
-
 
 \section{Local lemma}
 
@@ -225,21 +199,6 @@ One can choose two points $a$ and $b$ on the base of $\Delta$
 so that on one side of the segments $[va]$ and $[vb]$ we have only pluses
 and on the other side only minuses.
 
-%\begin{wrapfigure}{r}{53mm}
-%\begin{lpic}[t(-15mm),b(-12mm),r(0mm),l(0mm)]{pics/4-changes(0.25)}
-%\lbl[wtl]{110,153;$v$}
-%\lbl[tr]{70,88;$a_0=a$}
-%\lbl[tr]{14,128;$a_1$}
-%\lbl[br]{19,181;$a_2$}
-%\lbl[br]{73,228;$a_3$}
-%\lbl[bl]{139,222;$a_4$}
-%\lbl[bl]{170,195;$b=a_5$}
-%\lbl[w]{60,143;\tiny{$(+)$}}
-%\lbl[w]{90,190;\tiny{$(+)$}}
-%\lbl[w]{155,127;\tiny{$(-)$}}
-%\end{lpic}
-%\end{wrapfigure}
-
 The base of $\Delta$ has two polygonal lines with ends at $a$ and $b$.
 Choose the one that has only pluses;
 denote it by $a_0 a_1 \dots a_n$;
@@ -248,7 +207,14 @@ Denote by $a'_0 a'_1 \dots a'_n$
 the corresponding line in $P'$;
 let $a'=a'_0$ and $b'=a'_n$.
 
-Since each marked edge passing through $a_i$ has a $(+)$ on it or nothing, 
+\begin{wrapfigure}{r}{40mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-40}
+\vskip-0mm
+\end{wrapfigure}
+
+Since each marked edge passing thru $a_i$ has a $(+)$ on it or nothing, 
 we have $$\measuredangle a_i\le\measuredangle a'_i$$
 for each $i$.
 \begin{thm}{Exercise}
@@ -273,6 +239,32 @@ The equality case in arm lemma implies that no edge at $v$ is marked;
 that is, $v$ is not a vertex of $\Gamma$
 --- a contradiction.
 \qeds
+
+From the proof it follows that the local lemma is indeed local --- it works for two nonconguent convex polyhedral angles with equal corresponding faces.
+Use this observation to solve the following exercise.
+
+\begin{wrapfigure}{r}{20mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-10}
+\bigskip
+\includegraphics{mppics/pic-20}
+\vskip-0mm
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:disc-bend}
+Consider two polyhedral discs in $\RR^3$ glued from regular polygons by the rule on the diagrams.
+Assume that each disc is a part of a surface of a convex polyhedron.
+
+\begin{subthm}{}
+The first configuration is rigid; that is, one can not fix the position of the pentagon and continuously move the remaining 5 vertices in a new position so that each triangle moves by a one-parameter family of isometries of $\RR^3$.
+\end{subthm}
+
+\begin{subthm}{}
+Show that the second configuration has a rotational symmetry with the axis passing thru the midpoint of the marked edge.
+\end{subthm}
+
+\end{thm}
 
 \section{Global lemma}
 
@@ -355,12 +347,12 @@ that is, it might be an intersection of an edge and a fake edge.
 \begin{figure}[ht!]
 \vskip-0mm
 \centering
-\includegraphics{mppics/pic-40}
+\includegraphics{mppics/pic-50}
 \vskip-0mm
 \end{figure}
 
 For the first type of vertex, the local lemma can be proved the same way. 
-For a fake vertex $v$, it is easy to see that both parts of the edge coming through $v$ are marked with minus
+For a fake vertex $v$, it is easy to see that both parts of the edge coming thru $v$ are marked with minus
 while both of the fake edges at $v$ are marked with plus.
 Therefore, the local lemma holds for the fake vertices as well.
 
