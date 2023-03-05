@@ -45,7 +45,7 @@ A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed pa
 \parbf{Geodesic space.}
 A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
 
-\section{Triangles, hinges and angles}
+\section{Triangles, hinges, and angles}
 
 \parbf{Triangles.}
 Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
@@ -54,7 +54,7 @@ $\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}
 Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
 Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
-If we write $\trig p q r$, it means that we have made a choice of such a triangle.
+If we write $\trig p q r$, it means that we have chosen such a triangle.
 
 \parbf{Model triangles.}
 Given three points $p,q,r$ in a metric space $\spc{X}$,
@@ -71,9 +71,9 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
 
 The same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
 in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
-In the latter case the model triangle is said to be defined if in addition
+In the latter case, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
+In this case, the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
 
 \parbf{Model angles.}
 If 
@@ -96,7 +96,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 \section{Baby Toponogov}
 
 Recall that \emph{polyhedral space} is a geodesic space that admits a finite triangulation such that each simplex is isometric to a simplex in a Euclidean space.
-If, in addition, it is homeomorphic to a surface (without boundary), then it is called \emph{polyhedral surface}.
+If, in addition, it is homeomorphic to a surface (without boundary), then it is called a \emph{polyhedral surface}.
 A point on a polyhedral surface with nonzero curvature is called an \emph{essential vertex}.
 Any other point on the surface will be called \emph{regular}.
 Note that \textit{any regular point has a neighborhood that is isometric to an open set in the Euclidean plane}.
@@ -118,7 +118,7 @@ then these are the endpoints for both geodesics.
 The next theorem gives a global geometric property of 
 non-negatively curved polyhedral surface.
 
-Given a hinge $\hinge pxy$ in a polyhedral surface $P$, denote by $\mangle\hinge pxy$ the minimal of angle measures that the hinge cuts from $P$ at $p$.
+Given a hinge $\hinge pxy$ in a polyhedral surface $P$, denote by $\mangle\hinge pxy$ the minimal angle that the hinge cuts from $P$ at $p$.
 (Soon we will give a more general definition of $\mangle\hinge pxy$.)
 
 \begin{thm}{Theorem}\label{thm:poly-cbb}
@@ -148,7 +148,8 @@ $$| p- \gamma(t)|\le|\tilde p-\tilde \gamma(t)|
 \eqlbl{eq:comp-gamma}$$
 for any $t$ in $[0,\ell]$.
 
-We may assume that $p$ is a regular point; otherwise move it slightly and apply approximation.
+We may assume that $p$ is a regular point;
+otherwise, move it slightly and apply approximation.
 
 
 From the cosine law, we get that the function 
@@ -168,8 +169,8 @@ a geodesic $[p\gamma(t)]$ contains only regular points.
 Therefore for small $\eps>0$,
  the $\eps$-neighborhood of $[p\gamma(t)]$, say $\Omega$, contains only regular points. 
 We may assume that $\Omega$ is homeomorphic to a disc;
-in this case there is a locally distance preserving embedding $\iota\:\Omega\to\EE^2$.
-Note the image $\iota[p\gamma(t)]$ is a line segmentthat 
+in this case, there is a locally distance preserving embedding $\iota\:\Omega\to\EE^2$.
+Note the image $\iota[p\gamma(t)]$ is a line segment that 
 and $\iota(\Omega)$ is the $\eps$-neighborhood of $\iota[p\gamma(t)]$ in $\EE^2$;
 in particular, $\iota(\Omega)$ is convex.
 Thus $\iota(\Omega)$ contains a triangle with  base $\iota[\gamma(t_0-\eps)\ \gamma(t_0+\eps)]$  and vertex $\iota(p)$.
@@ -193,7 +194,7 @@ A metric space $\spc{X}$ has \emph{nonnegative curvature} in the sense of Alexan
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
-holds for any quadruple $p,x,y,z\in\spc{X}$ such that $p$ is distinct from $x$, $y$ and $z$. 
+holds for any quadruple $p,x,y,z\in\spc{X}$ such that $p$ is distinct from $x$, $y$, and $z$. 
 
 The inequality \ref{eq:CBB-comparison} is called \emph{$\CBB(0)$ comparison} for the quadruple $p,x,y,z$.
 If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
@@ -201,7 +202,7 @@ $\CBB(1)$ and $\CBB(-1)$ comparisons.
 \end{thm}
 
 While this definition can be applied to any metric space,
-it is usually applied to geodesic spaces (or, at least, length spaces that will be defined latter).
+it is usually applied to geodesic spaces (or, at least, length spaces that will be defined later).
 
 
 
@@ -212,13 +213,13 @@ Show that a polyhedral surface is $\CBB(0)$ if and only if it has nonnegative cu
 The following theorem generalizes \ref{thm:alexandrov-uni'} and \ref{thm:exist}.
 
 \begin{thm}{Theorem}
-A metric space $\spc{X}$ is isometric to the surface of convex body in the Euclidean space if and only if $\spc{X}$ is a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
+A metric space $\spc{X}$ is isometric to the surface of a convex body in the Euclidean space if and only if $\spc{X}$ is a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
 
 Moreover, $\spc{X}$ determines the convex body up to congruence.
 \end{thm}
 
 As before, a convex body can degenerate to a plane figure $F$;
-in this case its surface is defined as two copies of $F$ glued along the boundary.
+in this case, its surface is defined as two copies of $F$ glued along the boundary.
 
 The main part is due to Alexadr Alexandov;
 its proof is an application of \ref{thm:exist} together with approximation.
@@ -227,7 +228,7 @@ The last part is very difficult; it was proved by Aleksei Pogorelov.
 Eventually, we will prove the only-if part of the theorem, which is the simplest part of the theorem;
 it requires only \ref{ex:sphere-with-pos} which is
 the only-if part of \ref{thm:exist}.
-To do this we will need to introduce convergence of subsets in Euclidean space (Hausdorff cnvergence) and convergence of metric spaces (Gromov--Hausdorff convergence) that will be done in the next lecture.
+To do this we will need to introduce the convergence of subsets in Euclidean space (Hausdorff convergence) and convergence of metric spaces (Gromov--Hausdorff convergence); it will be done in the next lecture.
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Show that a metric space $\spc{X}$ is $\Alex0$
@@ -247,7 +248,6 @@ Show that $\RR^2$ with metric induced by a norm is $\Alex0$ if and only if it is
 \section{Comments}
 
 Let us give a more conceptual way to think about the comparison inequality in \ref{def:CBB} and an analogous inequality for upper curvature bound that will appear later.
-In this section we will give
 
 
 Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric spaces.
@@ -258,7 +258,7 @@ These 6 numbers are subject to 12 triangle inequalities; that is,
 holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$.
 
 The space $\mathcal{M}_4$ comes with topology.
-It can defined as a quotient of the cone in $\RR^6$ by permutations of the 4-points of the space.
+It can be defined as a quotient of the cone in $\RR^6$ by permutations of the 4-points of the space.
 
 \begin{wrapfigure}[7]{o}{33mm}
 \vskip-0mm
@@ -289,13 +289,13 @@ is called $\CAT(0)$ and $\CBB(0)$.
 \includegraphics{mppics/pic-710}
 \end{wrapfigure}
 
-Let us describe the subdivision into  $\mathcal{P}_4$, $\mathcal{E}_4$ and $\mathcal{N}_4$ intuitively.
-Imagine that you move out of $\mathcal{E}_4$ --- your path is a one parameter family of 4-point metric spaces.
+Let us describe the subdivision into $\mathcal{P}_4$, $\mathcal{E}_4$, and $\mathcal{N}_4$ intuitively.
+Imagine that you move out of $\mathcal{E}_4$ --- your path is a one-parameter family of 4-point metric spaces.
 The last thing you see in $\mathcal{E}_4$ is one of the two plane configurations shown on the diagram.
 If you see the left configuration then you move into $\mathcal{N}_4$;
 if it is the one on the right, then you move into $\mathcal{P}_4$.
 More degenerate pictures can be avoided; for example, a triangle with a point on a side.
-From such a configuration one may move in $\mathcal{N}_4$ and in $\mathcal{P}_4$ (as well as come back to $\mathcal{E}_4$).
+From such a configuration one may move in $\mathcal{N}_4$ and $\mathcal{P}_4$ (as well as come back to $\mathcal{E}_4$).
 
 Here is an exercise, solving which would force you to rebuild a considerable part of Alexandrov geometry.
 It might be helpful to spend some time thinking about this exercise before proceeding.
