@@ -220,6 +220,55 @@ drawdblarrow (.25[z.d,z.a]{left}..tension 1.4..(.75)[z.d,z.a]{right}) shifted (-
 
 endfig;
 
+beginfig(700) 
+save u;
+u:=1cm;
 
+z.a=(0,0)*u;
+z.b=(1,0)*u;
+
+save p;
+path p[];
+
+p1=circle(z.a,z.b-z.a);
+p2=circle(z.b,z.a-z.b);
+
+draw p1;
+draw p2;
+
+hatchfill p1 withcolor (77, 1mm, -.5bp);
+hatchfill p2 withcolor (177, 1mm, -.5bp);
+
+label.top(btex $\spc{M}_4$ etex, z.b rotatedabout(z.a,60)+(0,2));
+whitelabel(btex $\spc{E}_4$ etex, .5[z.a,z.b]);
+whitelabel(btex $\spc{P}_4$ etex, 1.5[z.a,z.b]);
+whitelabel(btex $\spc{N}_4$ etex, (-.5)[z.a,z.b]);
+endfig;
+
+
+beginfig(710) 
+save u;
+u:=1cm;
+
+z.a=(0,0)*u;
+z.b=(1,0)*u;
+z.c=(.4,1.1)*u;
+z.d=(.55,.25)*u;
+
+z.a1=(2,0)*u;
+z.b1=(3,0)*u;
+z.c1=(2.1,.9)*u;
+z.d1=(2.95,1.05)*u;
+
+draw z.a--z.b--z.c--z.d--cycle;
+draw z.a--z.c;
+draw z.b--z.d;
+
+draw z.a1--z.b1--z.c1--z.d1--cycle;
+draw z.a1--z.c1;
+draw z.b1--z.d1;
+
+dOt z.a,z.b,z.c,z.d,z.a1,z.b1,z.c1,z.d1;
+endfig;
 
 end

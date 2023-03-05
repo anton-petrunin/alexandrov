@@ -12,7 +12,7 @@ Further, \emph{surfaces} of convex polyhedrons will be considered with \emph{int
 Shortest paths parametrized by arclength will be called \emph{geodesics}; 
 this term has a slightly different meaning in Riemannian geometry.
  
-\begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be two non-degenerate convex polyhedrons in $\RR^3$;
+\begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be two non-degenerate convex polyhedrons in $\EE^3$;
 denote their surfaces 
 by $P$ and $P'$.
 Suppose there is an isometry $P\to P'$ that sends each face of $K$ to a face of $K'$.
@@ -58,8 +58,8 @@ It remains to prove these two lemmas.
 Next lemma is the main ingredient in our proof of the local lemma.
 
 \begin{thm}{Arm lemma}\label{lem:arm}
-Assume that $A=[a_0 a_1\dots a_n]$ is a convex polygon in $\RR^2$
-and $A'=[a'_0 a'_1\dots a'_n]$ be a polygonal line in $\RR^3$
+Assume that $A=[a_0 a_1\dots a_n]$ is a convex polygon in $\EE^2$
+and $A'=[a'_0 a'_1\dots a'_n]$ be a polygonal line in $\EE^3$
 such that 
 $$|a_i-a_{i+1}|=|a'_i-a'_{i+1}|$$ for any $i\in\{0,\dots,n-1\}$
 and 
@@ -94,7 +94,7 @@ Give an example showing the statement does not hold without assuming convexity.
 In the proof, we will use the following exercise which is the triangle inequality angles (or the spherical triangle inequality). 
 
 \begin{thm}{Exercise}\label{ex:angle-triangle}
-Let $w_1,w_2,w_3$ be unit vectors in $\RR^3$.
+Let $w_1,w_2,w_3$ be unit vectors in $\EE^3$.
 Denote by $\theta_{i,j}$ the angle between the vectors $v_i$ and $v_j$.
 Show that
 $$\theta_{1,3}\le \theta_{1,2}+\theta_{2,3}$$
@@ -105,8 +105,8 @@ and in case of equality, the vectors $w_1,w_2,w_3$ lie in a plane.
 
 
 \parit{Proof.}
-We will view $\RR^2$ as the $xy$-plane in $\RR^3$; 
-so both $A$ and $A'$ lie in $\RR^3$.
+We will view $\EE^2$ as the $xy$-plane in $\EE^3$; 
+so both $A$ and $A'$ lie in $\EE^3$.
 Let $a_m$ be the vertex of $A$ that lies on the maximal distance to the line $(a_0a_n)$.
 
 Let us shift indexes of $a_i$ and $a'_i$ down by $m$,
@@ -133,7 +133,7 @@ where $k=n-m$.
 
 Without loss of generality, we may assume that
 \begin{itemize}
-\item $a_0=a'_0$ and they both coincide with the origin $(0,0,0)\in\RR^3$;
+\item $a_0=a'_0$ and they both coincide with the origin $(0,0,0)\in\EE^3$;
 \item all $a_i$ lie in the $xy$-plane and the $x$-axis is parallel to the line $(a_{-m}a_k)$;
 \item the angle $\measuredangle a'_0$ lies in $xy$-plane and contains the angle $\measuredangle a_0$ inside
 and the directions to $a'_{-1}$,$a_{-1}$, $a_{1}$ and $a'_{1}$ from $a_0$ appear in the same cyclic order.
@@ -253,11 +253,11 @@ Use this observation to solve the following exercise.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:disc-bend}
-Consider two polyhedral discs in $\RR^3$ glued from regular polygons by the rule on the diagrams.
+Consider two polyhedral discs in $\EE^3$ glued from regular polygons by the rule on the diagrams.
 Assume that each disc is a part of a surface of a convex polyhedron.
 
 \begin{subthm}{}
-The first configuration is rigid; that is, one can not fix the position of the pentagon and continuously move the remaining 5 vertices in a new position so that each triangle moves by a one-parameter family of isometries of $\RR^3$.
+The first configuration is rigid; that is, one can not fix the position of the pentagon and continuously move the remaining 5 vertices in a new position so that each triangle moves by a one-parameter family of isometries of $\EE^3$.
 \end{subthm}
 
 \begin{subthm}{}
@@ -332,7 +332,7 @@ Clearly, \ref{eq:S>=4k} and \ref{eq:23-44-45} contradict \ref{eq:k=2+}.
 Alexandrov's uniqueness theorem states that the conclusion of the Cauchy theorem (\ref{thm:cauchy}) still holds without the face-to-face assumption.
 
 \begin{thm}{Theorem}\label{thm:alexandrov-uni'}
-Any two convex polyhedrons in $\RR^3$ with isometric surfaces are congruent.
+Any two convex polyhedrons in $\EE^3$ with isometric surfaces are congruent.
 \end{thm}
 
 \parit{Needed modifications in the proof of \ref{thm:cauchy}.}
@@ -359,15 +359,35 @@ Therefore, the local lemma holds for the fake vertices as well.
 What remains in the proof needs no modifications.
 \qeds
 
-\section{Existence}
+\begin{thm}{Exercise}\label{pr:K-P-simmetry}
+Let $K$ be a convex polyhedron in $\EE^3$;
+denote by $P$ its surface.
+Show that each isometry $\iota\:P\z\to P$,
+can be extended to an isometry of $\EE^3$. 
+\end{thm}
+
+\section{Existence}\label{sec:Alexandrov-existence}
 
 Let $P$ be a surface with a polyhedral metric.
-The curvature of a point $p\in P$ is defined as $2\cdot \pi -\theta$,
+The \emph{curvature} of a point $p\in P$ is defined as $2\cdot \pi -\theta$,
 where $\theta$ is the total angle around $p$.
 
 \begin{thm}{Exercise}\label{ex:sphere-with-pos}
 Suppose $P$ is the surface of a convex polyhedron.
 Show that $P$ is homeomorphic to the sphere, and it has nonnegative curvature at every point.
+\end{thm}
+
+\begin{thm}{Exercise}\label{pr:tetrahedron} 
+Assume that the surface of a nonregular tetrahedron $T$ has curvature $\pi$ at each of it vertices.
+Show that 
+
+\begin{subthm}{}
+all faces of $T$ are congruent; 
+\end{subthm}
+
+\begin{subthm}{} the line passing thru midpoints of opposite edges of $T$ itersects these edges at right angles.
+\end{subthm}
+ 
 \end{thm}
 
 Alexandrov's theorem states that the converse holds if one includes in the consideration \emph{twice covered polygons}.
