@@ -1,4 +1,4 @@
-\chapter{Nonnegative curvature: definition}
+\chapter{CBB: definition}
 
 \section{Distances and geodesics}
 
@@ -85,7 +85,7 @@ will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$,
 $\angk p q r_{\EE^2}$%
 \index{$\tilde\measuredangle$!$\angk{{*}}{{*}}{{*}}$}.
 The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$;
-in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SSS^2}$ is defined.
+in the latter case, we assume in addition that the model triangle $\modtrig(p q r)_{\SSS^2}$ is defined.
 
 We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\SSS^2$ is meant.
 
@@ -115,11 +115,10 @@ then these are the endpoints for both geodesics.
 
 \end{thm}
 
-The next theorem gives a global geometric property of 
-non-negatively curved polyhedral surface.
+The next theorem gives a global geometric property of non-negatively curved polyhedral surfaces.
 
-Given a hinge $\hinge pxy$ in a polyhedral surface $P$, denote by $\mangle\hinge pxy$ the minimal angle that the hinge cuts from $P$ at $p$.
-(Soon we will give a more general definition of $\mangle\hinge pxy$.)
+Given a hinge $\hinge pxy$ in a non-negatively curved polyhedral surface $P$, denote by $\mangle\hinge pxy$ the minimal angle that the hinge cuts from $P$ at~$p$.
+(Soon we will give a more general definition of $\mangle\hinge pxy$; see \ref{sec:angles}.)
 
 \begin{thm}{Theorem}\label{thm:poly-cbb}
 Let $P$ be a polyhedral surface.
@@ -199,11 +198,21 @@ holds for any quadruple $p,x,y,z\in\spc{X}$ such that $p$ is distinct from $x$, 
 The inequality \ref{eq:CBB-comparison} is called \emph{$\CBB(0)$ comparison} for the quadruple $p,x,y,z$.
 If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
 $\CBB(1)$ and $\CBB(-1)$ comparisons.
+
+(More generally, one may apply this definition to $\MM^2(\kappa)$ --- the model plane of curvature $\kappa$, defined as follows:
+$\MM(0)=\EE^2$,
+if $\kappa>0$, then $\MM(\kappa)$ is the sphere of radius $\tfrac{1}{\sqrt{\kappa}}$ and if $\kappa<0$, then it is Lobachevsky plane rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$.
+This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.)
 \end{thm}
+
+
 
 While this definition can be applied to any metric space,
 it is usually applied to geodesic spaces (or, at least, length spaces that will be defined later).
 
+\begin{thm}{Exercise}
+Show that Euclidean space $\EE^n$ is $\CBB(0)$.
+\end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:polyCBB}
@@ -221,7 +230,7 @@ Moreover, $\spc{X}$ determines the convex body up to congruence.
 As before, a convex body can degenerate to a plane figure $F$;
 in this case, its surface is defined as two copies of $F$ glued along the boundary.
 
-The main part is due to Alexadr Alexandov~\cite{alexandrov-1948};
+The main part is due to Alexadr Alexandrov~\cite{alexandrov-1948};
 its proof is an application of \ref{thm:exist} together with approximation.
 The last part is very difficult; it was proved by Aleksei Pogorelov~\cite{pogorelov}.
 
@@ -247,7 +256,7 @@ Show that $\RR^2$ with metric induced by a norm is $\Alex0$ if and only if it is
 
 \section{Four-point metric spaces}
 
-Let us give a more conceptual way to think about the comparison inequality in \ref{def:CBB} and an analogous inequality for upper curvature bound that will appear later.
+Let us give a more conceptual way to think about the comparison inequality in \ref{def:CBB} and an analogous inequality for upper-curvature bound that will appear later.
 
 
 Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric spaces.
@@ -258,9 +267,9 @@ These 6 numbers are subject to 12 triangle inequalities; that is,
 holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$.
 
 The space $\mathcal{M}_4$ comes with topology.
-It can be defined as a quotient of the cone in $\RR^6$ by permutations of the 4-points of the space.
+It can be defined as a quotient of the cone in $\RR^6$ by permutations of the 4 points of the space.
 
-\begin{wrapfigure}[7]{o}{33mm}
+\begin{wrapfigure}[7]{i}{33mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-700}
@@ -283,8 +292,8 @@ that has no quadruples of points of type $\mathcal{P}_4$ or $\mathcal{N}_4$
 respectively 
 is called $\CAT(0)$ and $\CBB(0)$.
 
-\begin{wrapfigure}{r}{33mm}
-\vskip-4mm
+\begin{wrapfigure}{o}{33mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-710}
 \end{wrapfigure}
@@ -306,9 +315,7 @@ containing only quadruples of type~$\mathcal{E}_4$.
 Show that $\spc{X}$ is isometric to a convex set in a Hilbert space.
 \end{thm}
 
-In the definition above, 
-instead of  Euclidean space 
-one can take  
+In the definition above, instead of Euclidean space, one can take  
 Lobachevsky space of curvature~$-1$.
 In this case,
 one obtains the definition of spaces with curvature bounded above or below by~$-1$ ($\CAT(-1)$ or $\CBB(-1)$).
@@ -324,12 +331,13 @@ The first synthetic description of curvature is due to Abraham Wald \cite{wald};
 it was given in a lone publication on a ``coordinateless description of Gauss surfaces'' published in 1936.
 In 1941, similar definitions were rediscovered by Alexandr Alexandrov \cite{alexandrov:def}.
 
-In Alexandrov's work the first applications of this approach were given.
+In Alexandrov's work, the first applications of this approach were given.
 Mainly: the main part of \ref{thm:alexandrov+pogorelov} \cite{alexandrov-1941,alexandrov-1941convex}
 and the {}\emph{gluing theorem} \cite{alexandrov-1946}, which gave a flexible tool to modify non-negatively curved metrics on a sphere.
 These two results together formed the foundation of the branch of geometry now called {}\emph{Alexandrov geometry};
 they gave  a very intuitive geometric tool to study embeddings and bending of surfaces in Euclidean space and changed the subject dramatically.
-In paticular, the existence of bending of a large spherical dome (sphere with a small disc removed) easily follows from these two theorems; moreover it provides an intuitive description of such bending that can be extended to a closed convex surface.
+
+In particular, the existence of bending of a large spherical dome (sphere with a small disc removed) easily follows from these two theorems; moreover, it provides an intuitive description of such bending that can be extended to a closed convex surface.
 
 
 

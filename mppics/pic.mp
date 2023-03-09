@@ -195,29 +195,28 @@ whitelabel(btex ${-}$ etex, .5[z.v,z.a]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.aa]);
 endfig;
 
-beginfig(1010) 
+beginfig(615) 
 save u;
-u:=1cm;
+u:=2cm;
 
-path p[];
+z.p=origin;
+z.x=(1,1)*u;
+z.z=(1.2,-.8)*u;
+z.y=.5[z.x,z.z];
 
-z.a=origin;
-z.b=(2,0)*u;
-z.d=(0,1)*u;
-z.c=z.b+z.d;
+labelarcsprof(z.x, z.p, z.y, 10, 26, btex $=\alpha^{23}+\eps$ etex rotated (.5*(angle(z.y-z.p)+angle(z.x-z.p))));
+labelarcsprof2(z.y, z.p, z.z, 10, 25, btex $=\alpha^{12}+\eps$ etex rotated (.5*(angle(z.y-z.p)+angle(z.z-z.p))));
 
-fill z.a--z.b--z.c--z.d--cycle withcolor .8;
-draw z.a--z.b--z.c--z.d--cycle;
-draw .5[z.a,z.b]--.5[z.b,z.c]--.5[z.c,z.d]--.5[z.d,z.a]--cycle dashed evenly;
-draw .5[z.a,z.b]--.5[z.c,z.d] dashed evenly;
+draw ddline(z.p,z.x)(0,.2);
+draw ddline(z.p,z.y)(0,.2);
+draw ddline(z.p,z.z)(0,.2);
+draw z.x--z.z;
 
-Dot z.a,z.b,z.c,z.d,.5[z.a,z.b],.5[z.b,z.c],.5[z.c,z.d],.5[z.d,z.a];
+dOt z.p,z.x,z.y,z.z;
 
-drawdblarrow (.25[z.a,z.b]{down}..tension 1.4..(.75)[z.a,z.b]{up}) shifted (0,-3);
-drawdblarrow (.25[z.b,z.c]{right}..tension 1.4..(.75)[z.b,z.c]{left}) shifted (3,0);
-drawdblarrow (.25[z.c,z.d]{up}..tension 1.4..(.75)[z.c,z.d]{down}) shifted (0,3);
-drawdblarrow (.25[z.d,z.a]{left}..tension 1.4..(.75)[z.d,z.a]{right}) shifted (-3,0);
-
+whitelabel(btex $t$ etex rotated angle(z.x-z.p), .5[z.p,z.x]+(0,-2)); 
+whitelabel(btex $s(t,\tau)$ etex rotated angle(z.y-z.p), .7[z.p,z.y]+(0,1)); 
+whitelabel(btex $\tau$ etex rotated angle(z.z-z.p), .5[z.p,z.z]);
 endfig;
 
 beginfig(700) 
@@ -269,6 +268,104 @@ draw z.a1--z.c1;
 draw z.b1--z.d1;
 
 dOt z.a,z.b,z.c,z.d,z.a1,z.b1,z.c1,z.d1;
+endfig;
+
+beginfig(730) 
+save u;
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.x=(.2,1)*u;
+z.y=(1.2,.1)*u;
+z.z=.9[z.p,.4[z.x,z.y]];
+
+draw z.x..z.z..z.y;
+draw z.p{.1,1}..z.x;
+draw z.p{1,.1}..z.y;
+draw z.p{.5,.5}..z.z;
+
+dOt z.x,z.y,z.z,z.p;
+
+label.top(btex $x$ etex, z.x);
+label.rt(btex $y$ etex, z.y);
+label.urt(btex $z$ etex, z.z);
+label.llft(btex $p$ etex, z.p);
+
+endfig;
+
+beginfig(740) 
+save u;
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.x=(.2,1)*u;
+z.y=(1.2,.1)*u;
+z.z=.4[z.x,z.y];
+z.yy=z.y rotatedabout(z.z,-20);
+
+draw z.x--z.y;
+draw z.p--z.x;
+draw z.p--z.y dashed evenly;
+draw z.p--z.z;
+draw z.p--z.yy--z.z;
+
+dOt z.x,z.y,z.z,z.p,z.yy;
+
+label.top(btex $\tilde x$ etex, z.x);
+label.rt(btex $\tilde y$ etex, z.y);
+label.bot(btex $\tilde y'$ etex, z.yy);
+label.urt(btex $\tilde z$ etex, z.z);
+label.llft(btex $\tilde p$ etex, z.p);
+
+endfig;
+
+beginfig(750) 
+save u;
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.x=(.2,1)*u;
+z.y=(1.2,.1)*u;
+z.xx=.4[z.p,z.x];
+z.yy=.3[z.p,z.y];
+
+draw z.p--z.y;
+draw z.p--z.x;
+draw z.xx--z.yy;
+
+dOt z.x,z.y,z.p,z.xx,z.yy;
+
+label.top(btex $x$ etex, z.x);
+label.rt(btex $y$ etex, z.y);
+label.bot(btex $\bar y$ etex, z.yy);
+label.lft(btex $\bar x$ etex, z.xx);
+label.llft(btex $p$ etex, z.p);
+
+endfig;
+
+beginfig(1010) 
+save u;
+u:=1cm;
+
+path p[];
+
+z.a=origin;
+z.b=(2,0)*u;
+z.d=(0,1)*u;
+z.c=z.b+z.d;
+
+fill z.a--z.b--z.c--z.d--cycle withcolor .8;
+draw z.a--z.b--z.c--z.d--cycle;
+draw .5[z.a,z.b]--.5[z.b,z.c]--.5[z.c,z.d]--.5[z.d,z.a]--cycle dashed evenly;
+draw .5[z.a,z.b]--.5[z.c,z.d] dashed evenly;
+
+Dot z.a,z.b,z.c,z.d,.5[z.a,z.b],.5[z.b,z.c],.5[z.c,z.d],.5[z.d,z.a];
+
+drawdblarrow (.25[z.a,z.b]{down}..tension 1.4..(.75)[z.a,z.b]{up}) shifted (0,-3);
+drawdblarrow (.25[z.b,z.c]{right}..tension 1.4..(.75)[z.b,z.c]{left}) shifted (3,0);
+drawdblarrow (.25[z.c,z.d]{up}..tension 1.4..(.75)[z.c,z.d]{down}) shifted (0,3);
+drawdblarrow (.25[z.d,z.a]{left}..tension 1.4..(.75)[z.d,z.a]{right}) shifted (-3,0);
+
 endfig;
 
 end
