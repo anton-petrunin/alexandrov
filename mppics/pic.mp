@@ -195,6 +195,30 @@ whitelabel(btex ${-}$ etex, .5[z.v,z.a]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.aa]);
 endfig;
 
+beginfig(105) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.A=origin;
+z.B=(3,0)*u;
+z.C=(1,2)*u;
+
+draw z.A--z.B--z.C--cycle;
+
+arcs(z.B, z.A, z.C, 12);
+
+dOt z.A,z.B,z.C;
+
+label.llft(btex $\tilde x$ etex, z.A);
+label.lrt(btex $\tilde p$ etex, z.B);
+label.top(btex $\tilde q$ etex, z.C);
+label(btex $=\mangle\hinge x p q$ etex rotated (angle(z.C-z.A)/2), z.A +32*unitvector(unitvector(z.B-z.A)+unitvector(z.C-z.A)));
+label(btex $\side\hinge x p q$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
+label(btex $\dist{x}{q}{}$ etex rotated angle(z.C-z.A), .5[z.A,z.C]+8*unitvector(z.C-z.A) zscaled (0,1));
+label.bot(btex $\dist{x}{p}{}$ etex, .5[z.A,z.B]);
+endfig;
+
 beginfig(615) 
 save u;
 u:=2cm;
@@ -340,6 +364,105 @@ label.rt(btex $y$ etex, z.y);
 label.bot(btex $\bar y$ etex, z.yy);
 label.lft(btex $\bar x$ etex, z.xx);
 label.llft(btex $p$ etex, z.p);
+
+endfig;
+
+beginfig(805) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.p=origin;
+z.x=(.7,2)*u;
+z.y=(1.2,-1.6)*u;
+z.z=(-2.3,-.2)*u;
+
+p0=z.p{.5,1}..z.x;
+p1=z.p{.6,-1}..z.y;
+p2=z.p{-1,.1}..z.z;
+
+z.w=point .3 of p2;
+
+p3=z.x{.5,-1}..z.y;
+p4=z.y{-1,0}..z.z;
+p5=z.z{1,1}..z.x;
+
+p6=z.w{.3,1}..z.x;
+p7=z.w{.4,-1}..z.y;
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+draw p6;
+draw p7;
+
+dOt z.p,z.x,z.y,z.z,z.w;
+
+label.rt(btex $p$ etex, z.p);
+label.top(btex $x$ etex, z.x);
+label.bot(btex $y$ etex, z.y);
+label.lft(btex $z$ etex, z.z);
+label.llft(btex $w$ etex, z.w);
+endfig;
+
+beginfig(820) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.x=(0,0)*u;
+z.p=(2,-3)*u;
+z.q=(2,4)*u;
+z.xx=.4[z.x,z.q];
+
+draw z.q--z.x--z.p--z.xx;
+
+dOt z.p,z.q,z.x,z.xx;
+
+whitelabelarcsprof(z.p, z.x, z.q, 12, 25, btex $\le \mangle\hinge x p q$ etex);
+labelarcsprof2(z.p, z.xx, z.q, 12, 26, btex $\ge \mangle\hinge{x'}p q$ etex);
+
+label.rt(btex $\tilde p$ etex, z.p);
+label.rt(btex $\tilde q$ etex, z.q);
+label.lft(btex $\tilde x$ etex, z.x);
+label.ulft(btex $\tilde x'$ etex, z.xx);
+endfig;
+
+beginfig(825) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(0,0)*u;
+z.q=(6,0)*u;
+z.x0=(-2,2)*u;
+z.x1=.25[z.x0,z.q];
+z.x2=.5[z.x0,z.q];
+z.x3=.5[z.x2,z.p];
+z.x4=.5[z.x3,z.q];
+z.x5=.5[z.x4,z.p];
+
+draw z.x0--z.p;
+draw z.x0--z.q;
+draw z.x1--z.p;
+draw z.x2--z.p;
+draw z.x3--z.q;
+draw z.x4--z.p;
+draw z.x5--z.q;
+
+dOt z.p,z.q,z.x0,z.x1,z.x2,z.x3,z.x4,z.x5;
+
+label.bot(btex $p$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+label.top(btex $x_0$ etex, z.x0);
+label.urt(btex $x_1$ etex, z.x1);
+label.urt(btex $x_2$ etex, z.x2);
+label.ulft(btex $x_3$ etex, z.x3);
+whitelabel.urt(btex $x_4$ etex, z.x4);
+label.bot(btex $x_5$ etex, z.x5);
 
 endfig;
 

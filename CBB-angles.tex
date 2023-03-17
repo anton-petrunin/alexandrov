@@ -1,7 +1,7 @@
 \chapter{CBB: first steps}
 
 
-In this lecture we start to study metric spaces that satisfy $\CBB$ comparison [see \ref{def:CBB}].
+In this lecture, we start to study metric spaces that satisfy $\CBB$ comparison [see \ref{def:CBB}].
 Most of the covered material
 will not be used further, it served as a motivation for $\CBB$ comparison.
 
@@ -89,7 +89,7 @@ Show that it does not change the value $\mangle\hinge p x y$.
 
 
 \begin{thm}{Exercise}\label{ex:undefined-angle}
-Give an example of a hinge $\hinge p x y$ in a metric space with undefined angle $\mangle\hinge p x y$.
+Give an example of a hinge $\hinge p x y$ in a metric space with an undefined angle $\mangle\hinge p x y$.
 \end{thm}
 
 \begin{thm}{Triangle inequality for angles}
@@ -141,13 +141,14 @@ We parametrize each half-line by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_{\ge0}$, let $s=s(t,\tau)$ be 
 the number such that 
 $\tilde \gamma_2(s)\in[\tilde \gamma_1(t)\ \tilde \gamma_3(\tau)]$. 
-Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
+Clearly, $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
 
 \begin{thm}{Exercise}\label{ex:adjacent-angles}
 Prove that the sum of adjacent angles is at least $\pi$.
 
-More precisely: suppose that geodesic $[xy]$ is the union of two sides $[px]$ and $[py]$ of hinges $\hinge pxz$ and $\hinge pyz$.
+More precisely: suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adjacent hinges}\emph{adjacent};
+that is, they share side $[pz]$, and the union of two sides $[px]$ and $[py]$ form a geodesic $[xy]$.
 Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
@@ -157,7 +158,7 @@ The above inequality can be strict.
 For example in a metric tree angles between any two different edges coming out of the same vertex are all equal to $\pi$.
 
 \begin{thm}{Exercise}\label{ex:first-var}
-Assume that a hinge $\hinge q p x$ has defined angle.
+Assume that a hinge $\hinge q p x$ with defined angle measure.
 Let $\gamma$ be the unit speed parametrization of $[qx]$ from $q$ to $x$.
 Show that
 \[\dist{p}{\gamma(t)}{}
@@ -247,7 +248,7 @@ with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} 
 Note that if $p\in\left]x y\right[$, then $\angk pxy=\pi$.
 Applying Alexandrov's lemma and $\CBB(0)$ comparison, we get the following claim and its corollary.
 
-\begin{thm}{Claim}
+\begin{thm}{Claim}\label{clm:angle-mono}
 If $p,x,y,z$ are points in a $\CBB(0)$ such that $p\in\left]x y\right[$, then 
 \[\angk xyz\le \angk xpz.\]
 \end{thm}
@@ -268,7 +269,7 @@ Show that $f$ is nonincreasing in each argument.
 
 Note that \ref{ex:noncreasing} implies the following generalization of \ref{thm:poly-cbb}.
 
-\begin{thm}{Claim}
+\begin{thm}{Claim}\label{clm:angle-defined}
 For any hinge $\hinge p x y$ in a $\CBB(0)$ space,
 the angle measure $\mangle\hinge p x y$ is defined, and
 \[\mangle\hinge p x y\ge \angk p x y.\]
@@ -278,6 +279,33 @@ the angle measure $\mangle\hinge p x y$ is defined, and
 \begin{thm}{Exercise}\label{ex:0-angle}
 Let $\hinge p x y$ be a hinge in a $\CBB(0)$ space.
 Suppose $\mangle\hinge p x y=0$ show that $[px]\subset [py]$ or $[py]\subset [px]$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:pi-angle}
+Let $[xy]$ be a geodesic in a $\CBB(0)$ space.
+Suppose $z\in \left]xy\right[$ show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:adjacent-CBB}
+Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in a $\CBB(0)$ space.
+Show that
+\[\mangle\hinge pxz+\mangle\hinge pyz= \pi.\]
+\end{thm}
+
+
+\begin{thm}{Exercise}
+\label{ex:pxyvw}
+Let 
+$p,x,y$ in a $\CBB(0)$ space
+and $v,w\in \left]xy\right[$.
+Show that  
+\[
+\angk xyp=\angk xvp
+\quad\Longleftrightarrow\quad
+\angk xyp=\angk xwp.
+\]
+
 \end{thm}
 
 Recall that a \index{triangle}\emph{triangle} $\trig xyz$ in a space $\spc{X}$ 
