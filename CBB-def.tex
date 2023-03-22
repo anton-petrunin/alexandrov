@@ -193,16 +193,18 @@ A metric space $\spc{X}$ has \emph{nonnegative curvature} in the sense of Alexan
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
-holds for any quadruple $p,x,y,z\in\spc{X}$ such that $p$ is distinct from $x$, $y$, and $z$. 
+holds for any quadruple $p,x,y,z\in\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
 
 The inequality \ref{eq:CBB-comparison} is called \emph{$\CBB(0)$ comparison} for the quadruple $p,x,y,z$.
 If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
 $\CBB(1)$ and $\CBB(-1)$ comparisons.
+(Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
+but for $\angk  pxy_{\SSS^2}$ we need in addition, $\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi$.)
 
-(More generally, one may apply this definition to $\MM^2(\kappa)$ --- the model plane of curvature $\kappa$, defined as follows:
+More generally, one may apply this definition to $\MM^2(\kappa)$ --- the model plane of curvature $\kappa$, defined as follows:
 $\MM(0)=\EE^2$,
 if $\kappa>0$, then $\MM(\kappa)$ is the sphere of radius $\tfrac{1}{\sqrt{\kappa}}$ and if $\kappa<0$, then it is Lobachevsky plane rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$.
-This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.)
+This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
 \end{thm}
 
 
@@ -242,7 +244,7 @@ To do this we will need to introduce the convergence of subsets in Euclidean spa
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Show that a metric space $\spc{X}$ is $\Alex0$
 if and only if for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$ 
-there is a quadruple of points $q,y_1,y_2,y_3\in\EE^2$
+there is a quadruple of points $q,y_1,y_2,y_3\in\EE^3$
 such that 
 \[\dist{p}{x_i}{\spc{X}}\ge\dist{q}{y_i}{\EE^2} 
 \quad \text{and}\quad
