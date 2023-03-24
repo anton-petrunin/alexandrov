@@ -6,7 +6,7 @@
 The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
 The latter notation is used if we need to emphasize 
 that the distance is taken in the space~${\spc{X}}$.
-The function $(x,y)\mapsto \dist{x}{y}{\spc{X}}$ is called \emph{metric};
+The function $(x,y)\mapsto \dist{x}{y}{\spc{X}}$ is called \index{metric}\emph{metric};
 it has to meet the following conditions for any three points $x,y,z\in \spc{X}$:
 
 \begin{subthm}{metric>=0}
@@ -95,10 +95,10 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 \section{Baby Toponogov}
 
-Recall that \emph{polyhedral space} is a geodesic space that admits a finite triangulation such that each simplex is isometric to a simplex in a Euclidean space.
-If, in addition, it is homeomorphic to a surface (without boundary), then it is called a \emph{polyhedral surface}.
-A point on a polyhedral surface with nonzero curvature is called an \emph{essential vertex}.
-Any other point on the surface will be called \emph{regular}.
+Recall that \index{polyhedral space}\emph{polyhedral space} is a geodesic space that admits a finite triangulation such that each simplex is isometric to a simplex in a Euclidean space.
+If, in addition, it is homeomorphic to a surface (without boundary), then it is called a \index{polyhedral surface}\emph{polyhedral surface}.
+A point on a polyhedral surface with nonzero curvature is called an \index{essential vertex}\emph{essential vertex}.
+Any other point on the surface will be called \index{regular point}\emph{regular}.
 Note that \textit{any regular point has a neighborhood that is isometric to an open set in the Euclidean plane}.
 
 \begin{thm}{Exercise}\label{ex:poly+geod}
@@ -188,14 +188,14 @@ It remains to apply~\ref{ex:concave-loc}.
 \section{Definition}
 
 \begin{thm}{Definition}\label{def:CBB}
-A metric space $\spc{X}$ has \emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$) if the inequality 
+A metric space $\spc{X}$ has \index{$\CBB$}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$) if the inequality 
 \[\angk  pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
 holds for any quadruple $p,x,y,z\in\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
 
-The inequality \ref{eq:CBB-comparison} is called \emph{$\CBB(0)$ comparison} for the quadruple $p,x,y,z$.
+The inequality \ref{eq:CBB-comparison} is called \index{$\CBB(0)$ comparison}\emph{$\CBB(0)$ comparison} for the quadruple $p,x,y,z$.
 If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
 $\CBB(1)$ and $\CBB(-1)$ comparisons.
 (Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,

@@ -8,8 +8,8 @@ Further, we sketch a proof of the Alexandrov embedding theorem.
 
 \section{Cauchy theorem}
 
-Further, \emph{surfaces} of convex polyhedrons will be considered with \emph{intrinsic metric}; it is defined as the length of a shortest path on the surface between points.
-Shortest paths parametrized by arclength will be called \emph{geodesics}; 
+Further, \textit{surfaces} of convex polyhedrons will be considered with \index{intrinsic metric}\emph{intrinsic metric}; it is defined as the length of a shortest path on the surface between points.
+Shortest paths parametrized by arclength will be called \index{geodesic}\emph{geodesics}; 
 this term has a slightly different meaning in Riemannian geometry.
  
 \begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be two non-degenerate convex polyhedrons in $\EE^3$;
@@ -34,7 +34,7 @@ assume the contrary.
 
 The graph $\Gamma$ is embedded into $P$, which is homeomorphic to the sphere.
 In particular, the edges coming from one vertex have a natural cyclic order. 
-Given a vertex $v$ of $\Gamma$, count the \emph{number of sign changes} around $v$;
+Given a vertex $v$ of $\Gamma$, count the \textit{number of sign changes} around $v$;
 that is, the number of consequent pairs edges with different signs. 
 
 \begin{thm}{Local lemma}\label{lem:local}
@@ -294,7 +294,7 @@ that is, one can get from any vertex to any other vertex by walking along edges.
 (If not, pass to a connected component of $\Gamma$.)
 
 Denote by $k$ and $l$ the number of vertices and edges in $\Gamma$.
-Denote by $m$ the number of \emph{regions} that $\Gamma$ cuts from $P$.
+Denote by $m$ the number of \textit{regions} that $\Gamma$ cuts from $P$.
 Since $\Gamma$ is connected, each region is homeomorphic to an open disc.%
 \begin{thm}{Exercise}
 Prove the last statement.
@@ -339,11 +339,11 @@ Moreover any isometry between surfaces of convex polyhedrons can be extended to 
 
 \parit{Needed modifications in the proof of \ref{thm:cauchy}.}
 Suppose $\iota\:P\to P'$ be an isometry between surfaces of $K$ and $K'$.
-Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$; further, these will be called \emph{fake} edges.
+Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$; further, these will be called \index{fake edge}\emph{fake} edges.
 The marked lines divide $P$ into convex polygons, and the restriction of $\iota$ to each polygon is a rigid motion.
 These polygons play the role of faces in the proof above.
 
-A vertex of the obtained graph can be a vertex of $K$ or it can be a \emph{fake} vertex;
+A vertex of the obtained graph can be a vertex of $K$ or it can be a fake vertex;
 that is, it might be an intersection of an edge and a fake edge.
 
 \begin{figure}[ht!]
@@ -371,7 +371,7 @@ can be extended to an isometry of $\EE^3$.
 \section{Existence}\label{sec:Alexandrov-existence}
 
 Let $P$ be a surface with a polyhedral metric.
-The \emph{curvature} of a point $p\in P$ is defined as $2\cdot \pi -\theta$,
+The \index{curvature}\emph{curvature} of a point $p\in P$ is defined as $2\cdot \pi -\theta$,
 where $\theta$ is the total angle around $p$.
 
 \begin{thm}{Exercise}\label{ex:sphere-with-pos}
@@ -392,7 +392,7 @@ all faces of $T$ are congruent;
  
 \end{thm}
 
-Alexandrov's theorem states that the converse holds if one includes in the consideration \emph{twice covered polygons}.
+Alexandrov's theorem states that the converse holds if one includes in the consideration \textit{twice covered polygons}.
 In other words, we assume that a polyhedron can degenerate to a plane polygon;
 in this case, its surface is defined as two copies of the polygon glued along the boundaries.
 Intuitively, one can regard these copies as different sides of the polygon.
@@ -429,7 +429,7 @@ Since any polyhedron has at least 3 vertices, the space $\mathbf{K}$ admits a su
 The space of polyhedral metrics on the sphere with nonnegative curvature will be denoted by $\mathbf{P}$.
 The metrics in $\mathbf{P}$ will be considered up to an isometry, and the whole space $\mathbf{P}$ will be equipped with the natural topology (again, an intuitive meaning of closeness of two metrics is sufficient).
 
-A point on the sphere with positive curvature will be called an \emph{essential vertex}.
+A point on the sphere with positive curvature will be called an \index{essential vertex}\emph{essential vertex}.
 The subset of $\mathbf{P}$ of all metrics with exactly $n$ essential vertices will be denoted by $\mathbf{P}_n$.
 It is easy to see that any metric in $\mathbf{P}$ has at least 3 essential vertices.
 Therefore $\mathbf{P}$ is subdivided into countably many subsets
@@ -452,7 +452,7 @@ the map $\iota$ induces a bijection between $\mathbf{K}_n$ and~$\mathbf{P}_n$.
 
 The proof is based on a construction of a one-parameter family of polyhedrons that starts at an arbitrary polyhedron
 and ends at a polyhedron with its surface isometric to the given one.
-This type of argument is called the \emph{continuity method}; it is often used in the theory of differential equations.
+This type of argument is called the \textit{continuity method}; it is often used in the theory of differential equations.
 
 
 \parit{Sketch.}
@@ -482,13 +482,13 @@ that is, it maps any open set in $\mathbf{K}_n$ to an open set in $\mathbf{P}_n$
 In particular, for any $n\ge 3$, the image $\iota(\mathbf{K}_n)$ is open in~$\mathbf{P}_n$.
 \end{thm}
 
-This statement is very close to the so-called \emph{invariance of domain theorem};
+This statement is very close to the so-called \textit{invariance of domain theorem};
 the latter states that a continuous injective map between manifolds of the same dimension is open.
 
 Recall that $\iota$ is injective.
 The proof of the invariance of domain theorem can be adapted to our case since both spaces $\mathbf{K}_n$ and $\mathbf{P}_n$ are $(3\cdot n-6)$-dimensional and both look like manifolds, altho, formally speaking, they are \textit{not} manifolds.
-In a more technical language, $\mathbf{K}_n$ and $\mathbf{P}_n$ have the natural structure of $(3\cdot n-6)$-dimensional \emph{orbifolds},
-and the map $\iota$ respects the \emph{orbifold structure}.
+In a more technical language, $\mathbf{K}_n$ and $\mathbf{P}_n$ have the natural structure of $(3\cdot n-6)$-dimensional \textit{orbifolds},
+and the map $\iota$ respects the \textit{orbifold structure}.
 
 We will only show that both spaces $\mathbf{K}_n$ and $\mathbf{P}_n$ are $(3\cdot n-6)$-dimensional.
 

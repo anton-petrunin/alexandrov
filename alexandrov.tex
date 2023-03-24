@@ -1,5 +1,8 @@
 \documentclass[twoside]{book}
 
+%\newcommand{\spell}[2]{#1} %spell
+\newcommand{\spell}[2]{#2} %notes
+
 
 \def\thetitle{Elements of Alexandrov geometry}
 \def\theauthors{Anton Petrunin}
@@ -23,21 +26,25 @@ pdfauthor={\theauthors}
 %\overfullrule=100mm
 
 \begin{document}
-%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\emph[1]{#1}
+\spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\emph[1]{#1}}{}
+
 
 
 \thispagestyle{empty}
-\include{hwa}
+\spell{}{\include{hwa}}
 \thispagestyle{empty}
 \tableofcontents
 \thispagestyle{empty}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\include{embedding-theorem}
+\spell{}{\include{embedding-theorem}
 \include{CBB-def}
 \include{CBB-angles}
 \include{globalization}
+}
+\include{concave-fun}
 
 {
 \input{alexandrov.ind}

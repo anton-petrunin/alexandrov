@@ -491,4 +491,29 @@ drawdblarrow (.25[z.d,z.a]{left}..tension 1.4..(.75)[z.d,z.a]{right}) shifted (-
 
 endfig;
 
+
+beginfig(1205) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z.v=(1,0)*u;
+z.vv=2.2*z.v;
+z.u=(.6,1.1)*u;
+z.w=.4[z.v,z.u];
+
+labelarcsprof(z.u,z.p,z.v, 17, 2, btex $\alpha$ etex);
+
+draw z.vv--z.p--z.u--z.v;
+
+dOt z.vv,z.p,z.u,z.v,z.w;
+
+label.bot(btex $\tilde p$ etex, z.p);
+label.top(btex $\tilde u$ etex, z.u);
+label.bot(btex $\tilde v$ etex, z.v);
+label.bot(btex $\tilde q$ etex, z.vv);
+label.urt(btex $\tilde w$ etex, z.w);
+endfig;
+
 end
