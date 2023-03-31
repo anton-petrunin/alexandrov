@@ -542,4 +542,36 @@ Dot (0,0)*u;
 
 endfig;
 
+beginfig(3005) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.q=origin;
+z.p=(5,0)*u;
+z.y=.7*z.p;
+z.x=(1,2)*u;
+z.xx=.35*z.x;
+z.b=.4*z.y;
+z.bb=z.xx+abs(z.b)*unitvector(z.y-z.xx);
+
+labelarcsprof(z.p,z.q,z.x, 17, 2, btex $\theta$ etex);
+
+draw z.p--z.q--z.x;
+draw z.xx--z.y;
+
+rimmark2(z.q--z.b);
+rimmark2(z.xx--z.bb);
+
+dOt z.x,z.xx,z.y,z.p,z.q,z.b,z.bb;
+
+label.rt(btex $p$ etex, z.p);
+label.llft(btex $q$ etex, z.q);
+label.bot(btex $y$ etex, z.y);
+label.top(btex $x$ etex, z.x);
+label.ulft(btex $x_n$ etex, z.xx);
+label.bot(btex $z$ etex, z.b);
+label.urt(btex $z_n$ etex, z.bb);
+endfig;
+
 end
