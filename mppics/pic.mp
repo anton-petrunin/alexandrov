@@ -516,4 +516,30 @@ label.bot(btex $\tilde q$ etex, z.vv);
 label.urt(btex $\tilde w$ etex, z.w);
 endfig;
 
+beginfig(1215) 
+save u,p,n;
+path p[];
+u:=.5cm;
+n:=3;
+
+
+
+drawarrow (-n,0)*u--(n,0)*u;
+drawarrow (0,-n)*u--(0,n)*u;
+
+drawarrow (2,2)*u--(1,1)*u pensemibold;
+drawarrow (-2,2)*u--(-1,1)*u pensemibold;
+drawarrow (2,-2)*u--(1,-1)*u pensemibold;
+drawarrow (-2,-2)*u--(-1,-1)*u pensemibold;
+
+drawarrow (2,0)*u--(1,0)*u pensemibold;
+drawarrow (-2,0)*u--(-1,0)*u pensemibold;
+drawarrow (0,-2)*u--(0,-1)*u pensemibold;
+drawarrow (0,2)*u--(0,1)*u pensemibold;
+
+dOt (2,2)*u,(-2,2)*u,(2,-2)*u,(-2,-2)*u,(2,0)*u,(-2,0)*u,(0,-2)*u,(0,2)*u;
+Dot (0,0)*u;
+
+endfig;
+
 end

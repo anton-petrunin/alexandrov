@@ -15,9 +15,10 @@ It could be also defined via existence of (local) upper \index{supporting functi
 that is, $\ell(t_0)\z= h(t_0)$ and $\ell(t)\ge h(t)$ for any $t$ (in a neighborhood of $t_0$)}.
 
 The equivalence of these definitions is assumed to be known.
+We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
+
 
 \section{Function comparison}
-
 
 A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined in an open subset of $\spc{L}$}.
 The domain of definition of a function $f$ will be denoted by $\Dom f$.
@@ -173,7 +174,7 @@ Choose a unit-speed geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
 \[(\dd_pf)(\xi)\df(f\circ\gamma)^+(0),\]
-here $(f\circ\gamma)^+$ denoted right derivative of $(f\circ\gamma)$;
+here $(f\circ\gamma)^+$ denotes the right derivative of $(f\circ\gamma)$;
 it is defined since $f$ is semiconcave.
 
 By the following exercise, the value $(\dd_pf)(\xi)$ is defined; that is, it does not depend on the choice of $\gamma$.
@@ -217,9 +218,10 @@ $(\dd_p f)(w)\le \<g,w\>$ for any $w\in \T_p$, and
 \end{subthm}
 
 \begin{subthm}{}
-$(\dd_p f)(g) = \<g,g\> .$
+$(\dd_p f)(g) = \<g,g\>.$
 \end{subthm}
 \end{thm}
+
 
 \begin{thm}{Proposition}\label{prop:grad-exist}
 Suppose that a semiconcave function $f$ is defined in a neighborhood of a point $p$ in a $\CBB(\kappa)$ space.
@@ -239,6 +241,11 @@ where
 
 \end{thm}
 
+Note that in Euclidean space we have
+\[|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}.\]
+The right-hand side makes sense in any Euclidean cone,
+but the sum in the left-hand side does not.
+
 \parit{Proof.}
 We will assume $\kappa=0$;
 the general case requires only minor modifications.
@@ -247,7 +254,7 @@ We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, t
 {
 
 \begin{wrapfigure}{r}{34 mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1205}
 \vskip0mm
@@ -267,7 +274,7 @@ Prepare a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$
 Note that 
 \[\dist{\tilde p}{\tilde w}{}
 =
-\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
+\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\eqlbl{eq:|p-w|=}\]
 
 We can assume that there are geodesics in the directions of $u$ and $v$;
 the latter follows since the geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$.
@@ -310,20 +317,26 @@ $\angk{v_t}p{w_t}
 and thus 
 \[\dist{p}{w_t}{}=t\cdot\dist{\tilde p}{\tilde w}{}+o(t).\]
 
+Without loss of generality, we can assume that $f(p)=0$.
 Since $f$ is $\lambda$-concave, we have 
 \begin{align*}
 2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
 \\
-&=2\cdot f(p)
-+t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
+&=t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
 \end{align*}
  
 Applying $\lambda$-concavity of $f$, we have
-\[(\dd_p f)(\dir p{w_t})
+\begin{align*}
+(\dd_p f)(\dir p{w_t})
+&\ge 
+\frac{f(w_t)-\tfrac\lambda2\cdot |p-w_t|^2}{|p-w_t|}
 \ge 
+\\
+&\ge
 \frac{t\cdot[(\dd_p f)(u)+(\dd_p f)(v)]
-+o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}.\]
-The key lemma follows.
++o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}.
+\end{align*}
+By \ref{eq:|p-w|=}, the key lemma follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:first-var-CBB}
@@ -332,7 +345,7 @@ Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x
 Show that
 \[\dist{y}{\gamma(t)}{}
 =
-\dist{q}{y}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
+\dist{y}{q}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
 Conclude that 
 \[(\dd_q\distfun_y)(w)=-\langle\dir qp,w\rangle\]
 for any $w\in \T_x$
@@ -377,6 +390,51 @@ Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
 that is, the sequence $\xi_n$ is Cauchy.
 Clearly $\overline{\xi}=\lim_n\xi_n$ meets \ref{overlinexi}.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:convergence-grad}
+Let $f$ and $g$ be locally Lipschitz semiconcave functions defined in a neighborhood of a point $p$ in a $\CBB$ space.
+Show that 
+\[\dist[2]{\nabla_p f}{\nabla_p g}{\T_p}
+\le 
+s\cdot(|\nabla_p f|+|\nabla_p g|),\]
+where
+\[s=\sup\set{|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
+
+Conclude that if the sequence of restrictions $\dd_p f_n|_{\Sigma_p}$ converges uniformly, then $\nabla_pf_n$ converges as $n\to\infty$.
+Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave and locally Lipschitz. 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:semicontinuous-grad}
+Let $f$ be a locally Lipschitz semiconcave function on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+
+\begin{subthm}{}
+Suppose $s\ge 0$.
+Show that $|\nabla_xf|> s$ if and only if  
+\[f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2\]
+for some point $y$; here $\ell=\dist{x}{y}{}$.
+\end{subthm}
+
+\begin{subthm}{} Show that $x\mapsto|\nabla_xf|$ is lower semicontinuous;
+that is, if $x_n\z\to x_\infty$, then
+\[|\nabla_{x_\infty}f|\le \liminf_{n\to\infty} |\nabla_{x_n}f|.\]
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:grad-dist}
+Let $p$ be a point in a complete geodesic $\CBB(\kappa)$ space $\spc{L}$ and $f=\distfun_p$.
+
+\begin{subthm}{}
+Show that $|\nabla_xf|=1$
+for $x$ in a dense G-delta set.
+\end{subthm}
+
+\begin{subthm}{}
+Show that if $|\nabla_xf|=1$, then $\dd_xf(w)= \langle\nabla_xf,w\rangle$ for any $w\in \T_x$.
+\end{subthm}
+
+
+\end{thm}
 
 \section{Comments}
 
