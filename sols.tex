@@ -2,7 +2,7 @@
 
 \chapter{Solutions}
 
-\parbf{\ref{ex:first-var-CBB};} 
+\parbf{\ref{ex:first-var-CBB}.} 
 Let $\theta=\mangle\hinge q p x$.
 We need to prove two inequalities
 \begin{align*}
@@ -51,3 +51,46 @@ By  $\CBB(0)$ comparison,
 \[\dist{q}{x_n}{}<\dist{p}{q}{}-\delta_2\]
 for some $\delta_2>0$ and all large $n$.
 Since $\dist{q}{x_n}{}\to 0$, we arrive at a contradiction with the triangle inequality.
+
+\parbf{\ref{ex:|antisum|}.}
+By the definition of anti-sum, we have
+\begin{align*}
+\langle u,u\rangle +\langle v,u\rangle +\langle w,u\rangle &\ge 0,
+\\
+\langle u,v\rangle +\langle v,v\rangle +\langle w,v\rangle &\ge 0,
+\\
+\langle u,w\rangle +\langle v,w\rangle +\langle w,w\rangle &= 0.
+\end{align*}
+Add the first two inequalities and subtract the last identity.
+
+\parbf{\ref{prop:two-opp}.}
+Applying \ref{prop:opposite}, we get $\langle v,w\rangle=-\langle u,w\rangle=|u|^2$.
+Since $|u|\z=|v|\z=|w|$, we get
+\begin{align*}
+|v-w|^2&=|v|^2+|w|^2-2\cdot \langle v,w\rangle=
+\\
+&=0.
+\end{align*}
+
+
+\parbf{\ref{ex:3<,>=0}.} 
+Note that 
+\begin{align*}
+\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle &\ge 0,
+\\
+\langle u,-x\rangle +\langle v,-x\rangle +\langle w,-x\rangle &\ge 0.
+\end{align*}
+By \ref{prop:opposite}, $\langle y,x\rangle=-\langle y ,-x\rangle$ for any $y\in \T_p$.
+Hence the result.
+
+
+\parbf{\ref{ex:-u}.}
+If $u=-u^*$, then $|u^*|= |u|$; it remains to prove the converse.
+
+Note that $\langle u^*,u^*\rangle +\langle u,u^*\rangle = 0$
+and $\langle u^*,u\rangle +\langle u,u\rangle \ge 0$.
+(Hence $|u^*|\le |u|$, but we do not need it.)
+
+If $|u^*|= |u|$, then $|u^*|^2=|u|^2=-\langle u,u^*\rangle$.
+Therefore $\mangle(u,u^*)=\pi$ or $u=u^*=0$.
+Hence $u=-u^*$.
