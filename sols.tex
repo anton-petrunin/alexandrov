@@ -1,0 +1,53 @@
+\appendix
+
+\chapter{Solutions}
+
+\parbf{\ref{ex:first-var-CBB};} 
+Let $\theta=\mangle\hinge q p x$.
+We need to prove two inequalities
+\begin{align*}
+\dist{y}{\gamma(t)}{}
+&\le
+\dist{y}{q}{}-t\cdot \cos\theta+o(t),
+\\
+\dist{y}{\gamma(t)}{}
+&\ge
+\dist{y}{q}{}-t\cdot \cos\theta+o(t).
+\end{align*}
+The first one follows from \ref{ex:first-var}; it remains to prove the second one.
+Arguing by contradiction, assume there is a sequence $t_n\to 0+$ such that for some fixed $\eps>0$
+\[\angk{q}{x_n}{y}<\theta-\eps\]
+for any $x_n=\gamma(t_n)$.
+Since $\dist{q}{x_n}{}\to0$, we get
+\[\mangle\hinge{x_n}{q}{y}>\pi-\theta+\tfrac\eps2,
+\quad\text{and therefore}\quad
+\mangle\hinge{x_n}{x}{y}<\theta-\tfrac\eps2\eqlbl{eq:<theta-eps/2}
+\]
+for all large $n$.%
+\footnote{If the space is compact, then a subsequence of $[x_ny]$ should converge to a geodesic from $q$ to $y$ that makes angle $<\theta$ to $[qx]$.
+It follows that there is a pair of distinct geodesics from $q$ to $y$ which contradicts \ref{ex:pi-angle}.
+With the use of ultralimits (see for example \cite{petrunin2023pure}), this argument works in the general case.}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-3005}
+\end{figure}
+
+Without loss of generality, we may assume that 
+\[\angk qxz>\theta-\tfrac\eps{10}\eqlbl{eq:>theta-eps/10}\]
+for some point $z\in \left]qy\right]$.
+(If it does not hold, shift $x$ to $q$.)
+
+For each $n$, choose $z_n\in \left]x_ny\right]$ such that $\dist{x_n}{z_n}{}=\dist{q}{z}{}$.
+Applying the triangle inequality, \ref{eq:<theta-eps/2}, \ref{eq:>theta-eps/10}, and the $\CBB(0)$ comparison, we get
+\[\dist{z}{z_n}{}\ge\dist{a}{z}{}-\dist{a}{z_n}{} >\delta_0\]
+for some $\delta_0>0$ and all large $n$.
+Hence
+\[\mangle\hinge y{x_n}{q}=\mangle\hinge y{z_n}{z}\ge \angk{y}{z_n}{z}>\delta_1,
+\quad\text{and therefore}\quad
+\mangle\hinge y{x_n}{p}<\pi-\delta_1\]
+for some $\delta_1>0$ and all large $n$.
+By  $\CBB(0)$ comparison,
+\[\dist{q}{x_n}{}<\dist{p}{q}{}-\delta_2\]
+for some $\delta_2>0$ and all large $n$.
+Since $\dist{q}{x_n}{}\to 0$, we arrive at a contradiction with the triangle inequality.
