@@ -1,11 +1,15 @@
 \chapter{Polyhedral spaces}\label{chap:poly}
 
+This lecture is nearly a copy of \cite[Sections 3.4--3.8]{alexander-kapovitch-petrunin-2019};
+here we describe a set of rules for gluing Euclidean cubes that produce a 
+locally $\CAT(0)$ space and use these rules to construct exotic examples of aspherical manifolds.
+
 \section{Products and cones and suspension}
 \label{sec:Products and cones}
 
 Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
 $\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ where $u\in\spc{U}$ and $v\in \spc{V}$ 
-with the metric defined by Pythogorean theorem
+with the metric defined by Pythagorean theorem
 \[\dist{(u_1,v_1)}{(u_2,v_2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u_1}{u_2}{\spc{U}}+\dist[2]{v_1}{v_2}{\spc{V}}}.\]
 
 \begin{thm}{Proposition}\label{ex:product-CAT}
@@ -74,7 +78,7 @@ and whose metric is given by the cosine rule
 \]
 where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
 Points in $\spc{V}$ might be called \emph{vectors},
-they come with norm, scalar product and multiplication by nonnegative reals.
+they come with the norm, scalar product, and multiplication by nonnegative reals.
 The space $\spc{U}$ can be identified with the subset $x\in \spc{V}$ such that $|x|=1$.
 
 \begin{thm}{Proposition}\label{ex:cone+susp}
@@ -126,7 +130,7 @@ Suppose that $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ are defined as a
 Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with origin at its boundary. 
 Then we can choose positive values $a$, $b$, $c$, and $d$ such that the points $a\cdot \tilde p'$, $b\cdot \tilde q'$, $c\cdot \tilde x'$, $d\cdot \tilde y'$ lie in one plane.
 Consider the corresponding points $a\cdot  p'$, $b\cdot  q'$, $c\cdot  x'$, $d\cdot y'$ in $\Cone\spc{U}$.
-Applying the $\CAT(0)$ comparison for the these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
+Applying the $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
 
 It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not in a half-space.
 Fix $\tilde z'\in [\tilde x' \tilde y']_{\SSS^2}$.
@@ -138,7 +142,7 @@ Observe that
 \dist{\tilde p'}{\tilde y'}{\SSS^2}+\dist{\tilde q'}{\tilde y'}{\SSS^2}
 &\le
 \dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}.\end{align*}
-That is, in this case, the $\CAT(1)$ comparison follow from the triangle inequality.
+That is, in this case, the $\CAT(1)$ comparison follows from the triangle inequality.
 \qeds
 
 Suspension is a spherical analog of cone construction.
@@ -178,8 +182,7 @@ a \index{polyhedral space}\emph{(spherical) polyhedral space}
 if it admits a finite triangulation $\tau$ 
 such that every simplex in $\tau$ is isometric to a simplex in a Euclidean space (or respectively a unit sphere) of appropriate dimension.
 
-By a 
-\index{triangulation of a polyhedral space}\emph{triangulation of a polyhedral space} 
+By \index{triangulation of a polyhedral space}\emph{triangulation of a polyhedral space}, 
 we will always understand a triangulation as above. 
 \end{thm}
 
@@ -200,7 +203,7 @@ denoted by $\Link_\sigma$.
 If $m$ is  the dimension of $\sigma$,
 then the set of vertices of $\Link_\sigma$
 is formed by the $(m+1)$-simplices that  contain $\sigma$;
-the set of its edges are formed by the $(m+2)$-simplices 
+the set of its edges is formed by the $(m+2)$-simplices 
 that contain $\sigma$; and so on.
 
 The link $\Link_\sigma$
@@ -253,7 +256,7 @@ the \index{no-triangle condition}\emph{no-triangle condition}.
 
 Note that every flag complex is determined by its one-skeleton.
 Moreover, for any graph, its \index{clique}\emph{cliques} (that is, complete subgraphs) define a flag complex.
-For that reason  flag complexes are also called  \index{clique complex}\emph{clique complexes}.
+For that reason, flag complexes are also called  \index{clique complex}\emph{clique complexes}.
 
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
@@ -270,7 +273,7 @@ $\mathcal{S}$ as well as all the links of all its simplices
 satisfy the no-triangle condition.
 \end{thm}
 
-From the definition of flag complex 
+From the definition of flag complex, 
 we get the following.
 
 \begin{thm}{Observation}\label{obs:link-of-flag}
@@ -317,7 +320,7 @@ if and only if $\tau$ is flag.
 \end{thm}
 
 \parit{Proof; only-if part.} 
-Assume there are three vertices $v^1,v^2$ and $v^3$ of $\tau$
+Assume there are three vertices $v^1$, $v^2$, and $v^3$ of $\tau$
 that are pairwise joined by edges 
 but do not span a triangle.
 Note that in this case 
@@ -330,7 +333,7 @@ Note that in this case
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
 The product
-of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
+of the geodesics $[v^1v^2]$, $[v^2v^3]$, and $[v^3v^1]$
 forms a locally geodesic loop in~$\spc{P}$ of length $\tfrac32\cdot\pi$.
 \end{clm}
 
@@ -358,8 +361,8 @@ Consider the maximal arc $\gamma_v$ of $\gamma$
 that contains the point $\gamma(t_0)$
 and runs in $\Star_v$.
 Note that the distance $\dist{v}{\gamma_v(t)}{\spc{P}}$ behaves in exactly the same way 
-as the distance from the north pole in~$\mathbb{S}^2$ to a geodesic in the north hemisphere;
-that is, there is a geodesic $\tilde\gamma_v$ in the north hemisphere of $\mathbb{S}^2$ such that for any $t$ we have
+as the distance from the north pole in~$\mathbb{S}^2$ to a geodesic in the northern hemisphere;
+that is, there is a geodesic $\tilde\gamma_v$ in the northern hemisphere of $\mathbb{S}^2$ such that for any $t$ we have
 \[\dist{v}{\gamma_v(t)}{\spc{P}}
 =
 \dist{n}{\tilde\gamma_v(t)}{\mathbb{S}^2},\]
@@ -397,7 +400,7 @@ if $\tau$ is flag.
 \begin{thm}{Exercise}\label{ex:polyhedron-glue}
 Let $P$ be a convex polyhedron in $\EE^3$ with $n$ faces $F_1,\dots, F_n$.
 Suppose that each face of $P$ has only obtuse or right angles.
-Let us take $2^n$ copies of $P$ indexed by $n$-bit array.
+Let us take $2^n$ copies of $P$ indexed by an $n$-bit array.
 Glue two copies of $P$ along $F_i$ if their arrays differ only in $i$-th bit.
 Show that the obtained space is a locally $\CAT(0)$ topological manifold.
 \end{thm}
@@ -411,8 +414,8 @@ and  Karen Vogtmann \cite{billera-holmes-vogtmann}.
 Let $\spc{T}_n$ be the set of all metric trees with 
 $n$ end vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $t$ with end vertices $a^1,\dots,a^n$ 
-and all  other vertices of degree 3,  
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $t$ with end vertices $a^1,\dots$, $a^n$,
+and all other vertices of degree 3,  
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge vanishes, we assume that this edge degenerates;
 such a tree can be also described using a different topological tree~$t'$.
@@ -485,7 +488,7 @@ is isometric to  ${\spc{S}}$
 equipped with the spherical right-angled metric.
 
 In particular, if $\spc{S}$ is a flag complex,
-then $\spc{Q}$ is a locally $\CAT(0)$
+then $\spc{Q}$ is a locally $\CAT(0)$,
 and therefore its universal cover $\tilde{\spc{Q}}$ is $\CAT(0)$.
 \end{thm}
 
@@ -526,18 +529,17 @@ Recall that $\spc X$ is called
 \index{simply connected space at infinity}\emph{simply connected at infinity} 
 if for any compact set $K\subset\spc X$
 there is a bigger compact set $K'\supset K$
-such that  $\spc X\setminus K'$ is path connected 
+such that  $\spc X\setminus K'$ is path-connected 
 and any loop which lies in $\spc X\setminus K'$
 is null-homotopic in  $\spc X\setminus K$.
 
-Recall that path connected spaces are not empty by definition.
+Recall that path-connected spaces are not empty by definition.
 Therefore compact spaces are not simply connected at infinity.
 
 The following example was constructed by Michael Davis \cite{davis-1983}.
 
 \begin{thm}{Proposition}\label{prop:aspherical}
-For any  $m\ge 4$ there is a closed aspherical 
-$m$-dimensional manifold whose universal cover is not simply connected at infinity.
+For any $m\ge 4$, there is a closed aspherical $m$-dimensional manifold whose universal cover is not simply connected at infinity.
 
 In particular, the universal cover of this manifold 
 is not homeomorphic to the $m$-dimensional Euclidean space.
@@ -593,7 +595,7 @@ denote this edge by~$e$.
 
 Each edge of $\spc{S}$ has length~$\tfrac\pi2$.
 Therefore each of two circles formed by $e$ and an arc of $\gamma$
-from $\xi$ to $\zeta$ is shorter that~$\gamma$.
+from $\xi$ to $\zeta$ is shorter than~$\gamma$.
 Moreover,
 at least one of them is noncontractible 
 since $\gamma$ is 
@@ -603,7 +605,7 @@ $\gamma$ is not a shortest noncontractible circle, a contradiction.
 \claimqeds
 
 Further, note that 
-$\tilde G$ is homeomorphic to the plane, 
+$\tilde G$ is homeomorphic to the plane
 since $\tilde G$ is 
 a two-dimensional manifold without boundary which 
 by the above is $\CAT(0)$ and hence is contractible.
@@ -635,15 +637,15 @@ the complement $\spc{S}\setminus\{v\}$ is simply connected.
 \parit{Proof of \ref{prop:aspherical}.}
 Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere that  is not simply connected, and bounds a contractible smooth compact $m$-dimensional manifold~$\spc{W}$. 
 
-For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$
+For $m\ge 5$, the existence of such $(\spc{W}, \Sigma)$
 is proved by Michel Kervaire \cite{kervaire}. 
-For $m=4$ it follows from a construction of Barry Mazur~\cite{mazur}.
+For $m=4$, it follows from construction of Barry Mazur~\cite{mazur}.
 
 Pick any triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
 
 
 We can assume that $\spc{S}$ is flag; 
-otherwise pass to the barycentric subdivision 
+otherwise, pass to the barycentric subdivision 
 of $\tau$ and apply Exercise~\ref{ex:baricenric-flag}.
 
 
@@ -704,7 +706,7 @@ The universal cover of $\spc{P}$ is not simply connected at infinity.
 \end{subthm}
 \end{thm}
 
-Dale Rolfsen \cite{rolfsen} have showed that there are no three-dimensional examples of that type.
+Dale Rolfsen \cite{rolfsen} has shown that there are no three-dimensional examples of that type.
 Paul Thurston \cite{thurston} conjectured that the same holds in the four-dimensional case.
 
 \parit{Proof.}
@@ -721,7 +723,7 @@ and $\pi_1(\spc{S}\setminus\{v\})\ne0$ for some vertex $v$ in~$\spc{S}$.
 
 There is a good-looking description of polyhedral $\CAT(\kappa)$ and $\CBB(\kappa)$ spaces \cite[12.2 and 12.5]{alexander-kapovitch-petrunin-2025},
 but in fact, it is hard to check even in very simple cases.
-For example the description of those coverings of $\mathbb{S}^3$ branching at three 
+For example, the description of those coverings of $\mathbb{S}^3$ branching at three 
 great circles which are $\CAT(1)$ requires quite a bit of work \cite{charney-davis-1993} --- try to guess the answer before reading.
 
 Another example is the braid space $\spc{B}_n$ that  is the universal cover of $\CC^n$ infinitely branching in complex hyperplanes $z_i=z_j$ with the induced length metric.
