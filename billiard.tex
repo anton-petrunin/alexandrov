@@ -134,41 +134,7 @@ Show that any geodesic in $\spc{U}$ can be extended
 as a two-side infinite geodesic.
 \end{thm}
 
-A curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
-
-\begin{thm}{Proposition}\label{cor:loc-geod-are-min}
-Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space.  
-Then any local geodesic in $\spc{U}$ is a geodesic.
-
-Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local geodesic in $\spc{U}$ which is shorter than $\pi$ is a geodesic.
-\end{thm}
-
-
-\begin{wrapfigure}{r}{25mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-800}
-\end{wrapfigure}
-
-\parit{Proof.}
-Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
-Choose $a$ to be the maximal value 
-such that $\gamma$ is a geodesic on $[0,a]$.
-Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
-
-Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin (see the next section) and 
-$\dist{\gamma(0)}{\gamma(b)}{}<b$ we have
-\[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
-for all small~$\eps>0$.
-That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
-a contradiction.
-
-The spherical case is done in the same way.
-\qeds
-
 \section{Thin triangles}
-
-
 
 Let us recall the definition of thin triangles.
 
@@ -205,6 +171,38 @@ Applying \ref{ex:noncreasing-CAT}, we get that
 Therefore $ \dist{\tilde p}{\tilde q}{\EE^2}\ge \dist{p}{q}{}$.
 
 The $\CAT(1)$ argument is the same.
+\qeds
+
+A curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
+
+\begin{thm}{Proposition}\label{cor:loc-geod-are-min}
+Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space.  
+Then any local geodesic in $\spc{U}$ is a geodesic.
+
+Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local geodesic in $\spc{U}$ which is shorter than $\pi$ is a geodesic.
+\end{thm}
+
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-800}
+\end{wrapfigure}
+
+\parit{Proof.}
+Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
+Choose $a$ to be the maximal value 
+such that $\gamma$ is a geodesic on $[0,a]$.
+Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
+
+Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin (see the next section) and 
+$\dist{\gamma(0)}{\gamma(b)}{}<b$ we have
+\[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
+for all small~$\eps>0$.
+That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
+a contradiction.
+
+The spherical case is done in the same way.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex-dist}
