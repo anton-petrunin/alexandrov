@@ -94,3 +94,77 @@ and $\langle u^*,u\rangle +\langle u,u\rangle \ge 0$.
 If $|u^*|= |u|$, then $|u^*|^2=|u|^2=-\langle u,u^*\rangle$.
 Therefore $\mangle(u,u^*)=\pi$ or $u=u^*=0$.
 Hence $u=-u^*$.
+
+\parbf{\ref{ex:sba-2+2-short}}; \textit{only-if part.}
+Let us start with two model triangles $[\tilde x\tilde y\tilde p]=\modtrig(xyp)$ and $[\tilde x\tilde y\tilde q]=\modtrig(xyq)$ such that $\tilde p$ and $\tilde q$ lie on the opposite sides of the line $\tilde x\tilde y$.
+
+Suppose $[\tilde x \tilde y]$ intersects $[\tilde p\tilde q]$ at a point $\tilde z$.
+In this case by $\CAT(0)$ comparison we have that
+\[\dist{\tilde p}{\tilde q}{\EE^2}=\dist{\tilde p}{\tilde z}{\EE^2}-\dist{\tilde z}{\tilde q}{\EE^2}\le \dist{p}{q}{\spc{X}}.\]
+Hence the problem is solved.
+
+\begin{wrapfigure}{r}{30mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-6}
+\end{wrapfigure}
+
+Now suppose $[\tilde p \tilde q]$ does not intersect $[\tilde x\tilde y]$.
+Without loss of generality, we may assume that $[\tilde p \tilde q]$ crosses the line $\tilde x\tilde y$ behind $\tilde x$.
+
+Let us rotate $\tilde p$ around $\tilde x$ so that $\tilde x$ will lie between $\tilde p$ and $\tilde q$.
+It will result in decreasing the distance $\dist{\tilde p}{\tilde y}{}$,
+by the triangle inequality we have that 
+\begin{align*}
+\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{\tilde p}{\tilde x}{\EE^2}+\dist{\tilde x}{\tilde q}{\EE^2}=
+\\
+&=\dist{p}{x}{\spc{X}}+\dist{x}{q}{\spc{X}}\ge
+\\
+&\ge \dist{p}{q}{\spc{X}}.
+\end{align*}
+
+\parit{If part.}
+Suppose $\tilde p,\tilde q,\tilde x,\tilde y\in\EE^2$ satisfies the conditions.
+We can assume that $\dist{\tilde p}{\tilde x}{}+\dist{\tilde p}{\tilde y}{}+\dist{\tilde q}{\tilde x}{}+\dist{\tilde q}{\tilde y}{}$ takes maximal possible value.
+Note that in this case $\tilde p\tilde x\tilde q\tilde y$ is a convex quadrangle and 
+\begin{align*}
+\dist{\tilde p}{\tilde x}{}&=\dist{p}{x}{},
+&
+\dist{\tilde p}{\tilde y}{}&=\dist{p}{y}{},
+\\
+\dist{\tilde q}{\tilde x}{}&=\dist{q}{x}{},
+&
+\dist{\tilde q}{\tilde y}{}&=\dist{q}{y}{}.
+\end{align*}
+
+Since 
+\begin{align*}
+\dist{\tilde p}{\tilde q}{}&\ge\dist{p}{q}{},
+&
+\dist{\tilde x}{\tilde y}{}&\ge\dist{x}{y}{},
+\intertext{we get}
+\mangle\hinge{\tilde p}{\tilde x}{\tilde y}&\ge \angk{p}{x}{y},
+&
+\mangle\hinge{\tilde p}{\tilde x}{\tilde y}&\ge \angk{p}{x}{y}.
+\end{align*}
+
+Suppose $\tilde z=t\cdot \tilde x+(1-t)\cdot \tilde y$ for some $t\in[0,1]$.
+Consider the model triangles $[\dot p\dot x\dot y]=\modtrig(pxy)$ and $[\dot q\dot x\dot y]=\modtrig(qxy)$;
+let $\dot z=t\cdot \dot x+(1-t)\cdot \dot y$.
+The last inequalities imply 
+\begin{align*}
+\dist{\tilde p}{\tilde z}{}&\le \dist{\dot p}{\dot z}{},
+&
+\dist{\tilde q}{\tilde z}{}&\le \dist{\dot q}{\dot z}{}.
+\end{align*}
+Therefore
+\begin{align*}
+\dist{p}{q}{}
+&\le \dist{\tilde p}{\tilde q}{}\le
+\\
+&\le \dist{\tilde p}{\tilde z}{}+\dist{\tilde q}{\tilde z}{}\le
+\\
+&\le \dist{\dot p}{\dot z}{}+\dist{\dot q}{\dot z}{}.
+\end{align*}
+
+

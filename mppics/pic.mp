@@ -17,6 +17,75 @@ linecap:=butt;
 %filenametemplate "%j-%1c.svg";
 outputformat := "eps";
 
+beginfig(5) 
+save u;
+u:=2cm;
+
+z.x=origin;
+z.y=(1,0)*u;
+z.p=(.3,.8)*u;
+z.q=(.5,-.7)*u;
+z.pp=z.p rotated -25;
+z.ppp=z.p rotated -10;
+z.qq=z.q rotated 18;
+z.qqq=z.q rotated 8;
+
+labelarcsprof(z.y, z.x, z.pp, 12, 10, btex $\alpha$ etex);
+labelarcsprof2(z.y, z.x, z.qq, 12, 10, btex $\beta$ etex);
+rimmark(z.x--z.p,z.x--z.pp);
+rimmark2(z.x--z.q,z.x--z.qq);
+
+draw z.p--z.x--z.y--z.q;
+draw z.p--z.y;
+draw z.q--z.x;
+
+drawarrow ddarc(z.p,z.ppp,z.pp)(-4,-4);
+drawarrow ddarc(z.q,z.qqq,z.qq)(-4,-4);
+
+draw z.pp--z.y--z.qq dashed evenly;
+draw z.pp--z.qq--z.x--cycle;
+
+dOt z.x,z.y,z.p,z.q,z.pp,z.qq;
+
+label.lft(btex $\tilde x$ etex, z.x);
+label.rt(btex $\tilde y$ etex, z.y);
+label.top(btex $\tilde p$ etex, z.p);
+label.bot(btex $\tilde q$ etex, z.q);
+
+endfig;
+
+beginfig(6) 
+save u;
+u:=1.6cm;
+
+z.x=origin;
+z.y=(1,0)*u;
+z.q=(-.1,-.7)*u;
+z.pp=-.8*z.q;
+z.p=z.pp rotated 25;
+z.ppp=z.p rotated -10;
+
+
+rimmark(z.x--z.p,z.x--z.pp);
+
+draw z.p--z.x--z.y--z.q;
+draw z.p--z.y;
+draw z.q--z.x--z.pp;
+
+drawarrow ddarc(z.p,z.ppp,z.pp)(-4,-4);
+
+draw z.pp--z.y dashed evenly;
+
+
+dOt z.x,z.y,z.p,z.q,z.pp;
+
+label.lft(btex $\tilde x$ etex, z.x);
+label.rt(btex $\tilde y$ etex, z.y);
+label.top(btex $\tilde p$ etex, z.p);
+label.bot(btex $\tilde q$ etex, z.q);
+
+endfig;
+
 
 beginfig(10) 
 save u,k;
