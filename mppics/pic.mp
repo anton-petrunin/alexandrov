@@ -1120,6 +1120,33 @@ label.top(btex $\zeta$ etex, z.z);
 label.lft(btex $e$ etex, .5[z.x,z.z]);
 endfig;
 
+beginfig(1106) 
+save u,p,k;
+path p[];
+u:=1cm;
+k:=4;
+
+drawarrow (-.5,0)*u--(k,0)*u;
+drawarrow (0,-.5)*u--(0,k)*u;
+
+z.a=(3,.5)*u;
+z.b=(.4,2)*u;
+
+p1=z.a{left}..z.b{up}..tension 3..cycle;
+p2=(k*u,y.a)--subpath(0,1) of p1--(x.b,k*u)--(k,k)*u--cycle;
+
+
+hatchfill p1 withcolor (17, 2mm, -.5bp);
+hatchfill p2 withcolor (77, 2mm, -.5bp);
+draw p1;
+draw subpath (0,3) of p2;
+draw subpath (1,2) of p2 penbold;
+
+whitelabel(btex $V=\bm{f}(\spc{X})$ etex, (2,1.4)*u);
+whitelabel(btex $W=\Up V$ etex, (3,3)*u);
+label(btex {\small $\bm{f}[\spx{\bm{f}}(\Delta^k)]$} etex rotated -19, (-3,-5)+point 0.4 of p1);
+
+endfig;
 
 beginfig(1205) 
 save u,p;
