@@ -1198,6 +1198,87 @@ Dot (0,0)*u;
 
 endfig;
 
+beginfig(1305) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.q=origin;
+z.p=(0,2)*u;
+z.x=(1,2.5)*u;
+z.z=1.5*z.x-.5*z.p;
+z.y=z.x yscaled 0;
+
+draw z.q--z.p--z.z;
+draw z.y--z.x dashed evenly;
+draw ddline (z.q,z.y)(1.2,.7) pensemibold;
+drawarrow z.q--.5*z.p pensemibold;
+draw z.q--z.x;
+
+labelarcsprof(z.q,z.p,z.x, 17, 2, btex $\alpha$ etex);
+mark_rt_angle(z.p, z.q, -z.y);
+
+dOt z.p,z.q,z.x,z.y,z.z;
+
+label.lft(btex $p$ etex, z.p);
+label.lft(btex $\xi$ etex, .5*z.p);
+label.bot(btex $q$ etex, z.q);
+label.top(btex $x$ etex, z.x);
+label.rt(btex $\gamma_x$ etex, .4[z.q,z.x]);
+label.top(btex $z$ etex, z.z);
+label.bot(btex $y$ etex, z.y);
+label(btex $\spc{L}$ etex, .6*z.p-z.y);
+label.bot(btex $\partial\spc{L}$ etex, -z.y);
+endfig;
+
+beginfig(1315) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.x=(-1,0)*u;
+z.y=-z.x;
+z.xx=(-1.4,-.3)*u;
+z.yy=(-x.xx,y.xx);
+p1=z.xx..z.x..z.y..z.yy;
+
+draw ddline (z.x,z.y)(.4,.4) pensemibold;
+draw p1;
+
+draw (subpath (1,2) of p1) yscaled -1 dashed evenly;
+
+dOt z.x,z.y;
+
+label.top(btex $x$ etex, z.x);
+label.top(btex $y$ etex, z.y);
+label.top(btex $\gamma$ etex, point 1.5 of p1);
+label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
+
+endfig;
+
+beginfig(1325) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.x=(-1,0)*u;
+z.y=-z.x;
+z.p=(-.2,1)*u;
+z.a=(0,-1)*u;
+z.b=(1,1)*u;
+
+draw z.a--z.b;
+draw ddline (z.x,z.y)(.4,.4) pensemibold;
+dOt z.p;
+
+
+label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
+label(btex $\spc{L}_0$ etex, 1.3*z.x+(0,1)*u);
+label(btex $\spc{L}_1$ etex, 1.3*z.x+(0,-1)*u);
+label.ulft(btex $\gamma$ etex, .8[z.a,z.b]);
+label.rt(btex $p$ etex, z.p);
+endfig;
+
 beginfig(3005) 
 save u,p;
 path p[];

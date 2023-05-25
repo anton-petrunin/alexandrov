@@ -4,7 +4,7 @@ This lecture is nearly a copy of \cite[Sections 3.4--3.8]{alexander-kapovitch-pe
 here we describe a set of rules for gluing Euclidean cubes that produce a 
 locally $\CAT(0)$ space and use these rules to construct exotic examples of aspherical manifolds.
 
-\section{Products and cones and suspension}
+\section{Products, cones, and suspension}
 \label{sec:Products and cones}
 
 Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
@@ -109,7 +109,7 @@ Note that
 $\trig{\tilde p}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(pxy)_{\EE^2}$
 and
 $\trig{\tilde q}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(qxy)_{\EE^2}$.
-Further note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
+Further, note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
 $\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']_{\SSS^2}$.
 Therefore the $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies the 
 $\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
@@ -144,6 +144,14 @@ Observe that
 \dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}.\end{align*}
 That is, in this case, the $\CAT(1)$ comparison follows from the triangle inequality.
 \qeds
+
+A similar argument together with the globalization theorem give the following;
+we leave this statement without proof.
+
+\begin{thm}{Proposition}\label{ex:cone+CBB}
+Let $\spc{L}$ be a geodesic space.
+Then $\Cone\spc{L}$ is  $\CBB(0)$ if and only if $\spc{L}$ is $\CBB(1)$.
+\end{thm}
 
 Suspension is a spherical analog of cone construction.
 
