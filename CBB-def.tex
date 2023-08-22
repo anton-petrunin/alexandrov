@@ -45,54 +45,6 @@ A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed pa
 \parbf{Geodesic space.}
 A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
 
-\section{Triangles, hinges, and angles}
-
-\parbf{Triangles.}
-Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
-$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
-
-Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
-$\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
-Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
-If we write $\trig p q r$, it means that we have chosen such a triangle.
-
-\parbf{Model triangles.}
-Given three points $p,q,r$ in a metric space $\spc{X}$,
-let us define its \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
-(briefly, 
-$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the Euclidean plane $\EE^2$ such that
-\begin{align*}\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{p}{q}{\spc{X}},
-&
-\quad\dist{\tilde q}{\tilde r}{\EE^2}&=\dist{q}{r}{\spc{X}},
-&
-\quad\dist{\tilde r}{\tilde p}{\EE^2}&=\dist{r}{p}{\spc{X}}.
-\end{align*}
-
-The same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
-in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
-In the latter case, the model triangle is said to be defined if in addition
-\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case, the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
-
-\parbf{Model angles.}
-If 
-$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$ 
-and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
-the angle measure of 
-$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
-will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
-$\angk p q r_{\EE^2}$%
-\index{$\tilde\measuredangle$!$\angk{{*}}{{*}}{{*}}$}.
-The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$;
-in the latter case, we assume in addition that the model triangle $\modtrig(p q r)_{\SSS^2}$ is defined.
-
-We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\SSS^2$ is meant.
-
-\parbf{Hinges.} Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
-A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
-$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
-
 \section{Baby Toponogov}
 
 Recall that \index{polyhedral space}\emph{polyhedral space} is a geodesic space that admits a finite triangulation such that each simplex is isometric to a simplex in a Euclidean space.
@@ -207,8 +159,6 @@ if $\kappa>0$, then $\MM(\kappa)$ is the sphere of radius $\tfrac{1}{\sqrt{\kapp
 This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
 \end{thm}
 
-
-
 While this definition can be applied to any metric space,
 it is usually applied to geodesic spaces (or, at least, length spaces that will be defined later).
 
@@ -221,111 +171,9 @@ Show that Euclidean space $\EE^n$ is $\CBB(0)$.
 Show that a polyhedral surface is $\CBB(0)$ if and only if it has nonnegative curvature in the sense of \ref{sec:Alexandrov-existence}. 
 \end{thm}
 
-The following theorem generalizes \ref{thm:alexandrov-uni'} and \ref{thm:exist}.
-
-\begin{thm}{Theorem}\label{thm:alexandrov+pogorelov}
-A metric space $\spc{X}$ is isometric to the surface of a convex body in the Euclidean space if and only if $\spc{X}$ is a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
-
-Moreover, $\spc{X}$ determines the convex body up to congruence.
-\end{thm}
-
-As before, a convex body can degenerate to a plane figure $F$;
-in this case, its surface is defined as two copies of $F$ glued along the boundary.
-
-The main part is due to Alexadr Alexandrov~\cite{alexandrov-1948};
-its proof is an application of \ref{thm:exist} together with approximation.
-The last part is very difficult; it was proved by Aleksei Pogorelov~\cite{pogorelov}.
-
-Eventually, we will prove the only-if part of the theorem, which is the simplest part of the theorem;
-it requires only \ref{ex:sphere-with-pos} which is
-the only-if part of \ref{thm:exist}.
-To do this we will need to introduce the convergence of subsets in Euclidean space (Hausdorff convergence) and convergence of metric spaces (Gromov--Hausdorff convergence); it will be done in the next lecture.
-
-\begin{thm}{Exercise}\label{ex:(3+1)-expanding}
-Show that a metric space $\spc{X}$ is $\Alex0$
-if and only if for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$ 
-there is a quadruple of points $q,y_1,y_2,y_3\in\EE^3$
-such that 
-\[\dist{p}{x_i}{\spc{X}}\ge\dist{q}{y_i}{\EE^2} 
-\quad \text{and}\quad
-\dist{x_i}{x_j}{\spc{X}}\le\dist{y_i}{y_j}{\EE^2}\] 
-for all $i$ and $j$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:normCBB}
-Show that $\RR^2$ with metric induced by a norm is $\Alex0$ if and only if it is isometric to the Euclidean plane $\EE^2$.
-\end{thm}
-
-\section{Four-point metric spaces}
-
-Let us give a more conceptual way to think about the comparison inequality in \ref{def:CBB} and an analogous inequality for upper-curvature bound that will appear later.
 
 
-Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric spaces.
-Each element in $\mathcal{M}_4$ can be described by 6 numbers 
- --- the distances between all 6 pairs of its points, say $\ell_{i,j}$ for $1\le i< j\le 4$ modulo permutations of the index set $(1,2,3,4)$.
-These 6 numbers are subject to 12 triangle inequalities; that is,
-\[\ell_{i,j}+\ell_{j,k}\ge \ell_{i,k}\]
-holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$.
 
-The space $\mathcal{M}_4$ comes with topology.
-It can be defined as a quotient of the cone in $\RR^6$ by permutations of the 4 points of the space.
-
-\begin{wrapfigure}[7]{i}{33mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-700}
-\end{wrapfigure}
-
-Consider the subset $\mathcal{E}_4\subset \mathcal{M}_4$ of all isometry classes of 4-point metric spaces that admit isometric embeddings into Euclidean space.
-
-\begin{thm}{Advanced exercise}\label{clm:two-components-of-M4}
-The complement $\mathcal{M}_4\setminus \mathcal{E}_4$ has two connected components.
-\end{thm}
-
-Let us denote one of the components by $\mathcal{P}_4$ and the other by~$\mathcal{N}_4$.
-Here $\mathcal{P}$ and $\mathcal{N}$ stand for {}\emph{positive} 
-and {}\emph{negative curvature} because spheres have no quadruples of type $\mathcal{N}_4$ and 
-Lobachevsky space
-has no quadruples of type~$\mathcal{P}_4$.
-
-A metric space 
-that has no quadruples of points of type $\mathcal{P}_4$ or $\mathcal{N}_4$
-respectively 
-is called $\CAT(0)$ and $\CBB(0)$.
-
-\begin{wrapfigure}{o}{33mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-710}
-\end{wrapfigure}
-
-Let us describe the subdivision into $\mathcal{P}_4$, $\mathcal{E}_4$, and $\mathcal{N}_4$ intuitively.
-Imagine that you move out of $\mathcal{E}_4$ --- your path is a one-parameter family of 4-point metric spaces.
-The last thing you see in $\mathcal{E}_4$ is one of the two plane configurations shown on the diagram.
-If you see the left configuration then you move into $\mathcal{N}_4$;
-if it is the one on the right, then you move into $\mathcal{P}_4$.
-More degenerate pictures can be avoided; for example, a triangle with a point on a side.
-From such a configuration one may move in $\mathcal{N}_4$ and $\mathcal{P}_4$ (as well as come back to $\mathcal{E}_4$).
-
-Here is an exercise, solving which would force you to rebuild a considerable part of Alexandrov geometry.
-It might be helpful to spend some time thinking about this exercise before proceeding.
-
-\begin{thm}{Advanced exercise}\label{ex:convex-set}
-Assume $\spc{X}$ is a geodesic space, 
-containing only quadruples of type~$\mathcal{E}_4$.
-Show that $\spc{X}$ is isometric to a convex set in a Hilbert space.
-\end{thm}
-
-In the definition above, instead of Euclidean space, one can take  
-Lobachevsky space of curvature~$-1$.
-In this case,
-one obtains the definition of spaces with curvature bounded above or below by~$-1$ ($\CAT(-1)$ or $\CBB(-1)$).
-
-To define spaces with curvature bounded above or below by $1$ ($\CAT(1)$ or $\CBB(1)$),
-one has to take the unit 3-sphere 
-and specify that only the quadruples of points such that each of the four triangles has perimeter 
-less than $2\cdot\pi$ are checked.
 
 \section{Comments}
 

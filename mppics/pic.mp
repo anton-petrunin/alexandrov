@@ -264,6 +264,17 @@ whitelabel(btex ${-}$ etex, .5[z.v,z.a]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.aa]);
 endfig;
 
+beginfig(100) 
+save u;
+u:=.3cm;
+
+draw (0,0)*u--(6,0)*u--(6,6)*u--(0,6)*u--cycle penhair;
+draw (0,0)*u--(6,6)*u penbold;
+draw (0,0)*u--(1,0)*u--(1,1)*u--(2,1)*u--(2,2)*u--(3,2)*u--(3,3)*u--(4,3)*u--(4,4)*u--(5,4)*u--(5,5)*u--(6,5)*u--(6,6)*u penbold;
+
+
+endfig;
+
 beginfig(105) 
 save u,p;
 path p[];

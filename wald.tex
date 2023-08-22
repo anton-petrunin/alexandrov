@@ -1,0 +1,454 @@
+\chapter{Definitions}
+
+The first synthetic description of curvature is due to Abraham Wald \cite{wald}
+in his student work, written under supervision of Karl Menger; published in 1936. 
+This publication was not noticed for about 50 years \cite{berestovskii}.
+In 1941, similar definitions were rediscovered by Alexandr Alexandrov \cite{alexandrov:def}.
+
+\section{Notations}
+
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
+The latter notation is used if we need to emphasize 
+that the distance is taken in the space~${\spc{X}}$.
+
+We will denote by $\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
+Euclidean space, and Lobachevsky space respectively.
+More generally, $\MM^n(\kappa)$ will denote \emph{model $n$-space} of curvature $\kappa$;
+that is,
+\begin{itemize}
+\item if $\kappa>0$, then $\MM^n(\kappa)$ is the $n$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^n=\MM^n(1)$
+\item $\MM^n(0)=\EE^n$,
+\item if $\kappa<0$, then $\MM^n(\kappa)$ is the Lobachevsky $n$-space $\HH^n$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
+in particular $\MM^n(-1)=\HH^n$.
+\end{itemize}
+
+\section{Wald's approach}
+
+\begin{thm}{Exercise}
+Give an example of a quadruple $x_1,x_2,x_3,x_4$ in a metric space
+such that there is no quadruple 
+$\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\EE^3$ with
+\[\dist{\tilde x_i}{\tilde x_j}{\EE^3}=\dist{x_i}{x_j}{\spc{X}}\]
+for all $i$ and $j$.
+\end{thm}
+
+Wald noticed that a \textit{typical} quadruple $x_1,x_2,x_3,x_4$
+admits model configurations in $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\MM^3(\kappa)$ with
+\[\dist{\tilde x_i}{\tilde x_j}{\EE^3}=\dist{x_i}{x_j}{\spc{X}}\]
+for $\kappa$ in a closed interval,
+say 
+\[[\kappa_{\min}(x_1,x_2,x_3,x_4),\kappa_{\max}(x_1,x_2,x_3,x_4)]\subset \RR.\]
+
+Moreover, the same hold for \textit{any} quadruple if one use $[-\infty,\infty)$ instead of $\RR$ 
+and say $\kappa_{\min}(x_1,x_2,x_3,x_4)=-\infty$ if there is \textit{almost} model quadruple in
+$\MM^3(\kappa)$ for $\kappa\to -\infty$;
+that is, for any $\eps>0$ there is a quadruple
+$\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\MM^3(-\tfrac1\eps)$
+such that 
+\[\dist{\tilde x_i}{\tilde x_j}{\MM^3(-\frac1\eps)}\lege\dist{x_i}{x_j}{\spc{X}}\pm\eps\]
+for all $i$ and $j$.
+
+\begin{thm}{Exercise}
+Suppose that $x_1,x_2,x_3,x_4$ in a metric space
+such that
+\begin{align*}
+\dist{x_1}{x_2}{}=\dist{x_1}{x_3}{}=\dist{x_1}{x_4}{}&=1,
+\\
+\dist{x_2}{x_3}{}=\dist{x_3}{x_4}{}=\dist{x_4}{x_1}{}&=2
+\end{align*}
+Show that 
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=-\infty.\]
+\end{thm}
+
+
+
+\begin{thm}{Wald-style definition}
+Let $\kappa\in \RR$.
+A metric space $\spc{X}$ has curvature $\ge\kappa$ (or $\le\kappa$) 
+if any quadruple $x_1,x_2,x_3,x_4\in \spc{X}$ we have 
+$\kappa_{\max}(x_1,x_2,x_3,x_4)\ge \kappa$ (or $\kappa_{\min}(x_1,x_2,x_3,x_4)\le \kappa$ respectively). 
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $x_1,x_2,x_3,x_4$ be a quadruple in $\EE^2$.
+Suppose that triangle $[x_1x_2x_3]$ is degerate, but  $[x_2x_3x_4]$ is not.
+Show that 
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=0.\]
+\end{thm}
+
+\section{Substance}\label{sec:manifesto}
+
+Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric spaces.
+Each element in $\mathcal{M}_4$ can be described by 6 numbers 
+ --- the distances between all 6 pairs of its points, say $\ell_{i,j}$ for $1\le i< j\le 4$ modulo permutations of the index set $(1,2,3,4)$.
+These 6 numbers are subject to 12 triangle inequalities; that is,
+\[\ell_{i,j}+\ell_{j,k}\ge \ell_{i,k}\]
+holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$.
+
+{
+
+\begin{wrapfigure}{o}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-700}
+\end{wrapfigure}
+
+The space $\mathcal{M}_4$ comes with topology.
+It can defined as a quotient of the cone in $\RR^6$ by permutations of the 4 points of the space.
+
+Consider the subset $\mathcal{E}_4\subset \mathcal{M}_4$ of all isometry classes of 4-point metric spaces that admit isometric embeddings into Euclidean space.
+
+}
+
+\begin{thm}{Claim}\label{clm:two-components-of-M4}
+The complement $\mathcal{M}_4\setminus \mathcal{E}_4$ has two connected components.
+\end{thm}
+
+\begin{thm}{Exercise}
+Spend 10 minutes trying to prove the claim.
+\end{thm}
+
+
+The definition of Alexandrov spaces is based on this claim.
+Let us denote one of the components by $\mathcal{P}_4$ and the other by~$\mathcal{N}_4$.
+Here $\mathcal{P}$ and $\mathcal{N}$ stand for {}\emph{positive} 
+and {}\emph{negative curvature} because spheres have no quadruples of type $\mathcal{N}_4$ and 
+hyperbolic space
+has no quadruples of type~$\mathcal{P}_4$.
+
+A metric space, with length metric, 
+that has no quadruples of points of type $\mathcal{P}_4$ or $\mathcal{N}_4$
+respectively 
+is called an Alexandrov space with non-positive ($\CAT(0)$) or non-negative curvature ($\CBB(0)$).
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-710}
+\end{wrapfigure}
+
+Let us describe the subdivision into  $\mathcal{P}_4$, $\mathcal{E}_4$, and $\mathcal{N}_4$ intuitively.
+Imagine that you move out of $\mathcal{E}_4$ --- your path is a one-parameter family of 4-point metric spaces.
+The last thing you see in $\mathcal{E}_4$ is one of the two plane configurations shown on the diagram.
+If you see the left configuration then you move into $\mathcal{N}_4$;
+if it is the one on the right, then you move into $\mathcal{P}_4$.
+More degenerate pictures can be avoided; for example, a triangle with a point on a side.
+From such a configuration one may move in $\mathcal{N}_4$ and $\mathcal{P}_4$ (as well as come back to $\mathcal{E}_4$).
+
+Here is an exercise, solving which would force you to rebuild a considerable part of Alexandrov geometry.
+It might be helpful to spend some time thinking about this exercise before proceeding.
+
+\begin{thm}{Advanced exercise}\label{ex:convex-set}
+Assume $\spc{X}$ is a complete metric space with length metric, 
+containing only quadruples of type~$\mathcal{E}_4$.
+Show that $\spc{X}$ is isometric to a convex set in a Hilbert space.
+\end{thm}
+
+In the definition above, 
+one can take $\MM^3(\kappa)$
+instead of  Euclidean space.
+In this case,
+one obtains the definition of spaces with curvature bounded above or below by~$\kappa$ ($\CAT(\kappa)$ or $\CBB(\kappa)$).
+The parameter $\kappa$ has three interesting choices $-1$, $0$, and $1$;
+the rest can be obtained from these three applying rescaling.
+
+\section{Geodesics and geodesic spaces}
+
+Let $\spc{X}$ be a metric space 
+and $\II$\index{$\II$} a real interval. 
+A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
+\footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
+Also, note that the meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
+in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
+\[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
+for any pair $s,t\in \II$.
+
+If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
+In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
+We may write $[p q]_{\spc{X}}$ 
+to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
+
+In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique.  
+However, once we write $[p q]$ we assume that we have chosen such geodesic.
+
+A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
+
+A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
+
+\section{Triangles, hinges, and angles}
+
+\parbf{Triangles.}
+Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+
+Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
+Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
+If we write $\trig p q r$, it means that we have chosen such a triangle.
+
+\parbf{Model triangles.}
+Given three points $p,q,r$ in a metric space $\spc{X}$,
+let us define its \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
+(briefly, 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
+\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the Euclidean plane $\EE^2$ such that
+\begin{align*}\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{p}{q}{\spc{X}},
+&
+\quad\dist{\tilde q}{\tilde r}{\EE^2}&=\dist{q}{r}{\spc{X}},
+&
+\quad\dist{\tilde r}{\tilde p}{\EE^2}&=\dist{r}{p}{\spc{X}}.
+\end{align*}
+
+The same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
+in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
+In the latter case, the model triangle is said to be defined if in addition
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
+In this case, the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
+
+\parbf{Model angles.}
+If 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$ 
+and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
+the angle measure of 
+$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
+will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
+$\angk p q r_{\EE^2}$%
+\index{$\tilde\measuredangle$!$\angk{{*}}{{*}}{{*}}$}.
+The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$;
+in the latter case, we assume in addition that the model triangle $\modtrig(p q r)_{\SSS^2}$ is defined.
+
+We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\SSS^2$ is meant.
+
+\parbf{Hinges.} Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
+A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
+$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+
+\section{Definitions}
+
+In this section we write inequalities that describe the sets $\mathcal{E}_4\cup\mathcal{P}_4$ and ~$\mathcal{E}_4\cup\mathcal{N}_4$ from Section \ref{sec:manifesto}.
+
+\parbf{Curvature bounded below.}
+Let $p,x,y,z$ be a quadruple of points in a metric space.
+If the inequality 
+\[\angk  pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
+\le 
+2\cdot\pi
+\eqlbl{eq:CBB-comparison}\]
+holds, then we say that the quadruple meets \index{$\CBB(0)$ comparison}\emph{$\CBB(0)$ comparison}.
+
+\begin{thm}{Definition}\label{def:CBB}
+A metric space $\spc{X}$ has \index{$\CBB$}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$ if $\CBB(0)$ comparison
+holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
+\end{thm}
+
+If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
+$\CBB(1)$ and $\CBB(-1)$ comparisons.
+Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
+but for $\angk  pxy_{\SSS^2}$ we need in addition, $\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi$.
+
+More generally, one may apply this definition to $\MM^2(\kappa)$.
+This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
+
+\begin{thm}{Exercise}
+Show that $\EE^n$ is $\CBB(0)$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:(3+1)-expanding}
+Show that a metric space $\spc{X}$ is $\Alex0$
+if and only if for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$ 
+there is a quadruple of points $q,y_1,y_2,y_3\in\EE^3$
+such that 
+\[\dist{p}{x_i}{\spc{X}}\ge\dist{q}{y_i}{\EE^2} 
+\quad \text{and}\quad
+\dist{x_i}{x_j}{\spc{X}}\le\dist{y_i}{y_j}{\EE^2}\] 
+for all $i$ and $j$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:normCBB}
+Show that $\RR^2$ with metric induced by a norm is $\Alex0$ if and only if it is isometric to the Euclidean plane $\EE^2$.
+\end{thm}
+
+\parbf{Curvature bounded above.}
+Given a quadruple of points $p,q,x,y$ in a metric space $\spc{X}$,
+consider two model triangles 
+$\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\EE^2}$ 
+and 
+$\trig{\tilde q}{\tilde x}{\tilde y}\z=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-720}
+\end{wrapfigure}
+
+If the inequality
+\[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde q}{\EE^2}\]
+holds for any point $\tilde z\in [\tilde x\tilde y]$, then we say that 
+the quadruple $p,q,x,y$ satisfies \index{$\CAT(0)$ comparison}\emph{$\CAT(0)$ comparison}.
+\label{page:CAT-comparison}
+
+\begin{thm}{Definition}\label{def:CBB}
+A metric space $\spc{X}$ has \index{$\CAT$}\emph{nonpositive curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CAT(0)$ if $\CAT(0)$ comparison holds for any quadruple in $\spc{X}$.
+\end{thm}
+
+If we do the same for spherical model triangles  
+$\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\SSS^2}$ 
+and 
+$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\SSS^2}$,
+then we arrive at the definition of $\CAT(1)$ comparison.
+One of the spherical model triangles might undefined;
+it happens if 
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi
+\quad
+\text{or}
+\quad
+\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]
+In this case, it is assumed that $\CAT(1)$ comparison automatically holds for this quadruple.
+
+We can do the same for $\MM^2(\kappa)$.
+In this case, we arrive at the definition of $\CAT(\kappa)$ comparison.
+However, we will mostly consider $\CAT(0)$ comparison and occasionally $\CAT(1)$ comparison;
+so, if you see $\CAT(\kappa)$, then it is safe to assume that $\kappa$ is $0$ or~$1$.
+
+Here $\CAT$ is an acronym for Cartan, Alexandrov, and Toponogov,
+but usually pronounced as ``cat'' in the sense of ``miauw''.
+The term was coined by Mikhael Gromov in 1987.
+Originally, Alexandrov used \emph{$\mathfrak{R}_\kappa$ domain};
+this term is still in use.
+
+\begin{thm}{Exercise}\label{ex:sba-2+2-short}
+Show that a metric space $\spc{U}$ is $\CAT(0)$
+if and only if for any quadruple of points 
+$p,q,x,y$ in $\spc{U}$ 
+there is a quadruple $\tilde p,\tilde q,\tilde x,\tilde y$ in $\EE^2$
+such that 
+\begin{align*}
+\dist{\tilde p}{\tilde q}{}&\ge\dist{p}{q}{},
+&
+\dist{\tilde x}{\tilde y}{}&\ge\dist{x}{y}{},
+\\
+\dist{\tilde p}{\tilde x}{}&\le \dist{p}{x}{},
+&
+\dist{\tilde p}{\tilde y}{}&\le \dist{p}{y}{},
+\\
+\dist{\tilde q}{\tilde x}{}&\le \dist{q}{x}{},
+&
+\dist{\tilde q}{\tilde y}{}&\le \dist{q}{y}{}.
+\end{align*}
+
+\end{thm}
+
+The definitions stated in the previous section can be applied to any metric space.
+However, interesting things happening only for the so-called \textit{geodesic} or at least \textit{length spaces}.
+
+\section{Length and length spaces}
+
+\parbf{Length.}
+A \index{curve}\emph{curve} is defined as a continuous map from a real interval $\II$ to a metric space.
+If $\II=[0,1]$, then the curve is called a \index{path}\emph{path}.
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space and
+$\alpha\: \II\to \spc{X}$ be a curve.
+We define the \index{length}\emph{length} of $\alpha$ as 
+\[
+\length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha(t_{i-1})}{}.
+\]
+
+A curve $\alpha$ is called \index{rectifiable curve}\emph{rectifiable} if $\length \alpha<\infty$.
+\end{thm}
+
+The following theorem is assumed to be known;
+see \cite{petrunin2023pure,burago-burago-ivanov}.
+
+
+\begin{thm}{Theorem}\label{thm:length-semicont}
+Length is a lower semi-continuous with respect to the pointwise convergence of curves. 
+
+More precisely, assume that a sequence
+of curves $\gamma_n\:\II\to \spc{X}$ in a metric space $\spc{X}$ converges pointwise 
+to a curve $\gamma_\infty\:\II\to \spc{X}$;
+that is, for any fixed $t \in \II$ we have $\gamma_n(t)\z\to\gamma_\infty(t)$ as $n\to\infty$. 
+Then 
+$$\liminf_{n\to\infty} \length\gamma_n \ge \length\gamma_\infty.\eqlbl{eq:semicont-length}$$
+\end{thm}
+
+\begin{wrapfigure}{o}{20 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-100}
+\end{wrapfigure}
+
+Note that the inequality \ref{eq:semicont-length} might be strict.
+For example, the diagonal $\gamma_\infty$ of the unit square 
+can be  approximated by stairs-like
+polygonal curves $\gamma_n$
+with sides parallel to the sides of the square ($\gamma_6$ is on the picture).
+In this case
+\[\length\gamma_\infty=\sqrt{2}\quad
+\text{and}\quad \length\gamma_n=2\]
+for any $n$.
+
+\parbf{Length spaces.}
+Let $\spc{X}$ be a metric space.
+If for any $\eps>0$ and any pair of points $x,y\in\spc{X}$, there is a path $\alpha$ connecting $x$ to $y$ such that
+\[\length\alpha< \dist{x}{y}{}+\eps,\]
+then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
+
+Evidently, any geodesic space is a length space.
+
+\begin{thm}{Exercise}
+Show that any compact length space is geodesic.
+\end{thm}
+
+
+\parbf{Induced length metric.}
+Directly from the definition, it follows that if $\alpha\:[0,1]\to\spc{X}$ is a path from $x$ to $y$ 
+(that is, $\alpha(0)=x$ and $\alpha(1)=y$), then 
+\[\length\alpha\ge \dist{x}{y}{}.\]
+Set 
+\[\yetdist{x}{y}{}=\inf\{\,\length\alpha\,\}\]
+where the greatest lower bound is taken for all paths from $x$ to~$y$.
+It is straightforward to check that $(x,y)\mapsto \yetdist{x}{y}{}$ is an \emph{$\infty$-metric};
+that is, $(x,y)\mapsto \yetdist{x}{y}{}$ is a metric in the extended positive reals $[0,\infty]$. 
+The metric $\yetdist{*}{*}{}$ is called the \index{induced length metric}\emph{induced length metric}.
+
+\begin{thm}{Exercise}\label{ex:compact+connceted}
+Let $\spc{X}$ be a complete length space.
+Show that for any compact subset $K\subset\spc{X}$
+there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:compact=>complete}
+Suppose $(\spc{X},\dist{*}{*}{})$ is a complete metric space.
+Show that $(\spc{X},\yetdist{*}{*}{})$ is complete.
+\end{thm}
+
+Let $A$ be a subset of a metric space $\spc{X}$.
+Given two points $x,y\in A$,
+consider the value
+\[\dist{x}{y}{A}=\inf_{\alpha}\{\,\length\alpha\,\},\]
+where the greatest lower bound is taken for all paths $\alpha$ from $x$ to $y$ in~$A$.
+In other words, $\dist{*}{*}{A}$ denotes the induced length metric on the subspace $A$.
+(The notation $\dist{*}{*}{A}$ conflicts with the previously defined notation for distance $\dist{x}{y}{\spc{X}}$ in a metric space $\spc{X}$.
+However, most of the time we will work with ambient length spaces where the meaning will be unambiguous.)
+
+\section{Embedding theorem}
+
+The main part of the following theorem is due to Alexadr Alexandrov~\cite{alexandrov-1948}.
+The last part is very difficult; it was proved by Aleksei Pogorelov~\cite{pogorelov}.
+
+\begin{thm}{Theorem}\label{thm:alexandrov+pogorelov}
+A metric space $\spc{X}$ is isometric to the surface of a convex body in the Euclidean space if and only if $\spc{X}$ is a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
+
+Moreover, $\spc{X}$ determines the convex body up to congruence.
+\end{thm}
+
+Convex body above is a compact convex subset that does not lie in a line, but might degenerate to a plane figure, say $F$.
+In the latter case, its surface is defined as two copies of $F$ glued along the boundary.
+For nondegenerate convex body $B$, its surface is its boundary $\partial B$ equipped with the induced length metric. 
+
+Eventually, we will prove the only-if part of the theorem, which is the simplest part of the theorem;
+it requires only \ref{ex:sphere-with-pos} which is
+the only-if part of \ref{thm:exist}.
+To do this we will need to introduce the convergence of subsets in Euclidean space (Hausdorff convergence) and convergence of metric spaces (Gromov--Hausdorff convergence); it will be done in the next lecture.
