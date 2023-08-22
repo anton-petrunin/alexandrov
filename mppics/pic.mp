@@ -358,10 +358,12 @@ z.b=(1,0)*u;
 z.c=(.4,1.1)*u;
 z.d=(.55,.25)*u;
 
-z.a1=(2,0)*u;
-z.b1=(3,0)*u;
-z.c1=(2.1,.9)*u;
-z.d1=(2.95,1.05)*u;
+z.shift=(-4,0)*u;
+
+z.a1=(2,0)*u+z.shift;
+z.b1=(3,0)*u+z.shift;
+z.c1=(2.1,.9)*u+z.shift;
+z.d1=(2.95,1.05)*u+z.shift;
 
 draw z.a--z.b--z.c--z.d--cycle;
 draw z.a--z.c;

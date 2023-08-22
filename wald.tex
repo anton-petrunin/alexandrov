@@ -1,7 +1,7 @@
 \chapter{Definitions}
 
-The first synthetic description of curvature is due to Abraham Wald \cite{wald}
-in his student work, written under supervision of Karl Menger; published in 1936. 
+The first synthetic description of curvature is due to Abraham Wald \cite{wald} published in 1936;
+it was his student work, written under the supervision of Karl Menger. 
 This publication was not noticed for about 50 years \cite{berestovskii}.
 In 1941, similar definitions were rediscovered by Alexandr Alexandrov \cite{alexandrov:def}.
 
@@ -13,7 +13,7 @@ that the distance is taken in the space~${\spc{X}}$.
 
 We will denote by $\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
 Euclidean space, and Lobachevsky space respectively.
-More generally, $\MM^n(\kappa)$ will denote \emph{model $n$-space} of curvature $\kappa$;
+More generally, $\MM^n(\kappa)$ will denote the \emph{model $n$-space} of curvature $\kappa$;
 that is,
 \begin{itemize}
 \item if $\kappa>0$, then $\MM^n(\kappa)$ is the $n$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^n=\MM^n(1)$
@@ -24,29 +24,53 @@ in particular $\MM^n(-1)=\HH^n$.
 
 \section{Wald's approach}
 
-\begin{thm}{Exercise}
-Give an example of a quadruple $x_1,x_2,x_3,x_4$ in a metric space
-such that there is no quadruple 
-$\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\EE^3$ with
-\[\dist{\tilde x_i}{\tilde x_j}{\EE^3}=\dist{x_i}{x_j}{\spc{X}}\]
-for all $i$ and $j$.
-\end{thm}
-
 Wald noticed that a \textit{typical} quadruple $x_1,x_2,x_3,x_4$
 admits model configurations in $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\MM^3(\kappa)$ with
-\[\dist{\tilde x_i}{\tilde x_j}{\EE^3}=\dist{x_i}{x_j}{\spc{X}}\]
+\[\dist{\tilde x_i}{\tilde x_j}{\MM^3(\kappa)}=\dist{x_i}{x_j}{\spc{X}}\]
 for $\kappa$ in a closed interval,
 say 
 \[[\kappa_{\min}(x_1,x_2,x_3,x_4),\kappa_{\max}(x_1,x_2,x_3,x_4)]\subset \RR.\]
 
-Moreover, the same hold for \textit{any} quadruple if one use $[-\infty,\infty)$ instead of $\RR$ 
-and say $\kappa_{\min}(x_1,x_2,x_3,x_4)=-\infty$ if there is \textit{almost} model quadruple in
+\begin{wrapfigure}{r}{33mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-710}
+\end{wrapfigure}
+
+In $\MM^3(\kappa_{\min})$ and $\MM^3(\kappa_{\max})$, the points $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4$ form degenerate tetrahedrons shown on the diagram (for $\kappa_{\min}$ it is a convex quadrangle and for $\kappa_{\max}$ --- a triangle with a point inside).
+In the interior of the interval, the tetrahedron is nondegenerate.
+
+Moreover, one can use $[-\infty,\infty)$ instead of $\RR$ 
+and let
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=-\infty\]
+if there is \textit{almost} model quadruple in
 $\MM^3(\kappa)$ for $\kappa\to -\infty$;
 that is, for any $\eps>0$ there is a quadruple
 $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\MM^3(-\tfrac1\eps)$
 such that 
 \[\dist{\tilde x_i}{\tilde x_j}{\MM^3(-\frac1\eps)}\lege\dist{x_i}{x_j}{\spc{X}}\pm\eps\]
 for all $i$ and $j$.
+In this case the interval 
+\[[\kappa_{\min}(x_1,x_2,x_3,x_4),\kappa_{\max}(x_1,x_2,x_3,x_4)]\subset [-\infty,\infty)\]
+is defined for \textit{any} quadruple.
+
+We will not use these statements further in the sequel, so we omit the proofs.
+The just wanted to show the first step in the theory.
+
+\begin{thm}{Exercise}
+Let $x_1,x_2,x_3,x_4$ be a quadruple in a metric space such that $\kappa_{\min}(x_1,x_2,x_3,x_4)=-\infty$.
+Show that two maximal numbers from the following three are equal to each other.
+\begin{align*}
+a&=\dist{x_1}{x_2}{}+\dist{x_3}{x_4}{},
+\\
+b&=\dist{x_1}{x_3}{}+\dist{x_2}{x_4}{},
+\\
+c&=\dist{x_1}{x_4}{}+\dist{x_2}{x_3}{}.
+\end{align*}
+
+
+\end{thm}
+
 
 \begin{thm}{Exercise}
 Suppose that $x_1,x_2,x_3,x_4$ in a metric space
@@ -60,7 +84,12 @@ Show that
 \[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=-\infty.\]
 \end{thm}
 
-
+\begin{thm}{Exercise}
+Let $x_1,x_2,x_3,x_4$ be a quadruple in $\EE^2$.
+Suppose that triangle $[x_1x_2x_3]$ is degerate, but  $[x_2x_3x_4]$ is not.
+Show that 
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=0.\]
+\end{thm}
 
 \begin{thm}{Wald-style definition}
 Let $\kappa\in \RR$.
@@ -69,32 +98,34 @@ if any quadruple $x_1,x_2,x_3,x_4\in \spc{X}$ we have
 $\kappa_{\max}(x_1,x_2,x_3,x_4)\ge \kappa$ (or $\kappa_{\min}(x_1,x_2,x_3,x_4)\le \kappa$ respectively). 
 \end{thm}
 
-\begin{thm}{Exercise}
-Let $x_1,x_2,x_3,x_4$ be a quadruple in $\EE^2$.
-Suppose that triangle $[x_1x_2x_3]$ is degerate, but  $[x_2x_3x_4]$ is not.
-Show that 
-\[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=0.\]
-\end{thm}
-
 \section{Substance}\label{sec:manifesto}
+
+\begin{thm}{Exercise}
+Give an example of a quadruple $x_1,x_2,x_3,x_4$ in a metric space
+such that there is no isometric quadruple 
+$\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\z\in\EE^3$;
+that is,
+\[\dist{\tilde x_i}{\tilde x_j}{\EE^3}=\dist{x_i}{x_j}{\spc{X}}\]
+for all $i$ and $j$.
+\end{thm}
 
 Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric spaces.
 Each element in $\mathcal{M}_4$ can be described by 6 numbers 
  --- the distances between all 6 pairs of its points, say $\ell_{i,j}$ for $1\le i< j\le 4$ modulo permutations of the index set $(1,2,3,4)$.
 These 6 numbers are subject to 12 triangle inequalities; that is,
 \[\ell_{i,j}+\ell_{j,k}\ge \ell_{i,k}\]
-holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$.
+holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$, and $\ell_{i,i}=0$.
 
 {
 
 \begin{wrapfigure}{o}{33mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-700}
 \end{wrapfigure}
 
 The space $\mathcal{M}_4$ comes with topology.
-It can defined as a quotient of the cone in $\RR^6$ by permutations of the 4 points of the space.
+It can be defined as a quotient topology of the cone in $\RR^6$ by permutations of the 4 points of the space.
 
 Consider the subset $\mathcal{E}_4\subset \mathcal{M}_4$ of all isometry classes of 4-point metric spaces that admit isometric embeddings into Euclidean space.
 
@@ -121,7 +152,7 @@ that has no quadruples of points of type $\mathcal{P}_4$ or $\mathcal{N}_4$
 respectively 
 is called an Alexandrov space with non-positive ($\CAT(0)$) or non-negative curvature ($\CBB(0)$).
 
-\begin{wrapfigure}{r}{33mm}
+\begin{wrapfigure}[4]{r}{33mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-710}
@@ -139,7 +170,7 @@ Here is an exercise, solving which would force you to rebuild a considerable par
 It might be helpful to spend some time thinking about this exercise before proceeding.
 
 \begin{thm}{Advanced exercise}\label{ex:convex-set}
-Assume $\spc{X}$ is a complete metric space with length metric, 
+Assume $\spc{X}$ is a complete metric space with length metric (see Section~\ref{sec:length}), 
 containing only quadruples of type~$\mathcal{E}_4$.
 Show that $\spc{X}$ is isometric to a convex set in a Hilbert space.
 \end{thm}
@@ -191,7 +222,7 @@ Given three points $p,q,r$ in a metric space $\spc{X}$,
 let us define its \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the Euclidean plane $\EE^2$ such that
+\index{$\modtrig$}) to be a triangle in the Euclidean plane $\EE^2$ such that
 \begin{align*}\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{p}{q}{\spc{X}},
 &
 \quad\dist{\tilde q}{\tilde r}{\EE^2}&=\dist{q}{r}{\spc{X}},
@@ -214,10 +245,18 @@ $\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$
 will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\tilde\measuredangle$!$\angk{{*}}{{*}}{{*}}$}.
-The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$;
-in the latter case, we assume in addition that the model triangle $\modtrig(p q r)_{\SSS^2}$ is defined.
 
-We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\SSS^2$ is meant.
+The same way we define $\angk p q r_{\MM^2(\kappa)}$;
+in particular, $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$.
+We may use the notation $\angk p q r$ if it is evident which of the model spaces is meant.
+
+\begin{thm}{Exercise}
+Show that for any triple of point $p$, $q$, and $r$,
+the function
+\[\kappa\mapsto \angk p q r_{\MM^2(\kappa)}\]
+is nondecreasing in its domain of definition.
+\end{thm}
+
 
 \parbf{Hinges.} Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
 A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
@@ -234,10 +273,10 @@ If the inequality
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
-holds, then we say that the quadruple meets \index{$\CBB(0)$ comparison}\emph{$\CBB(0)$ comparison}.
+holds, then we say that the quadruple meets \index{$\CBB$}\emph{$\CBB(0)$ comparison}.
 
 \begin{thm}{Definition}\label{def:CBB}
-A metric space $\spc{X}$ has \index{$\CBB$}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$ if $\CBB(0)$ comparison
+A metric space $\spc{X}$ has {}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$ if $\CBB(0)$ comparison
 holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
 \end{thm}
 
@@ -276,7 +315,7 @@ and
 $\trig{\tilde q}{\tilde x}{\tilde y}\z=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
 
 \begin{wrapfigure}{r}{25mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-720}
 \end{wrapfigure}
@@ -284,7 +323,7 @@ $\trig{\tilde q}{\tilde x}{\tilde y}\z=\modtrig{}(qxy)_{\EE^2}$ with common side
 If the inequality
 \[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde q}{\EE^2}\]
 holds for any point $\tilde z\in [\tilde x\tilde y]$, then we say that 
-the quadruple $p,q,x,y$ satisfies \index{$\CAT(0)$ comparison}\emph{$\CAT(0)$ comparison}.
+the quadruple $p,q,x,y$ satisfies \index{$\CAT$}\emph{$\CAT(0)$ comparison}.
 \label{page:CAT-comparison}
 
 \begin{thm}{Definition}\label{def:CBB}
@@ -338,10 +377,16 @@ such that
 
 \end{thm}
 
-The definitions stated in the previous section can be applied to any metric space.
-However, interesting things happening only for the so-called \textit{geodesic} or at least \textit{length spaces}.
+\begin{thm}{Exercise}
+Assume that a quadruple of points in a metric space satisfies $\CBB(0)$ and $\CAT(0)$ comparisons for all labelings.
+Show that it is isometric to a quadruple in $\EE^3$.
+\end{thm}
 
-\section{Length and length spaces}
+
+The definitions stated in the previous section can be applied to any metric space.
+However, interesting things happen only for the so-called \textit{geodesic} or at least \textit{length spaces}.
+
+\section{Length and length spaces}\label{sec:length}
 
 \parbf{Length.}
 A \index{curve}\emph{curve} is defined as a continuous map from a real interval $\II$ to a metric space.
@@ -435,7 +480,7 @@ However, most of the time we will work with ambient length spaces where the mean
 
 \section{Embedding theorem}
 
-The main part of the following theorem is due to Alexadr Alexandrov~\cite{alexandrov-1948}.
+The main part of the following theorem is due to Alexandr Alexandrov~\cite{alexandrov-1948}.
 The last part is very difficult; it was proved by Aleksei Pogorelov~\cite{pogorelov}.
 
 \begin{thm}{Theorem}\label{thm:alexandrov+pogorelov}
@@ -444,11 +489,11 @@ A metric space $\spc{X}$ is isometric to the surface of a convex body in the Euc
 Moreover, $\spc{X}$ determines the convex body up to congruence.
 \end{thm}
 
-Convex body above is a compact convex subset that does not lie in a line, but might degenerate to a plane figure, say $F$.
+The convex body above is a compact convex subset in $\EE^3$;
+we assume that it does not lie in a line but might degenerate to a plane figure, say $F$.
 In the latter case, its surface is defined as two copies of $F$ glued along the boundary.
 For nondegenerate convex body $B$, its surface is its boundary $\partial B$ equipped with the induced length metric. 
 
-Eventually, we will prove the only-if part of the theorem, which is the simplest part of the theorem;
-it requires only \ref{ex:sphere-with-pos} which is
-the only-if part of \ref{thm:exist}.
-To do this we will need to introduce the convergence of subsets in Euclidean space (Hausdorff convergence) and convergence of metric spaces (Gromov--Hausdorff convergence); it will be done in the next lecture.
+The only-if part of the theorem is the simplest; we will give a complete proof of it eventually.
+The if part will be sketched.
+We will not touch the last part.
