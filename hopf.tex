@@ -1,0 +1,371 @@
+\chapter{CBB: quotients}
+
+\section{Space of directions}
+
+\begin{thm}{Theorem}\label{thm:finite-space-of-directions}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space.
+Then for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is a compact geodesic $\CBB(1)$ space.
+\end{thm}
+
+Note that the theorem also implies that $\T_p$ is a proper geodesic $\CBB(\kappa)$ space.
+It follows from the definition of tangent space; see Section~\ref{sec: tangent space}.
+
+
+\begin{thm}{Exercise}\label{ex:finite-space-of-directions-dim}
+Let $\spc{L}$ be an $m$-dimensional complete geodesic $\CBB(\kappa)$ space;
+suppose $m<\infty$.
+Show that for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is $(m-1)$-dimensional.
+\end{thm}
+
+Using this exercise, one can prove results for all finite-dimensional complete geodesic $\CBB(\kappa)$ spaces via induction on its dimension.
+Such proofs will be indicated below.
+
+\parit{Sketch.}
+Note that \ref{ex:Tan-is-CBB(0)} and \ref{ex:cone+CBB} imply that $\Sigma_p$ is $\CBB(1)$.
+
+\parit{Compactness.}
+Choose $\eps>0$; suppose $\spc{L}$ is $m$-dimensional.
+Assume can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that $\mangle(\xi_i,\xi_j)\z>\eps$ for any $i\ne j$.
+Without loss of generality, we may assume that each direction is geodesic;
+that is, there is a point $x_i\in \spc{L}$ such that $\xi_i=\dir p{x_i}$.
+
+Choose $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$ and small fixed $r>0$.
+Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for any $i\ne j$.
+By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin{p'}$ for any $i$.
+Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ for any $i\ne j$.
+By comparison, 
+\[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
+Therefore $n\le \pack_\eps\SSS^{m-1}$.
+
+Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$.
+By the definition, the space of directions $\Sigma_p$ is complete. 
+Applying \ref{ex:pack-net}, we get that  $\Sigma_p$ is compact.
+
+\parit{Geodesicness (ruf idea).}
+We will show that \textit{if $\Sigma_p$ is compact, then it is geodesic} --- we will not use the finiteness of dimension directly. 
+
+Choose two geodesic directions $\xi=\dir px$ and $\zeta=\dir py$;
+let 
+\[\alpha\z=\tfrac12\cdot \mangle \hinge pxy=\tfrac12\cdot \dist{\xi}{\zeta}{\Sigma_p}.\]
+
+Note that it is sufficient to construct an \emph{almost midpoint} $\mu\z=\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
+that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such that
+\[\mangle\hinge pxz\le \alpha+\eps
+\quad\text{and}\quad
+\mangle\hinge pyz\le \alpha+\eps.\]
+Once it is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$.
+After that Menger's lemma (\ref{lem:mid>geod}) finishes the proof.
+
+Let us choose small $r>0$;
+consider points $x(r)\in [px]$ and $y(r)\in [py]$ such that $\dist{p}{x(r)}{}=\dist{p}{y(r)}{}=r$.
+Let $m(r)$ be a midpoint of $[x(r)\,y(r)]$.
+The idea is to show that one can take $z=m(r)$ for some small $r>0$.%
+
+
+(This part of the proof will use the compactness of $\Sigma_p$.
+Halbeisen's example \cite{alexander-kapovitch-petrunin-bigbook} shows that compactness is essential.
+Also, notice that $\CBB$ comparison gives lower bounds on $\mangle\hinge pxz$ and $\mangle\hinge pyz$, but we need upper bounds.)
+
+
+Since $\Sigma_p$ is compact, we can choose a sequence $r_n\to 0$ such that 
+$\dir{p}{m(r_n)}$ converges;
+denote its limit by $\mu$.
+Choose a geodesic $[pz]$ that runs at angle $<\eps$ from $\mu$.
+Then $\dir p{z}$ is the needed almost midpoint.
+The latter is proved using \ref{ex:alex-lemma-cat} together with the following observation:
+The model angles 
+\[\angk p{x(r)}{y(r)},
+\quad
+\angk p{x(r)}{z(h)},
+\quad\text{and}\quad
+\angk p{z(h)}{y(r)}
+\]
+are arbitrary close to the corresponding angles
+\[\mangle\hinge p{x(r)}{y(r)},
+\quad
+\mangle\hinge p{x(r)}{z(h)},
+\quad\text{and}\quad
+\mangle\hinge p{z(h)}{y(r)},
+\]
+assuming that $r>0$ and $h>0$ are small.
+\qeds
+
+
+\section{Boundary}
+
+{\sloppy
+
+\begin{thm}{Exercise}
+Show that a 1-dimensional complete geodesic $\CBB(\kappa)$ space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
+\end{thm}
+
+}
+
+Suppose $\spc{L}$ is a 1-dimensional complete geodesic $\CBB(\kappa)$ space.
+Exercise allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of a manifold.
+
+Now let us use \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim} inductively to define the boundary of any finite-dimensional complete geodesic $\CBB(\kappa)$ space.
+Assume that the notion of boundary is already defined in dimensions $1,\dots,m-1$.
+Suppose  $\spc{L}$ is $m$-dimensional complete geodesic $\CBB(\kappa)$ space.
+We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
+$\partial\Sigma_p\ne\emptyset$.
+By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional complete geodesic $\CBB(1)$ space;
+therefore its boundary is already defined.
+
+
+
+\begin{thm}{Exercise}
+Show that for closed convex set $K\subset \EE^m$ with nonempty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
+\end{thm}
+
+
+The following statements should agree with your intuition.
+We omit their proofs and they are not at all simple.
+
+\begin{thm}{Theorem}
+Boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ space is a closed subset.
+\end{thm}
+
+Let $X$ be a subset in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
+Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
+Then we say that $\xi$ is in the \emph{space of directions} from $p$ to $X$; briefly $\xi\in\Sigma_pX$.
+
+Further, the cone $\T_pX=\Cone(\Sigma_pX)$ will be called \emph{tangent space} to $X$ at $p$.
+
+\begin{thm}{Theorem}\label{thm:partial-Sigma}
+For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we have
+\[\partial (\Sigma_p\spc{L})=\Sigma(\partial\spc{L})
+\quad\text{and}\quad
+\partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:partial-grad}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space with nonempty boundary.
+Suppose $p\in \spc{L}$ and $f\z=\tfrac12\distfun_p^2$.
+Then
+
+\begin{subthm}{}
+$\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{L}$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{L}$, then $\alpha(t)\in \partial \spc{L}$ for any $t$.
+\end{subthm}
+
+\end{thm}
+
+The first statement in the theorem above is quite easy.
+(Maybe I will add a proof later.)
+The second part is proved as Picard theorem with the use of the first part.
+Using the last statement for a sequence of points $x_n\to p$ one can get the following.
+
+\begin{thm}{Theorem}\label{thm:gexp}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(0)$ space.
+For any $p\in \spc{L}$ there is a map $\gexp_p\:\T_p\to \spc{L}$  that meets the following conditions.
+
+\begin{subthm}{}
+If $\gamma_x$ is a geodesic path from $p$ to $x$, then $\gexp_p(\gamma^+(0))=x$, 
+\end{subthm}
+
+\begin{subthm}{}
+The map $\gexp_p\:\T_p\to \spc{L}$ is short.
+\end{subthm}
+
+\begin{subthm}{}
+If $v\in \partial\T_p$, then $\gexp_p(v)\in \partial  \spc{L}$.
+\end{subthm}
+
+\end{thm}
+
+The map $\gexp_p\:\T_p\to \spc{L}$ described in the theorem is called \emph{gradient exponent} at $p$.
+It provides an alternative for the exponential map for $\CBB$ spaces.
+Gradient exponent is defined on the whole $\T_p$ while
+the usual exponential map is defined on a relatively small set;
+say its complement might be dense in $\T_p$.
+
+
+
+\section{Doubling theorem}
+
+\begin{thm}{Theorem}\label{thm:doubling}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(0)$ space.
+Suppose $\partial \spc{L}\ne \emptyset$.
+Then 
+\begin{subthm}{thm:doubling:concave}
+$\distfun_{\partial \spc{L}}$ is a concave function, and
+\end{subthm}
+
+\begin{subthm}{}
+the doubling $\hat{\spc{L}}$ of $\spc{L}$ across $\partial \spc{L}$ is a complete geodesic $\CBB(0)$ space.
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Sketch.} 
+Let us apply induction on $m=\LinDim \spc{L}$.
+
+\begin{wrapfigure}{r}{30mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1305}
+\end{wrapfigure}
+
+Choose a geodesic $[pz]$; let $\gamma(0)=p$.
+Suppose $p\notin\partial \spc{L}$.
+Let $q\in \partial\spc{L}$ be a closest point to $p$ and $\alpha\df\mangle\hinge pzq$.
+
+By the definition of boundary points, 
+\[\partial \Sigma_q\z\ne\emptyset.\]
+Let $\xi=\dir qp$.
+Theorem~\ref{thm:partial-Sigma} implies that 
+\[\dist{\xi}{\zeta}{\Sigma_q}\ge \tfrac\pi2
+\eqlbl{eq:<>pi/2}\]
+for any $\zeta\in\partial\Sigma_q$.
+
+By \ref{thm:finite-space-of-directions}, $\Sigma_q$ is an $(m-1)$-dimensional geodesic $\CBB(1)$ space.
+Applying the induction hypothesis, we get that the doubling $\hat\Sigma_q$ of $\Sigma_q$ across $\partial \Sigma_q$ is an $(m-1)$-dimensional geodesic $\CBB(1)$ space.
+Denote by $\xi_1$ and $\xi_2$ the two directions in $\hat\Sigma_q$ that correspond to $\xi$.
+Note that \ref{eq:<>pi/2} implies that $\dist{\xi_1}{\xi_2}{\hat\Sigma_q}\ge \pi$.
+Applying the line splitting theorem (\ref{thm:splitting}), we can identify 
+$\Cone\hat\Sigma_q$ with $\RR\times \partial\Sigma_q$.
+It follows that 
+\[\T_q=[0,\infty)\oplus \partial\T_q;\]
+in particular, there is a natural projection $\proj\:\T_q\to \partial\T_q$.
+
+Given $x\in [pz]$, choose a geodesic $\gamma_x$ from $q$ to $x$.
+Let 
+\[y
+\df
+\gexp_q\circ\proj(\gamma^+_x(0)).\]
+By \ref{thm:gexp}, $y\in \partial\spc{L}$ and 
+\[\dist{x}{y}{}\le \dist{p}{q}{}+\dist{p}{x}{}\cdot \cos\alpha.\eqlbl{eq:|x-y|}\]
+The latter inequality uses in addition the $\CBB$ comparison for $[pqx]$ and it requires some work.
+
+Note that \ref{eq:|x-y|} implies that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{L}\setminus \partial \spc{L}$.
+If $\gamma(t)\in \partial \spc{L}$ for some $t$, then it is easy to see that $(f\circ\gamma)'(t)=0$.
+These two statements imply that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{L}$.
+
+Now, let us show that doubling $\hat{\spc{L}}$ is $\CBB(0)$.
+Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\hat{\spc{L}}$;
+further, let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
+
+\begin{wrapfigure}{r}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1315}
+\end{wrapfigure}
+
+Choose a geodesic $\gamma$ in $\hat{\spc{L}}$.
+Suppose $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$.
+The splitting argument as in \ref{SHORT.thm:doubling:concave} shows that the doubling of $\T_x\spc{L}$ splits in the direction $\gamma^\pm(t_1)$.
+Similarly, the doubling of $\T_y\spc{L}$ splits in the direction $\gamma^\pm(t_y)$.
+Note that the arc of $\gamma$ between $x$ and $y$ can be reflected across $\partial \spc{L}$ and the obtained curve is still a geodesic in $\hat{\spc{L}}$.
+Using these observations together with part \ref{SHORT.thm:doubling:concave}, one can show that either $\gamma$ lies in $\partial \spc{L}$ or it crosses $\partial \spc{L}$ at most once.
+
+Now choose a point $p$ in $\hat{\spc{L}}$;
+let $f\df\tfrac12\cdot\distfun_p^2$.
+Without loss of generality, we can assume that $p\in \spc{L}_0$.
+It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
+If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the comparison in $\spc{L}_0$.
+
+\begin{wrapfigure}{r}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1325}
+\end{wrapfigure}
+
+In the remaining case, if $\gamma(t)\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\circ\gamma)''(t)\le 1$ follows from the comparison in $\spc{L}_0$.
+If $\gamma(t)\in \spc{L}_1\setminus\partial\spc{L}$, then the proof of inequality reminds the argument in part \ref{SHORT.thm:doubling:concave}, but it is a bit more tricky.
+Finally if $\gamma(t)\in\partial\spc{L}$, then splitting argument shows that 
+\[(f\circ\gamma)^+(t)+f\circ\gamma)^-(t)\le 0.\]
+These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
+\qeds
+
+\section{Hopf's conjecture}
+
+\begin{thm}{Theorem}
+There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $\ge 1$ and nontrivial isometric $\SSS^1$-action.
+\end{thm}
+
+Recall that a complete Riemannian manifold has sectional curvature $\ge 1$ if and only if the corresponding metric space is $\CBB(1)$.
+
+In the proof, we will use the following exercise.
+
+\begin{thm}{Exercise}\label{ex:S^3/S^1}
+Suppose $\SSS^1\acts\SSS^3$ be an isometric action without fixed points 
+and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
+Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ is the standard 2-sphere rescaled with factor $\tfrac12$.
+\end{thm}
+
+
+\parit{Sketch.}
+Let $\spc{M}=(\SSS^2\times\SSS^2,g)$ be a counterexample.
+
+Recall that $\spc{M}$ is $\CBB(1)$.
+By \ref{thm:CBB/G}, the quotient space $\spc{L}=\spc{M}/\SSS^1$ is $\CBB(1)$;
+evidently, $\spc{L}$ is 3-dimensional.
+
+Denote by $F\subset \spc{M}$ the fixed point set of the $\SSS^1$-action.
+Each connected component of $F$ is either an isolated point or a 2-dimensional submanifold in $\spc{M}$;
+the latter has to have positive curvature and therefore it is either $\SSS^2$ or $\RP^2$.
+Notice that 
+\begin{itemize}
+ \item each isolated point contributes 1 to the Euler characteristic of $\spc{M}$,
+ \item each sphere contributes 2 to the Euler characteristic of $\spc{M}$, and
+ \item each projective plane contributes 1 to the Euler characteristic of $\spc{M}$.
+\end{itemize}
+Since $\chi(\spc{M})=4$, we are in one of the following three cases:
+\begin{itemize}
+ \item $F$ has exactly 4 isolated points,
+ \item $F$ has one 2-dimensional submanifold and at least 2 isolated points,
+ \item $F$ has two 2-dimensional submanifolds.
+\end{itemize}
+Each case is covered separately.
+
+\parit{Case 1.}
+Suppose $F$ has exactly 4 isolated points $x_1$, $x_2$, $x_3$, and $x_4$.
+Denote by $y_1$, $y_2$, $y_3$, and $y_4$ the corresponding points in $\spc{L}$.
+Note that $\Sigma_{y_1}\spc{L}$ is isometric to a quotient of $\SSS^3$ by an isometric $\SSS^1$-action without fixed points.
+It follows that each angle $\mangle\hinge{y_i}{y_j}{y_k}\le \tfrac\pi2$ for any three distinct points 
+$y_i$, $y_j$, $y_k$.
+In particular, all four triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$ are nondegenerate.
+By comparison, the sum of angles in each triangle is strictly bigger than $\pi$.
+
+Denote by $\sigma$ the sum of all 12 angles in 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
+From above,
+\[\sigma>4\cdot\pi.\]
+
+On the other hand, by \ref{ex:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{L}$ has perimeter at most $\pi$.
+In particular, 
+\[\mangle\hinge{y_1}{y_2}{y_3}+\mangle\hinge{y_1}{y_3}{y_4}+\mangle\hinge{y_1}{y_4}{y_2}\le \pi.\]
+Applying the same argument in $\Sigma_{y_2}\spc{L}$, $\Sigma_{y_3}\spc{L}$, and $\Sigma_{y_4}\spc{L}$, we get 
+\[\sigma\le 4\cdot\pi\]
+--- a contradiction.
+
+\parit{Case 2.}
+Let $F$ contains one surface $S$.
+Note that the projection of $S$ to $\spc{L}$ forms its boundary $\partial \spc{L}$.
+Note that doubling $\hat {\spc{L}}$ of $\spc{L}$ across its boundary has 4 singular points --- each singular point of $\spc{L}$ corresponds to two singular points of $\hat {\spc{L}}$.
+By the doubling theorem, $\hat{\spc{L}}$ is a geodesic $\CBB(1)$ space.
+Therefore we arrive at a contradiction the same way as in the first case.
+
+\parit{Case 3.}
+Suppose $F$ contains at least two surfaces.
+Then $\partial\spc{L}$ has at least two connected components; choose two of them $A$ and $B$.
+Denote by $\gamma$ a geodesic that minimizes the distance from $A$ to $B$.
+
+Let 
+\[\dots \spc{L}_{-1},\spc{L}_{0},\spc{L}_{1},\dots\] two-side infinite sequence of copies on $\partial\spc{L}$.
+Let us glue $\spc{L}_{i}$ to $\spc{L}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
+Every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
+By the globalization theorem, $\spc{N}$ is $\CBB(1)$.
+
+Note that the copies of $\gamma$ in $\spc{L}_{i}$ form a line in $\spc{N}$.
+By the line splitting theorem, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
+The latter is impossible for $\CBB(1)$ space --- a contradiction.
+(Here we used that dimension of $\spc{N}$ is bigger than 1.
+According to our definitions, $\RR$ is $\CBB(1)$;
+it splits trivially, but such examples exist only in dimension~1.)
+\qeds
