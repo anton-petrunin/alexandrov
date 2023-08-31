@@ -1,107 +1,26 @@
 \chapter{CBB: globalization}
 
-\section{Hinge comparison}
-
-Let $\hinge pxy$ be a hinge in a $\CBB(0)$ space.
-By \ref{ex:0-angle}, the angle measure $\mangle\hinge pxy$ is defined and
-\[\mangle\hinge pxy\ge \angk pxy.\]
-
-Further, according to \ref{ex:adjacent-CBB}, we have 
-\[\mangle\hinge pxz+\mangle\hinge pyz=\pi\]
-for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in a $\CBB(0)$ space.
-
-The following theorem implies that a geodesic space is $\CBB(0)$ if
-the above conditions hold for all its hinges.
-
-\begin{thm}{Theorem}\label{thm:angle-cbb}
-A geodesic space $\spc{L}$ is $\CBB(0)$ if the following conditions hold.
-
-\begin{subthm}{angle-a}
-For any hinge $\hinge x p y$ in $\spc{L}$, the angle 
-$\mangle\hinge x p y$ is defined and 
-\[\mangle\hinge x p y\ge\angk x p y.\]
-\end{subthm}
-
-\begin{subthm}{angle-b}
-For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{L}$, we have
-\[\mangle\hinge pxz+\mangle\hinge pyz\le\pi.\]
-\end{subthm}
-
-\end{thm}
-
-\parit{Proof.}
-Consider a point  $w\in \mathopen{]} p z \mathclose{[}$ close to $p$.
-From \ref{SHORT.angle-b}, it follows that 
-\[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\quad \text{and}\quad \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
-
-\begin{wrapfigure}{o}{30 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-805}
-\vskip4mm
-\end{wrapfigure}
-
-Since $\mangle\hinge w x y\le \mangle\hinge w x p +\mangle\hinge w y{p}$ (see \ref{claim:angle-3angle-inq}), we get 
-\[\mangle\hinge w x z+ \mangle\hinge w y z +\mangle\hinge w x y
-\le
-2\cdot\pi.\]
-Applying \ref{SHORT.angle-a}, 
-\[\angk w x z
-+ \angk w y z 
-+\angk w x y
-\le
-2\cdot\pi.\]
-Passing to the limits $w\to p$, we have
-\[\angk p x z 
-+ \angk p y z 
-+\angk p x y
-\le
-2\cdot\pi.\]
-\qedsf
-
-\section{Equivalent conditions}
-
-The following theorem summarizes \ref{clm:angle-mono}, \ref{clm:angle-defined}, \ref{ex:adjacent-CBB}, \ref{thm:angle-cbb}.
-
-\begin{thm}{Theorem}\label{thm:defs_of_alex} 
-Let $\spc{L}$ be a geodesic space.
-Then the following conditions are equivalent.
-
-\begin{subthm}{cbb}
-$\spc{L}$ is $\CBB(0)$.
-\end{subthm}
+Recall that a \index{triangle}\emph{triangle} $\trig xyz$ in a space $\spc{X}$ 
+is a triple of minimizing geodesics $[xy]$, $[yz]$, and $[zx]$.
+Consider the  model triangle $\trig{\tilde x}{\tilde y}{\tilde z}\z=\modtrig{}({x}{y}{z})_{\EE^2}$ in the Euclidean plane.
+The \index{natural map}\emph{natural map} $\trig{\tilde x}{\tilde y}{\tilde z}\z\to \trig{x}{y}{z}$ 
+sends a point $\tilde p\in[\tilde x\tilde y]\cup[\tilde y\tilde z]\cup[\tilde z\tilde x]$ to the corresponding point $p\in[ x y]\cup[y z]\cup[ z x]$;
+that is, if $\tilde p$ lies on $[\tilde y\tilde z]$,
+then $p\in [y z]$ and $\dist{\tilde y}{\tilde p}{}=\dist{y}{p}{}$ (and therefore $\dist{\tilde z}{\tilde p}{}=\dist{z}{p}{}$).
  
+\begin{thm}{Definition}\label{def:k-thin-}
+A triangle $\trig{x}{y}{z}$ in the metric space $\spc{X}$ 
+is called \index{thin triangle}\emph{thin} (or \index{fat triangle}\emph{fat}) if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing (or respectively distance nondecreasing).
 
-\begin{subthm}{2-sum} 
-(adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and point $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ in $\spc{L}$, we have
-\[\angk z p x
-+\angk z p y\le \pi.\]
-\end{subthm}
-
-\begin{subthm}{point-on-side}
-(\index{comparison!point-on-side comparison}point-on-side comparison)
-for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$ in $\spc{L}$, we have
-\[\angk x p y\le\angk x p z.\]
-\end{subthm}
-
-\begin{subthm}{angle}(hinge comparison\index{comparison!hinge comparison})
-\index{hinge comparison}
-for any hinge $\hinge x p y$ in $\spc{L}$, the angle 
-$\mangle\hinge x p y$ is defined and 
-\[\mangle\hinge x p y\ge\angk x p y.\]
-Moreover, 
-\[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
-for any adjacent hinges $\hinge z p y$ and $\hinge z p x$.
-\end{subthm}
-
-Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Rightarrow$\ref{SHORT.point-on-side}$\Rightarrow$\ref{SHORT.angle} hold in any space, not necessarily geodesic.
 \end{thm}
 
-\begin{thm}{Advanced Exercise} \label{ex:urysohn}
-Construct a geodesic space $\spc{X}\notin\CBB(0)$ that meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
-\[\angk{z}{p}{x}+\angk{z}{p}{y}
-\le
-\pi.\]
+\begin{thm}{Exercise}\label{ex:fat}
+Show that any triangle in a $\CBB(0)$ space is fat.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:normCBB}
+Let $\spc{W}$ be $\RR^2$ with $\CBB(0)$ metric induced by a norm.
+Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 \end{thm}
 
 \section{Globalization}

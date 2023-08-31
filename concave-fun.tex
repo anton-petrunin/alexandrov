@@ -1,72 +1,5 @@
 \chapter{Semiconcave functions}
 
-\section{Real-to-real functions}
-
-Choose $\lambda\in \RR$.
-Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II$.
-We say that $s$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} if $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
-
-Equivalently, \textit{$s$ is $\lambda$-concave if the function $h\:t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave}.
-Concavity can be defined via \index{Jensen inequality}\emph{Jensen inequality}; that is,
-\[h(s\cdot t_0+(1-s)\cdot t_1)\ge s\cdot h(t_0)+(1-s)\cdot h(t_1)\]
-for any $t_0,t_1\in \II$ and $s\in[0,1]$.
-It could be also defined via existence of (local) upper \index{supporting function}\emph{support} at any point:
-\textit{for any $t_0\in \II$ there is a linear function $\ell$ that (locally) supports $h$ at $t_0$ from above;
-that is, $\ell(t_0)\z= h(t_0)$ and $\ell(t)\ge h(t)$ for any $t$ (in a neighborhood of $t_0$)}.
-
-The equivalence of these definitions is assumed to be known.
-We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
-
-
-\section{Function comparison}
-
-A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined in an open subset of $\spc{L}$}.
-The domain of definition of a function $f$ will be denoted by $\Dom f$.
-
-
-Let $f$ be a function on a metric space $\spc{L}$.
-We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if 
-for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
-the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
-
-The following proposition is conceptual ---
-it reformulates a global geometric condition into an infinitesimal condition on distance functions.
-
-\begin{thm}{Proposition}\label{comp-kappa}
-A geodesic space $\spc{L}$ is $\Alex{0}$ if and only if $f''\le 1$ for any function $f$ of the following type 
-\[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
-\end{thm} 
-
-\parit{Proof.}
-Choose a unit-speed geodesic $\gamma$ in $\spc{L}$ and two points $x=\gamma(t_0)$, $y=\gamma(t_1)$ for some $t_0<t_1$.
-Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}\z=\modtrig(p x y)$.
-Let $\tilde \gamma\:[t_0,t_1]\to\EE^2$ be the unit-speed parametrization of $[\tilde x \tilde y]$ from $\tilde x$ to $\tilde y$.
-
-Set
-\begin{align*} 
-\tilde r(t)&\df\dist{\tilde p}{\tilde\gamma(t)}{},
-& 
-r(t)&\df\dist{p}{\gamma(t)}{}.
-\end{align*}
-Clearly, $\tilde r(t_0)=r(t_0)$ and $\tilde r(t_1)=r(t_1)$.
-Note that the point-on-side comparison (\ref{point-on-side}) is equivalent to 
-\[t_0\le t\le t_1
-\qquad\Longrightarrow\qquad
-\tilde r(t)\le r(t)
-\eqlbl{eq:r=<r}\]
-for any $\gamma$ and $t_0<t_1$.
-
-Set
-\begin{align*} 
-\tilde h(t)&=\tfrac12\cdot \tilde r^2(t) - \tfrac12\cdot t^2,
-&
-h&=\tfrac12\cdot r^2(t) - \tfrac12\cdot t^2.
-\end{align*}
-Note that $\tilde h$ is linear,
-$\tilde h(t_0)=h(t_0)$ and $\tilde h(t_1)=h(t_1)$.
-Observe that the Jensen inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
-Hence the proposition follows.
-\qeds
 
 \section{Semiconcave functions} 
 
@@ -420,14 +353,3 @@ that is, if $x_n\z\to x_\infty$, then
 \end{subthm}
 
 \end{thm}
-
-
-
-\section{Comments}
-
-The function comparison of $\CBB(-1)$ states that 
-$f''\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
-Similarly, the function comparison of $\CBB(1)$ states that for any point $p$ we have
-$f''\le -f$ for the function $f=-\cos\circ\distfun_p$
-defined in $\oBall(p,\pi)$.
-The meaning of these inequalities is the same --- distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$.
