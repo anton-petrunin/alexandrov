@@ -24,12 +24,11 @@ Give an example of a hinge $\hinge p x y$ in a metric space with an undefined an
 \begin{thm}{Proposition}
 \label{claim:angle-3angle-inq}
 Let  $[px_1]$, $[px_2]$, and $[px_3]$ be three geodesics in a metric space.
-Suppose all the angle measure $\alpha_{i j}=\mangle\hinge p {x_i}{x_j}$ are defined.
+Suppose all the angle measures $\alpha_{i j}=\mangle\hinge p {x_i}{x_j}$ are defined.
 Then 
 \[\alpha_{13}\le \alpha_{12}+\alpha_{23}.\]
 
 \end{thm}
-
 
 \parit{Proof.}
 Since $\alpha_{13}\le\pi$, we can assume that $\alpha_{12}+\alpha_{23}< \pi$.
@@ -87,7 +86,7 @@ Give an example showing that the inequality can be strict.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:first-var}
-Assume that a hinge $\hinge q p x$ with defined angle measure.
+Assume that the angle measure of $\hinge q p x$ is defined.
 Let $\gamma$ be the unit speed parametrization of $[qx]$ from $q$ to $x$.
 Show that
 \[\dist{p}{\gamma(t)}{}
@@ -215,7 +214,7 @@ the angle measure $\mangle\hinge p x y$ is defined, and
 
 \begin{thm}{Exercise}\label{ex:0-angle}
 Let $\hinge p x y$ be a hinge in a $\CBB(0)$ space.
-Suppose $\mangle\hinge p x y=0$ show that $[px]\subset [py]$ or $[py]\subset [px]$.
+Suppose $\mangle\hinge p x y=0$; show that $[px]\subset [py]$ or $[py]\subset [px]$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:pi-angle}
@@ -360,17 +359,17 @@ Equivalently, \textit{$s$ is $\lambda$-concave if the function $h\:t\mapsto s(t)
 Concavity can be defined via \index{Jensen inequality}\emph{Jensen inequality}; that is,
 \[h(s\cdot t_0+(1-s)\cdot t_1)\ge s\cdot h(t_0)+(1-s)\cdot h(t_1)\]
 for any $t_0,t_1\in \II$ and $s\in[0,1]$.
-It could be also defined via existence of (local) upper \index{supporting function}\emph{support} at any point:
+It could be also defined via the existence of (local) upper \index{supporting function}\emph{support} at any point:
 \textit{for any $t_0\in \II$ there is a linear function $\ell$ that (locally) supports $h$ at $t_0$ from above;
 that is, $\ell(t_0)\z= h(t_0)$ and $\ell(t)\ge h(t)$ for any $t$ (in a neighborhood of $t_0$)}.
 
 The equivalence of these definitions is assumed to be known.
 We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
 
+\parbf{Functions on metric space.}
 A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined in an open subset of $\spc{L}$}.
 The domain of definition of a function $f$ will be denoted by $\Dom f$.
 
-\parbf{Functions on metric space.}
 Let $f$ be a function on a metric space~$\spc{L}$.
 We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if 
 for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
@@ -422,10 +421,10 @@ All the discussed statements admit natural generalizations to $\CBB(\kappa)$ spa
 Most of the time the proof is the same with uglier formulas.
 
 For example, the function comparison of $\CBB(-1)$ states that 
-$f''\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
-Similarly, the function comparison of $\CBB(1)$ states that for any point $p$ we have
+$f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
+Similarly, the function comparison of $\CBB(1)$ states that for any point $p$, we have
 $f''\le -f$ for the function $f=-\cos\circ\distfun_p$
 defined in $\oBall(p,\pi)$.
 The meaning of these inequalities is the same --- distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$.
-The inequality $f''\le \phi$ can means that for any point $p$ in the domain of definition and any $\eps>0$ there is a neighborhood $U\ni p$ such that $f''\le \phi(p)+\eps$ in $U$.
+The inequality $f''\le \phi$ means that for any point $p$ in the domain of definition and any $\eps>0$, there is a neighborhood $U\ni p$ such that $f''\le \phi(p)+\eps$ in $U$.
 Here we assume that $f$ and $\phi$ are continuous and defined in open set.
