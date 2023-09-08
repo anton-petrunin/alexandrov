@@ -226,6 +226,7 @@ whitelabel(btex ${+}$ etex, .5[z.v,z.a3]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.a4]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.a5]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.a6]);
+whitelabel.rt(btex $v$ etex, z.v);
 label.lft(btex $a_0=a$ etex, z.a);
 label.rt(btex $b=a_4$ etex, z.b);
 label.llft(btex $a_1$ etex, z.a1);
