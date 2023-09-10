@@ -484,6 +484,105 @@ Summarizing, $\iota(\mathbf{K}_n)$ is a nonempty closed and open set in $\mathbf
 Therefore, $\iota(\mathbf{K}_n)=\mathbf{P}_n$; that is, $\iota\:\mathbf{K}_n\z\to\mathbf{P}_n$ is surjective.
 \qeds
 
+\section{Approximation}
+
+By now, the embedding theorem is proved for polyhedral metrics on the sphere.
+The general case is done by approximation, using the following statement.
+
+\begin{thm}{Proposition}\label{prop:H>GH}
+Let $K_1,K_2,\dots$ be a sequence of convex bodies that converge to $K_\infty$ in the sense of Hausdorff.
+Then the surface of $K_n$ converges to the surface of $K_\infty$ in the sense of Gromov--Hausdorff.
+\end{thm}
+
+If $K_\infty$ is nondegenerate, then the statement follows from \ref{lem:H>GH}.
+The degenerate case is left as an exercise.
+
+Let $\spc{X}_\infty$ be a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
+Suppose that $\spc{X}_\infty$ is a Gromov--Hausdorff limit of a sequence of spheres with polyhedral metrics $\spc{X}_1,\spc{X}_2,\dots$
+By \ref{thm:exist}, there is a sequence of convex polyhedra $K_1,K_2,\dots$ with surfaces isometric to $\spc{X}_1,\spc{X}_2,\dots$, respectively.
+Note that  $\diam K_n\le \diam \spc{X}_n$ for any $n$.
+Therefore we can assume that all polyhedra $K_1,K_2,\dots$ lie in a closed ball of sufficiently large radius.
+
+Applying Blaschke selection theorem, we can pass to a subsequence of $K_1,K_2,\dots$ that converges in the sense of Hausdorff; denote its limit by $K_\infty$.
+By \ref{prop:H>GH} the surface of $K_\infty$ is isometric to $\spc{X}_\infty$.
+
+Therefore it remains to prove the following lemma.
+
+\begin{thm}{Lemma}\label{lem:GH-approximation}
+Let $\spc{X}$ be a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
+Then there is a sphere with polyhedral metrics $\spc{X}'$
+that is arbitrarily close to $\spc{X}$ in the sense of Gromov--Hausdorff.
+\end{thm}
+
+\parit{Idea behind the proof.}
+Suppose we can triangulate $\spc{X}_\infty$ by small geodesic triangles;
+that is, we can choose a finite set of points $p_1,\dots,p_n\z\in \spc{X}_\infty$ and some geodesics $[p_ip_j]$ that cut $\spc{X}_\infty$ into regions of small diameter bounded by geodesic triangles $[p_ip_jp_k]$.
+(The actual proof constructs a triangulation with a weaker property.)
+
+Observe that total angle around each $p_i$ cannot exceed $2\cdot \pi$.
+That is, suppose $p_{j_1},\dots,p_{j_k}$ are points connected to $p_i$ by geodesics.
+Assume that they are ordered in the natural cyclic order.
+Then 
+\[\mangle\hinge{p_i}{p_{j_1}}{p_{j_2}}+\dots+\mangle\hinge{p_i}{p_{j_{k-1}}}{p_{j_k}}+\mangle\hinge{p_i}{p_{j_{k}}}{p_{j_1}}\le 2\cdot\pi.\]
+By comparison, we get
+\[\angk{p_i}{p_{j_1}}{p_{j_2}}+\dots+
+\angk{p_i}{p_{j_{k-1}}}{p_{j_k}}+\angk{p_i}{p_{j_{k}}}{p_{j_1}}\le 2\cdot\pi.\eqlbl{eq:sum<=<2pi}\]
+
+Now let us exchange each triangle by its model triangle.
+That is, consider a model triangle for each region in the subdivision of $\spc{X}$ and glue them together by the same rule.
+By \ref{eq:sum<=<2pi}, the obtained polyhedral surface $\spc{X}'$ has nonnegative curvature.
+It remains to show that this way we can produce $\spc{X}'$ arbitrarily close to $\spc{X}$.
+
+Denote by $p_i\to p_i'$ the natural map; it takes $p_i$ in $\spc{X}$ and returns the corresponding point in $\spc{X}'$.
+Observe that 
+\[\dist{p_i'}{p_j'}{\spc{X}'}
+\le
+\dist{p_i}{p_j}{\spc{X}}.\eqlbl{eq:|pp|}\]
+Indeed, choose a geodesic $\gamma$ from $p_i$ to $p_j$.
+Let $p_i=x_0,x_1,\dots,x_n=p_j$ be the points of intersections of $\gamma$ with the edges of the triangulation listed as they appear on $\gamma$.
+For each $i$, denote by $x_i'$ the corresponding point in $\spc{X}'$.
+By comparison, we get 
+\[\dist{x_k'}{x_{k-1}'}{\spc{X}'}
+\le
+\dist{x_k}{x_{k-1}}{\spc{X}}.\]
+for each $k$.
+Therefore, \ref{eq:|pp|} follows.
+
+Suppose $\eps>0$ is small, the points $p_1,\dots,p_n$ form an $\eps$-net in $\spc{X}$, all edges of the triangulation are smaller than $\eps$ and
+\[\dist{p_i'}{p_j'}{\spc{X}'}
+\ge
+\dist{p_i}{p_j}{\spc{X}} -100\cdot \eps.\eqlbl{eq:|pp|>=}\]
+Then, together with the inequality above it proves that the lemma.
+
+Note that the sides of the model triangles are local geodesics in $\spc{X}'$,
+but not necessarily geodesic; that is they do not have to be length-minimizing.
+Now, let us make another unjustified assumption:
+\textit{Suppose that the sides of model triangles in $\spc{X}'$ are geodesics.}
+(The actual proof does not use this assumption.)
+
+Choose a geodesic $\gamma'$ from $p_i'$ to $p_j'$ in $\spc{X}'$.
+Note that $\gamma'$ visits each triangle in the triangulation of $\spc{X}'$ at most once.
+
+Let $p_i'=x_0',x_1',\dots,x_n'\z=p_j'$ be the points of intersections of $\gamma'$ with the edges of the triangulation listed from $p_i'$ to $p_j'$.
+For each $i$, denote by $x_i$ the corresponding point in $\spc{X}$.
+Let $\Delta_k'$ be the triangle that contains arc $[x'_{k-1}x'_k]$ of $\gamma'$ and $\Delta_k$ the corresponding triangle in $\spc{X}$.
+Note that
+\[\dist{x_k'}{x_{k-1}'}{\spc{X}'}
+\ge
+\dist{x_k}{x_{k-1}}{\spc{X}} -\eps\cdot K(\Delta_k),
+\eqlbl{eq:|xx|<}\]
+where $K(\Delta_k)$ denotes the access of $\Delta_k$;
+that is, the sum of its internal angles minus $\pi$.
+
+Euler's formula and \ref{eq:sum<=<2pi} imply that the sum of all accesses is at most $4\cdot\pi$.
+Therefore, summing up \ref{eq:|xx|<}, we get 
+\[\dist{p_i'}{p_j'}{\spc{X}'}
+\ge
+\dist{p_i}{p_j}{\spc{X}}-4\cdot \pi\cdot \eps.\]
+Whence \ref{eq:|pp|>=} follows.
+\qeds
+
+
 \section{Comments}
 
 This lecture contains selected material from Alexandrov's book~\cite{alexandrov}.
