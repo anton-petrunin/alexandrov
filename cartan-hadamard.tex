@@ -1,4 +1,4 @@
-\chapter{CAT: globalization}\label{chapter:globalization}
+\chapter{Globalization for CATs}\label{chapter:globalization}
 
 This lecture is nearly a copy of \cite[Sections 3.1--3.3]{alexander-kapovitch-petrunin-2019};
 here we introduce locally $\CAT(0)$ spaces and prove the globalization theorem that provides a sufficient condition for locally $\CAT(0)$ spaces to be globally $\CAT(0)$.
@@ -213,17 +213,7 @@ Analogously, a proper geodesic, locally $\CAT(1)$ space $\spc{U}$ is $\CAT(1)$
 if and only if all pairs of points in $\spc{U}$ at distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
-The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
-
-\begin{thm}{Line-of-sight map} \label{def:sight}
-Let $p$ be a point and $\alpha$ be a curve of finite length in a geodesic space~$\spc{X}$. 
-Let $\mathring\alpha:[0,1]\to\spc{U}$ be the constant-speed parametrization of~$\alpha$.  
-If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\mathring\alpha(t)$, we say 
-\[
-[0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)
-\]
-is a \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.  
-\end{thm}
+The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{lem:inherit-angle}) and the line-of-sight map (\ref{def:sight}).
 
 \parit{Proof of the patchwork globalization theorem (\ref{thm:alex-patch}).} 
 Note that the implication ``only if'' follows from \ref{ex:CAT-geodesic} and \ref{ex:convex-dist}; it remains to prove the ``if'' part.
