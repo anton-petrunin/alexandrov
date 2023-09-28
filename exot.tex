@@ -247,6 +247,107 @@ A small neighborhood of $p$ is isometric to a neighborhood of the tip of $\Cone\
 In fact, if this property holds at any point of a compact length space $\spc{P}$,
 then  $\spc{P}$ is a polyhedral space \cite{lebedeva-petrunin}.
 
+\section{CAT test}
+
+The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded above.
+
+
+\begin{thm}{Theorem}\label{thm:PL-CAT}
+Let $\spc{P}$ be a polyhedral space and $\tau$ be its triangulation. 
+Then $\spc{P}$ is locally $\CAT(0)$ if and only if the link of each simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
+
+Analogously, let $\spc{P}$ be a spherical polyhedral space and $\tau$ be its triangulation. 
+Then $\spc{P}$ is $\CAT(1)$ if and only if neither $\spc{P}$ nor  the  link of any simplex in $\tau$ has a closed local geodesic shorter than $2\cdot\pi$.
+\end{thm}
+
+
+
+
+
+\parit{Proof.}
+The ``only if'' part follows from \ref{cor:loc-geod-are-min}, \ref{prop:susp}, and \ref{ex:cone+susp}.
+
+To prove the ``if'' part,
+we apply induction on $\dim\spc{P}$.
+The base case $\dim\spc{P}=0$ is evident.
+Let us start with the $\CAT(1)$ case.
+
+\parit{Step.}
+Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
+
+
+Fix a point $p\in\spc{P}$.
+A neighborhood of $p$ 
+is isometric to a neighborhood of the north pole in the suspension over the space of directions~$\Sigma_p$.
+
+Note that $\Sigma_p$ is a spherical polyhedral space, 
+and its  links are isometric to  links of~$\spc{P}$. 
+By the  induction hypothesis, $\Sigma_p$ is $\CAT(1)$.
+Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $\CAT(1)$.
+
+
+Applying the second part of Corollary~\ref{cor:closed-geod-cat},
+we get the statement.
+
+The $\CAT(0)$ case is done in exactly the same way except we need to use the first part of Exercise~\ref{ex:cone+susp} and  the first part of Corollary~\ref{cor:closed-geod-cat} on the last step.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:unique-geod=CAT}
+Let $\spc{P}$
+be a polyhedral space such that any two points can be connected by a unique geodesic.
+Show that $\spc{P}$ is $\CAT(0)$.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:S3}
+Construct a Euclidean polyhedral metric on $\mathbb{S}^3$
+such that the total angle around each edge in its triangulation is at least $2\cdot \pi$.
+\end{thm}
+
+
+Let us formulate an analogous test for spaces with lower curvature bound.
+
+\begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}$ be a polyhedral space and $\tau$ be a triangulation of $\spc{P}$.
+Then $\spc{P}$ is $\CBB(0)$ if and only if the following conditions hold.
+
+\begin{subthm}{} $\tau$ is \index{pure complex}\emph{pure}; 
+that is, any simplex in $\tau$ is  a face of some simplex of dimension exactly $m$. 
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:m-1}
+The link of any simplex of dimension $m-1$ is formed by single point or two points.
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:connected}
+The link of any simplex of dimension $\le m-2$ is connected.
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:2pi}
+Any link of any simplex of dimension $m-2$
+has diameter at most~$\pi$.
+\end{subthm}
+\end{thm}
+
+The condition \ref{SHORT.thm:poly-CBB:connected}
+can be reformulated in the following way:
+
+\begin{itemize}
+ \item[{\it \ref{SHORT.thm:poly-CBB:connected}$'$}] 
+Any path $\gamma$ in $\spc{P}$ is a limit of paths
+that cross only simplexes of dimension $m$ and $m-1$.
+\end{itemize}
+
+Further, modulo the other conditions,
+the condition \ref{SHORT.thm:poly-CBB:2pi}
+is equivalent to the following:
+
+
+\begin{itemize}
+ \item[{\it \ref{SHORT.thm:poly-CBB:2pi}$'$}] 
+The link of any simplex of dimension $m-2$ is 
+isometric to a circle of length $\le 2\cdot\pi$
+or a closed real interval of length $\le \pi$.
+\end{itemize}
+
 \section{Flag complexes}
 
 
@@ -529,7 +630,7 @@ By \ref{ex:contractible}, any complete length $\CAT(0)$ space is contractible.
 Therefore, by  the globalization theorem (\ref{thm:hadamard-cartan}), all proper length, locally $\CAT(0)$ spaces 
 are \index{aspherical}\emph{aspherical};
 that is, they have contractible universal covers.
-This observation can be used to construct examples of  aspherical spaces. 
+This observation will be used to construct examples of  aspherical spaces. 
 
 Let $\spc X$ be a proper topological space.
 Recall that $\spc X$ is called 
@@ -669,8 +770,8 @@ we can obtain a piecewise linear manifold $\spc{N}$
 whose boundary is formed by several copies of~$\Sigma$.
 
 Let us glue a copy of  $\spc{W}$ along its boundary to each copy of $\Sigma$ in the boundary of~$\spc{N}$.
-This results in a  closed piecewise linear manifold 
-$\spc{M}$ which is homotopically equivalent to~$\spc{Q}$.
+This results in a  closed manifold 
+$\spc{M}$ with polyhedral metric which is homotopically equivalent to~$\spc{Q}$.
 
 Indeed, since both $V_v$ and $\spc{W}$ are contractible, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence $V_v\to\spc{W}$ relative to the boundary.
 Therefore the identity map on $\spc{N}$ extends to homotopy equivalences 
