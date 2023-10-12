@@ -134,7 +134,10 @@ for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm
 Since $\Delta^k$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 \qeds
 
-
+\begin{thm}{Exercise}\label{ex:finite-action-CAT}
+Show that any finite isometric group action on a proper geodesic $\CAT(0)$ space has
+a fixed point.
+\end{thm}
 
 \section{Convexity of up-set}
 
@@ -268,7 +271,7 @@ $\spx{\bm{p}}$ is nondegenerate.
 \begin{subthm}{}
 Suppose $\spx{\bm{p}}$ is nondegenerate.
 Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} hold for some 
-  array of positive reals $(r_0,r_1,\dots,r_\kay)$.
+  array of positive reals $(r_0,\dots,r_\kay)$.
 \end{subthm}
 
 \end{thm}
@@ -542,6 +545,15 @@ $\bm{0}\in \RR^m$ is not a stable value of  $F_\eps\circ\Psi\circ\map$.
 Since $\eps>0$ is arbitrary, we get the result.
 \qeds
 
+The following exercise is a generalization of Helly's theorem; for closely related statements see \cite[Prop. 5.3]{kleiner} and \cite{ivanov2014}.
+
+
+\begin{thm}{Exercise}\label{ex:helly}
+Let $K_1,\dots,K_n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
+Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K_1,\dots K_n\}$ have a common point.
+Show that all subsets $K_1,\dots,K_n$ have a common point.
+\end{thm}
+
 \section{Remarks}
 
 The barycenters in $\CAT(\kappa)$ spaces were introduced by Bruce Kleiner \cite{kleiner}.
@@ -550,4 +562,5 @@ He also proved the dimension theorem; an improvement was made by Alexander Lytch
 It is not known if the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces.
 It was conjectured by Bruce Kleiner \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
 The answer is ``yes'' for separable spaces \cite[Corollary 14.13]{alexander-kapovitch-petrunin-2025}.
+
 
