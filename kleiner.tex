@@ -554,6 +554,37 @@ Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K_1,\dots K_n\}$ 
 Show that all subsets $K_1,\dots,K_n$ have a common point.
 \end{thm}
 
+\section{Hausdorff dimension}
+
+\begin{thm}{Definition}
+\label{def:HausDim}\index{dimension!Hausdorff dimension}\index{Hausdorff dimension}
+Let $\spc{X}$ be a metric space. 
+Its Hausdorff dimension is defined as
+\[\HausDim\spc{X}=\sup\set{\alpha\in\RR}{\HausMes_\alpha(\spc{X})>0},\]
+where $\HausMes_\alpha$ denotes the $\alpha$-dimensional Hausdorff measure.
+\end{thm}
+
+The following theorem follows from \cite[theorems V 8 and VII 2]{hurewicz-wallman}.
+
+\begin{thm}{Szpilrajn's theorem}\label{thm:szpilrajn} 
+Let $\spc{X}$ be a separable metric space.
+Assume $\TopDim\spc{X}\ge m$.
+Then $\HausMes_m \spc{X}>0$.
+
+In particular, 
+$\TopDim\spc{X}\le\HausDim\spc{X}$.
+\end{thm}
+
+Except for Szpilrajn's theorem, there are no other relations between topological and Husdorff dimension of separable spaces.
+Moreover, the following exercise implies that the same holds for compact geodesic $\CAT(0)$ spaces of topological dimension at least 1.
+
+\begin{thm}{Exercise}\label{ex:dim-top-haus-CAT}
+Construct a metric on the binary tree such that it has compact completion of arbitrary Huasdorff dimension $\alpha\ge 1$.
+
+Concclude that for any integer $m\ge 1$ and real $\alpha\ge m$ there is a compact $\CAT(0)$ space with topological dimension $m$ and Hausdorff dimension $\alpha$. 
+\end{thm}
+
+
 \section{Remarks}
 
 The barycenters in $\CAT(\kappa)$ spaces were introduced by Bruce Kleiner \cite{kleiner}.
@@ -561,15 +592,16 @@ He also proved the dimension theorem; an improvement was made by Alexander Lytch
 
 It is not known if the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces.
 It was conjectured by Bruce Kleiner \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
-For separable spaces, the answer is ``yes'';
-it follows from Kleiner's argument \cite[Corollary 14.13]{alexander-kapovitch-petrunin-2025}.
+For separable spaces, the answer is ``yes'', and it follows from Kleiner's argument \cite[Corollary 14.13]{alexander-kapovitch-petrunin-2025}.
 
-\begin{thm}{Open question}
-Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space such that $\TopDim \spc{U}=\infty$.
-Is it possible to find a subset $S\subset \spc{U}$ that is bi-Lipschitz to an open domain in $\EE^n$ for any $n$, or even for $n=2$.
-\end{thm}
-
-If $\TopDim \spc{U}=m$, then $\spc{U}$ contains a subset bi-Lipschitz to an open domain in $\EE^m$ \cite[Theorem 14.15.]{alexander-kapovitch-petrunin-2025}.
-
+One may wonder if bi-H\"older condition \ref{thm:dim-infty-CBA:mnfld} can be improved to bi-Lipschitz;
+it seem to be unknown even for compact spaces.
+However if a compact geodesic $\CAT(0)$ space $\spc{U}$ has finite topological dimension $m$,
+then a slight modification of Kleiner's technique can be used to show that there is a bi-Lipschitz embedding of an $m$-cube into $\spc{U}$ \cite[Theorem 14.15]{alexander-kapovitch-petrunin-2025}.
+In particular, there is a bi-Lipschitz embedding of an $n$-cube for any $n\le m$.
+If $\TopDim\spc{U}=\infty$, then we expect existence of a bi-Lipschitz embedding of an $n$-cube for any integer $n\ge1$.
+The statement is trivial for $n=1$; in this case any geodesic gives an isometric embedding.
+For $n=2$, one can get it from the the fact that minimal (or metric minimizing) surfaces in $\spc{U}$ are $\CAT(0)$ (any such surface is locally bi-Lipschitz to the Euclidean plane).
+For $n\ge 3$ the question remains open.
 
 
