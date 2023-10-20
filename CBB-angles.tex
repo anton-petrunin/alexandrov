@@ -1,14 +1,18 @@
-\chapter{CBB: first steps}
+\chapter{Quotients}
 
+\section{Quotient space}
 
-In this lecture, we start to study metric spaces that satisfy $\CBB$ comparison [see \ref{def:CBB}].
-Most of the covered material
-will not be used further, it served as a motivation for $\CBB$ comparison.
-
-\section{Quotients and submetries}
+Suppose that group $G$ acts isometrically on a metric space $\spc{X}$.
+Note that
+\[\dist{G\cdot x}{G\cdot y}{\spc{X}/G}
+\df
+\inf
+\set{\dist{x}{g\cdot y}{\spc{X}}}{g\in G}\]
+defines a semimetric on the orbit space $\spc{X}/G$.
+Moreover, it is a genuine metric if the orbits of the action are closed.
 
 \begin{thm}{Theorem}\label{thm:CBB/G}
-Assume that group $G$ acts isometrically on a $\Alex0$ space $\spc{L}$ and has closed orbits.
+Assume that group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$ and has closed orbits.
 Then the quotient space $\spc{L}/G$ is $\Alex0$.
 
 \end{thm}
@@ -18,17 +22,22 @@ Denote by $\sigma\:\spc{L}\to \spc{L}/G$ the quotient map.
 
 Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{L}/G$.
 Choose an arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
-Note that we can choose the points $\hat{x}_1,\hat{x}_2,\hat{x}_3\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
+Since $\spc{L}$ is proper, we can choose the points $\hat{x}_1,\hat{x}_2,\hat{x}_3\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
 \[\dist{p}{x_i}{\spc{L}/G}
-\lege
-\dist{\hat{p}}{\hat{x}_i}{\spc{L}}
-\pm\delta\]
-for all $i$ and any fixed $\delta>0$.
+=
+\dist{\hat{p}}{\hat{x}_i}{\spc{L}}\]
+for all $i$.
 
-Given $\eps>0$, the value $\delta$ can be chosen in such a way that the inequality
+Note that 
+\[\dist{x_i}{x_j}{\spc{L}/G}
+\le 
+\dist{\hat{x}_i}{\hat{x}_j}{\spc{L}}
+\]
+for all $i$ and $j$.
+Therefore 
 \[\angk p{x_i}{x_j}
-<
-\angk {\hat{p}}{\hat{x}_i}{\hat{x}_j}+\eps
+\le
+\angk {\hat{p}}{\hat{x}_i}{\hat{x}_j}
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
@@ -43,14 +52,19 @@ Applying  \ref{eq:angles-M-L},
 we get 
 \[\angk p{x_1}{x_2}
 +\angk p{x_2}{x_3}
-+\angk p{x_3}{x_1}< 2\cdot\pi+3\cdot\eps.\]
-Since $\eps>0$ is arbitrary we have 
-\[\angk p{x_1}{x_2}
-+\angk p{x_2}{x_3}
-+\angk p{x_3}{x_1}\le 2\cdot\pi;\]
++\angk p{x_3}{x_1}< 2\cdot\pi;\]
 that is,
 the $\Alex0$ comparison holds for this quadruple in $\spc{L}/G$.
 \qeds
+
+\begin{thm}{Advanced exercise}
+Let $G$ be a compact Lie group with a bi-invariant Riemannian metric.
+Show that $G$ is isometric to a quotient of the Hilbert space by isometric group action.
+
+Conclude that $G\in\CBB(0)$.
+\end{thm}
+
+\section{Submetries}
 
 A map $\sigma\:\spc{X}\to\spc{Y}$ between the metric spaces $\spc{X}$ and $\spc{Y}$
 is called a \index{submetry}\emph{submetry} if 
@@ -59,19 +73,12 @@ for any $p\in \spc{X}$ and $r\ge 0$.
 
 Suppose $G$ and $\spc{L}$ are as in \ref{thm:CBB/G}.
 Observe that the quotient map $\sigma\:\spc{L}\to \spc{L}/G$ is a submetry.
-Moreover, the proof above works for any submetry.
+Moreover, the proof above (with minor changes) works for any submetries.
 Therefore we get the following.
 
 \begin{thm}{Generalization}\label{thm:submetry-CBB}
 Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
 Suppose $\spc{L}$ is a $\Alex{0}$ space, then so is $\spc{M}$.
-\end{thm}
-
-\begin{thm}{Advanced exercise}
-Let $G$ be a compact Lie group with a bi-invariant Riemannian metric.
-Show that $G$ is isometric to a quotient of the Hilbert space by isometric group action.
-
-Conclude that $G\in\CBB(0)$.
 \end{thm}
 
 
