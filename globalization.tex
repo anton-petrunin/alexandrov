@@ -19,7 +19,17 @@ Show that any triangle in a $\CBB(0)$ space is fat.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:normCBB}
-Let $\spc{W}$ be $\RR^2$ with $\CBB(0)$ metric induced by a norm.
+Let $\spc{W}$ be $\RR^2$ with the metric induced by a norm.
+Suppose that 
+
+\begin{subthm}{}
+$\spc{W}$ is $\CBB(0)$, or 
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{W}$ is $\CAT(0)$.
+\end{subthm}
+
 Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 \end{thm}
 
@@ -33,14 +43,14 @@ Any locally $\CBB(0)$ compact geodesic space is $\CBB(0)$.
 
 \parit{Proof modulo the key lemma.}
 Let $\spc{L}$ be a locally $\CBB(0)$ compact geodesic space.
-Note that condition \ref{angle-b} holds in $\spc{L}$ (the proof is the same as for $\CBB(0)$ space).
+Note that condition \ref{angle-b} holds in $\spc{L}$ (the proof is the same as for $\CBB(0)$ spaces).
 It remains to prove that \ref{angle-a} holds in $\spc{L}$;
 that is,
 \[\mangle\hinge x p y\ge\angk x p y.
 \eqlbl{eq:mod-angle-CBB-comp-glob}\]
 
 First note that \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
-this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of $\CBB(0)$ comparison.
+this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\CBB(0)$ comparison.
 Since $\spc{L}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds if $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
 Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
 \qeds
@@ -54,7 +64,7 @@ holds for any hinge $\hinge x p q$ with
 $\dist{x}{y}{}+\dist{x}{q}{}
 <
 \frac{2}{3}\cdot\ell$.
-Then comparison
+Then the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\] 
 holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
@@ -202,7 +212,7 @@ Together with the triangle inequality
 \]
 this yields
 \[\lim_{n\to\infty}\side \hinge{x_n}p q\ge \dist{p}{q}{}.\]
-Applying monotonicity of the sequence  $s_n=\side \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
+Applying the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
 \section{On general curvature bound}
@@ -246,7 +256,7 @@ Conclude that $\spc{L}$ is isometric to a real interval or a circle.
 The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
 
 Recall that a metric space $\spc{X}$ is called \index{complete space}\emph{complete} if any Cauchy sequence of points in $\spc{X}$ converges.
-The compactness condition in our version of the theorem can be traded to completeness by using the following exercise.
+The compactness condition in our version of the theorem can be traded for completeness by using the following exercise.
 
 \begin{thm}{Exercise}\label{ex:alm-min}
 Let $\spc{X}$ be a complete metric space.
@@ -259,9 +269,9 @@ for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
 
 Let us mention two more general versions of the globalization theorem.
 
-Recall that \index{length space}\emph{length space} is a metric space such that any two points $p$ and $q$ can be connected by a path with length arbitrarily close to $|p-q|$.
+Recall that a \index{length space}\emph{length space} is a metric space such that any two points $p$ and $q$ can be connected by a path with a length arbitrarily close to $|p-q|$.
 Note that any geodesic space is length, but not the other way around.
-The following theorem was proved already in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}.
+The following theorem was already proved in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}.
 
 \begin{thm}{Theorem}
 Any complete locally $\Alex\kappa$ length space is $\Alex\kappa$.
@@ -286,7 +296,7 @@ The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \
 Another simplified version was obtained by
 Katsuhiro Shiohama \cite{shiohama}.
 
-The question whether \ref{angle-a} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
+The question of whether \ref{angle-a} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
 in print, it was first stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 
 
