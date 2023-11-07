@@ -58,8 +58,7 @@ The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 
 \section{Tangent space}\label{sec: tangent space}
 
-\textbf{Cone construction.}
-The \index{cone}\emph{Euclidean cone} $\spc{V}=\Cone\spc{X}$ 
+Recall that \index{cone}\emph{Euclidean cone} $\spc{V}=\Cone\spc{X}$ 
 over a metric space $\spc{X}$
 is defined as the metric space whose underlying set consists of
 equivalence classes in
@@ -93,9 +92,30 @@ The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent
 (despite the fact that $\T_p$ is only a cone --- not a vector space).
 The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$.
 
-\begin{thm}{Exercise}\label{ex:Tan-is-CBB(0)}
-Show that tangent spaces of $\CBB(\kappa)$ space are $\CBB(0)$.
+\begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
+Tangent spaces of $\CBB(\kappa)$ space are $\CBB(0)$.
+\end{thm}
 
+\parit{Proof.}
+Consider the tangent space $\T_p=\Cone \Sigma_p$ of a $\CBB(\kappa)$ space $\spc{L}$ at a point $p$.
+We need to show that the $\CBB(0)$ comparison holds for a given quadruple $v_0$, $v_1$, $v_2$, $v_3\in \T_p$.
+
+Recall that the space of geodesic directions $\Sigma_p'$ is dense in $\Sigma_p$.
+It follows that the subcone $\T'_p=\Cone\Sigma_p'$ is dense in $\T_p$.
+Therefore, it is sufficient to consider the case $v_0$, $v_1$, $v_2$, $v_3\in \T'_p$.
+
+For each $i$, choose a geodesic $\gamma_i$ from $p$ in the direction of $v_i$;
+assume $\gamma_i$ has speed $|v_i|$ for each $i$.
+Since the angles are defined, we have
+\[\dist{\gamma_i(\eps)}{\gamma_j(\eps)}{\spc{L}}=\eps\cdot\dist{v_i}{v_j}{\T_p}+o(\eps).
+\eqlbl{eq:gamma-v}\]
+The quadruple $\gamma_0(\eps)$, $\gamma_1(\eps)$, $\gamma_2(\eps)$, $\gamma_3(\eps)$ satisfied $\CBB(\kappa)$ comparison;
+after rescaling the distances by $\tfrac1\eps$, it becomes the $\CBB(\eps^2\cdot\kappa)$ comparison.
+Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\CBB(0)$ comparison for $v_0$, $v_1$, $v_2$, $v_3$.
+\qeds
+
+\begin{thm}{Exercise}
+Show that tangent spaces of $\CAT(\kappa)$ space are $\CAT(0)$.
 \end{thm}
 
 

@@ -292,7 +292,7 @@ It follows that to count subgroups up to conjugation, we need to count the image
 Therefore, by the lemma below, $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{L}=\EE^m/\Gamma$.
 Combining this observation with \ref{thm:extr-point}, we get the following.
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:2m}
 Let $\Gamma\acts \EE^m$ be a crystallographic action.
 Then $\#_0(\Gamma)\le 2^m$.
 \end{thm}
@@ -350,4 +350,19 @@ Then any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$.
 
 Compact geodesic $m$-dimensional $\CBB(0)$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
 (This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{L}=\TT^m/\ZZ_2$.)
-Nina Lebedeva has proved \cite{lebedeva} that \textit{every $m$-dimensional geodesic $\CBB(0)$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}; see the definition below.
+Nina Lebedeva has proved \cite{lebedeva} that \textit{every $m$-dimensional geodesic $\CBB(0)$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
+
+Counting maximal finite subgroups in a crystallographic group $\Gamma$ is equivalent to counting the so-called primitive extremal subsets in the quotient space $\spc{L}=\EE^m/\Gamma$.
+So, \ref{prop:2m} would follow from the next conjecture.
+
+\begin{thm}{Conjecture}
+Any $m$-dimensional compact geodesic $\CBB(0)$ space has at most $2^m$ primitive extremal subset.
+\end{thm}
+
+A closed subset $E$ in a $\CBB(\kappa)$ space is called 
+\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
+An extremal subset is called primitive if it contains no proper \emph{extremal} subsets.
+For example, the whole space and empty set are aslo extremal in any space.
+Also every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
+Vertices of the cube are the only its primitive extremal subsets.
+
