@@ -1,0 +1,38 @@
+\chapter{Homotopy finiteness theorem}
+
+\section{Formulation and sketch}
+
+\begin{thm}{Theorem}
+Given a positive integer $n$, and real numbers $\kappa$, $v_0>0$, and $D$,
+denote by $\mathfrak{M}=\mathfrak{M}(n,\kappa,v_0,D)$ the class of compact Riemannian $n$-dimensional manifolds
+with sectional curvature at least $\kappa$,
+diameter at most $D$,
+and volume at least $v_0$.
+Then $\mathfrak{M}$ contains at most finite collection of manifolds of different homotopy types.
+\end{thm}
+
+\parit{Stetch.}
+Arguing by contradiction, assume $M_1,M_2,\dots\in \mathfrak{M}$ be an infinite sequence of manifolds with different homotopy types.
+By Gromov's selection theorem, we can pass to a subsequence of $M_n$ that converges in the Gromov--Hausdorff sense; denote it limit by $\spc{L}$.
+
+Note that $\spc{L}$ is compact and $\dim\spc{L}=n$.
+
+Choose $p\in \spc{L}$.
+Applying Perelman's construction, we get a strongly concave function $f$ defined in a neighborhood of $p$ that has a unique maximum point at $p$.
+We can assume that $f(p)>0$ and the set defined by $f(x)\ge 0$ is compact.
+The suplevel set of $f(x)>0$ is a convex neighbohood of $p$; denote it by $U$.
+Since $\spc{L}$, there is a finite cover $U_1,\dots, U_k$ of $\spc{L}$ by such neighbohood of $p_1,\dots,p_k$.
+
+Observe that the covering $\{U_i\}$ is \index{good covering}\emph{good};
+that is, each nonempty intersection of $U_I=\cap_{i\in I} U_i$ is contractible.
+Indeed, the function $f_I=\min_{i\in I}\{f_i\}$ is a strongly concave function defined in $U_I$.
+Therefore it has unique maximum point $p_I$.
+The gradient flow for $f_I$ shrinks $U_I$ to $p_I$ as the time $t\to\infty$.
+It remains to reparametrizre $[0,\infty)$ by $[0,1)$.
+
+By nerve theorem, $\spc{L}$ is homotopy equivalent to the nerve $\spc{N}$ associated with the covering.
+
+Note that the construction of the covering $\{U_1,\dots, U_k\}$ can be lifted to $M_n$ for large $n$.
+It follows that $M_n$ admits a good covering with nerve $\spc{N}$ for all large $n$.
+Again by nerve theorem, $M_n$ is homotopy equivalent to $\spc{N}$ for all large $n$ --- a contradiction.
+\qeds
